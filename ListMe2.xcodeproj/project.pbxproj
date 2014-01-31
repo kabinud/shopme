@@ -21,6 +21,8 @@
 		B806B751189BD14600C19AC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B733189BD14600C19AC0 /* UIKit.framework */; };
 		B806B759189BD14600C19AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B806B757189BD14600C19AC0 /* InfoPlist.strings */; };
 		B806B75B189BD14600C19AC0 /* ListMe2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B75A189BD14600C19AC0 /* ListMe2Tests.m */; };
+		B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B765189BD1A600C19AC0 /* XYZMainViewController.m */; };
+		B806B76D189BE44100C19AC0 /* crateM.png in Resources */ = {isa = PBXBuildFile; fileRef = B806B76C189BE44000C19AC0 /* crateM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		B806B756189BD14600C19AC0 /* ListMe2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListMe2Tests-Info.plist"; sourceTree = "<group>"; };
 		B806B758189BD14600C19AC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B806B75A189BD14600C19AC0 /* ListMe2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListMe2Tests.m; sourceTree = "<group>"; };
+		B806B764189BD1A600C19AC0 /* XYZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
+		B806B765189BD1A600C19AC0 /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
+		B806B76C189BE44000C19AC0 /* crateM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM.png; path = ../../Desktop/crateM.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,8 @@
 		B806B723189BD14600C19AC0 = {
 			isa = PBXGroup;
 			children = (
+				B806B76C189BE44000C19AC0 /* crateM.png */,
+				B806B767189BDF6400C19AC0 /* Graphics */,
 				B806B735189BD14600C19AC0 /* ListMe2 */,
 				B806B754189BD14600C19AC0 /* ListMe2Tests */,
 				B806B72E189BD14600C19AC0 /* Frameworks */,
@@ -115,6 +122,8 @@
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B806B741189BD14600C19AC0 /* Main.storyboard */,
+				B806B764189BD1A600C19AC0 /* XYZMainViewController.h */,
+				B806B765189BD1A600C19AC0 /* XYZMainViewController.m */,
 				B806B744189BD14600C19AC0 /* XYZViewController.h */,
 				B806B745189BD14600C19AC0 /* XYZViewController.m */,
 				B806B747189BD14600C19AC0 /* Images.xcassets */,
@@ -150,6 +159,13 @@
 				B806B757189BD14600C19AC0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B806B767189BDF6400C19AC0 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
+				B806B76D189BE44100C19AC0 /* crateM.png in Resources */,
 				B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */,
 				B806B743189BD14600C19AC0 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
+				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
 			);
