@@ -28,6 +28,8 @@
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
 		B87FC120189D859400AF60FD /* folder22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11C189D859400AF60FD /* folder22@2x.png */; };
+		B87FC123189D8ACF00AF60FD /* crateM.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC121189D8ACF00AF60FD /* crateM.png */; };
+		B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC122189D8ACF00AF60FD /* crateM@2x.png */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8AB064C189D245C00E81E4F /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB064B189D245C00E81E4F /* XYZTopViewController.m */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
 		B87FC11C189D859400AF60FD /* folder22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22@2x.png"; path = "ListMe2/Icons/folder22@2x.png"; sourceTree = "<group>"; };
+		B87FC121189D8ACF00AF60FD /* crateM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM.png; path = ListMe2/Icons/crateM.png; sourceTree = "<group>"; };
+		B87FC122189D8ACF00AF60FD /* crateM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM@2x.png"; path = "ListMe2/Icons/crateM@2x.png"; sourceTree = "<group>"; };
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8AB064A189D245C00E81E4F /* XYZTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZTopViewController.h; path = ../XYZTopViewController.h; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 		B806B767189BDF6400C19AC0 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B87FC121189D8ACF00AF60FD /* crateM.png */,
+				B87FC122189D8ACF00AF60FD /* crateM@2x.png */,
 				B87FC119189D859400AF60FD /* bin222M.png */,
 				B87FC11A189D859400AF60FD /* bin222M@2x.png */,
 				B87FC11B189D859400AF60FD /* folder22.png */,
@@ -271,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B87FC11D189D859400AF60FD /* bin222M.png in Resources */,
+				B87FC123189D8ACF00AF60FD /* crateM.png in Resources */,
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
 				B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */,
 				B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */,
@@ -279,6 +286,7 @@
 				B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */,
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,
+				B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
