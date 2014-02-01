@@ -6,10 +6,12 @@
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
+#define SLIDE_TIMING .95
+
 #import "XYZMainViewController.h"
 
-@interface XYZMainViewController ()
 
+@interface XYZMainViewController ()
 @end
 
 @implementation XYZMainViewController
@@ -57,11 +59,19 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row==0){
-        return self.tableView.rowHeight*2;
+        return self.tableView.rowHeight*2.5;
     }
     else{
         return self.tableView.rowHeight;
     }
+    
+}
+
+
+
+- (void)checkButtonTapped:(id)sender event:(id)event{
+    self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
+    [self.delegate bringTopPanel];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,11 +82,11 @@
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *image = [UIImage imageNamed:@"crateM.png"];
-        CGRect frame = CGRectMake(0.0, 0.0, 20, 20);
+        UIImage *image = [UIImage imageNamed:@"crateM.png" ];
+        CGRect frame = CGRectMake(0.0, 0.0, 44, 44);
         button.frame = frame;
         [button setBackgroundImage:image forState:UIControlStateNormal];
-//        [button addTarget:self action:@selector(checkButtonTapped:event:)  forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(checkButtonTapped:event:)  forControlEvents:UIControlEventTouchUpInside];
         button.backgroundColor = [UIColor clearColor];
         cell.accessoryView = button;
         

@@ -23,6 +23,8 @@
 		B806B75B189BD14600C19AC0 /* ListMe2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B75A189BD14600C19AC0 /* ListMe2Tests.m */; };
 		B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B765189BD1A600C19AC0 /* XYZMainViewController.m */; };
 		B806B76D189BE44100C19AC0 /* crateM.png in Resources */ = {isa = PBXBuildFile; fileRef = B806B76C189BE44000C19AC0 /* crateM.png */; };
+		B8AB0646189C14BD00E81E4F /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0645189C14BD00E81E4F /* XYZTopViewController.m */; };
+		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		B806B764189BD1A600C19AC0 /* XYZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
 		B806B765189BD1A600C19AC0 /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
 		B806B76C189BE44000C19AC0 /* crateM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM.png; path = ../../Desktop/crateM.png; sourceTree = "<group>"; };
+		B8AB0644189C14BD00E81E4F /* XYZTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopViewController.h; sourceTree = "<group>"; };
+		B8AB0645189C14BD00E81E4F /* XYZTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopViewController.m; sourceTree = "<group>"; };
+		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
+		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B806B741189BD14600C19AC0 /* Main.storyboard */,
+				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
+				B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */,
+				B8AB0644189C14BD00E81E4F /* XYZTopViewController.h */,
+				B8AB0645189C14BD00E81E4F /* XYZTopViewController.m */,
 				B806B764189BD1A600C19AC0 /* XYZMainViewController.h */,
 				B806B765189BD1A600C19AC0 /* XYZMainViewController.m */,
 				B806B744189BD14600C19AC0 /* XYZViewController.h */,
@@ -267,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
+				B8AB0646189C14BD00E81E4F /* XYZTopViewController.m in Sources */,
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
@@ -479,6 +491,7 @@
 				B806B760189BD14600C19AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B806B761189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "ListMe2Tests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +500,7 @@
 				B806B763189BD14600C19AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
