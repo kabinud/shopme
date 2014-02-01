@@ -1,21 +1,18 @@
 //
-//  XYZMainViewController.m
+//  XYZTopViewController.m
 //  ListMe2
 //
-//  Created by Marcin Kmieć on 31.01.2014.
+//  Created by Marcin Kmieć on 01.02.2014.
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
-#define SLIDE_TIMING .95
+#import "XYZTopViewController.h"
 
-#import "XYZMainViewController.h"
+@interface XYZTopViewController ()
 
-
-@interface XYZMainViewController ()
 @end
 
-@implementation XYZMainViewController
-
+@implementation XYZTopViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -54,13 +50,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return 20;
+    // Return the number of rows in the section.
+    return 3;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-        return self.tableView.rowHeight;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return tableView.rowHeight/2;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -69,30 +65,13 @@
     return headerView;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
-    static NSString *CellIdentifier = @"Header";
-    UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    return headerView.frame.size.height;
-}
-
-
-- (IBAction)menuButtonAction:(id)sender {
-
-    self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
-    [self.delegate bringTopPanel];
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
- 
     static NSString *CellIdentifier = @"Cell";
-    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
- 
-    [cell.contentView.layer setBorderColor:[UIColor redColor].CGColor];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.textLabel.text = @"Some text";
+    
     return cell;
 }
 

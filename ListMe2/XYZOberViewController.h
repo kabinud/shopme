@@ -11,6 +11,7 @@
 @protocol OberViewControllerDelegate <NSObject>
 
 - (void)bringTopPanel;
+- (BOOL)isTopPanelOn;
 
 @end
 
