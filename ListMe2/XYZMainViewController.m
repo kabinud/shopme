@@ -66,6 +66,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     static NSString *CellIdentifier = @"Header";
     UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    headerView.backgroundColor = [UIColor whiteColor];
     return headerView;
 }
 

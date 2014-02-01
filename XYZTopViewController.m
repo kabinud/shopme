@@ -14,6 +14,8 @@
 
 @implementation XYZTopViewController
 
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -59,6 +61,11 @@
     return tableView.rowHeight/2;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return tableView.rowHeight;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     static NSString *CellIdentifier = @"Header";
     UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -67,11 +74,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier;
+    
+    if(indexPath.row == 0){
+        CellIdentifier = @"RemoveButton";
+    }
+    else if(indexPath.row == 1){
+        CellIdentifier = @"OrganizeButton";
+    }
+    else if(indexPath.row == 2){
+        CellIdentifier = @"FinishShoppingButton";
+    }
+    
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"Some text";
-    
+
     return cell;
 }
 
