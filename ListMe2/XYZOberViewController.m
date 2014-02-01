@@ -31,21 +31,22 @@
     return self;
 }
 
+- (void)loadMainView{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    self.mainViewController = (XYZMainViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"mainViewId"];
+    self.mainViewController.delegate = self;
+    
+    [self.view addSubview:self.mainViewController.view];
+    [self addChildViewController:_mainViewController];
+    [_mainViewController didMoveToParentViewController:self];
+}
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    
-    self.mainViewController = (XYZMainViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"mainViewId"];
-    self.mainViewController.delegate = self;
-    
-    self.topViewController = (XYZTopViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topViewId"];
-    
-    [self.view addSubview:self.mainViewController.view];
-    [self addChildViewController:_mainViewController];
-    
-    [_mainViewController didMoveToParentViewController:self];
+    [self loadMainView];
 }
 
 
@@ -53,18 +54,15 @@
 {
   
     
-    
-    [self.view addSubview:self.topViewController.view];
-    
-    [self addChildViewController:_topViewController];
-    [_topViewController didMoveToParentViewController:self];
-    
-    _topViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    
-  //  self.showingLeftPanel = YES;
-    
-    // set up view shadows
-   // [self showCenterViewWithShadow:YES withOffset:-2];
+    if(_topViewController == nil){
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        self.topViewController = (XYZTopViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topViewId"];
+        [self addChildViewController:_topViewController];
+        [self.view addSubview:self.topViewController.view];
+        [_topViewController didMoveToParentViewController:self];
+        _topViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }
+    self.showingTopPanel = YES;
     
     UIView *view = self.topViewController.view;
     return view;
@@ -73,6 +71,7 @@
 - (void)bringTopPanel{
     
     if(self.showingTopPanel){
+        
         [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
                              _mainViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -83,6 +82,10 @@
                                  [self.topViewController.view removeFromSuperview];
                              }
                          }];
+        self.showingTopPanel = NO;
+        
+        [self.topViewController.view removeFromSuperview];
+        self.topViewController = nil;
         self.showingTopPanel = NO;
     }
     
