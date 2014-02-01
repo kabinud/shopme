@@ -25,6 +25,8 @@
 		B806B75B189BD14600C19AC0 /* ListMe2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B75A189BD14600C19AC0 /* ListMe2Tests.m */; };
 		B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B765189BD1A600C19AC0 /* XYZMainViewController.m */; };
 		B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8094175189D9E6400FE81EB /* XYZEditViewController.m */; };
+		B8094179189DAE5700FE81EB /* crateM1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094177189DAE5700FE81EB /* crateM1.png */; };
+		B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094178189DAE5700FE81EB /* crateM1@2x.png */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
@@ -71,6 +73,8 @@
 		B806B765189BD1A600C19AC0 /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
 		B8094174189D9E6400FE81EB /* XYZEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZEditViewController.h; sourceTree = "<group>"; };
 		B8094175189D9E6400FE81EB /* XYZEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZEditViewController.m; sourceTree = "<group>"; };
+		B8094177189DAE5700FE81EB /* crateM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM1.png; path = ListMe2/Icons/crateM1.png; sourceTree = "<group>"; };
+		B8094178189DAE5700FE81EB /* crateM1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM1@2x.png"; path = "ListMe2/Icons/crateM1@2x.png"; sourceTree = "<group>"; };
 		B87FC119189D859400AF60FD /* bin222M.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bin222M.png; path = ListMe2/Icons/bin222M.png; sourceTree = "<group>"; };
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		B806B767189BDF6400C19AC0 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B8094177189DAE5700FE81EB /* crateM1.png */,
+				B8094178189DAE5700FE81EB /* crateM1@2x.png */,
 				B87FC121189D8ACF00AF60FD /* crateM.png */,
 				B87FC122189D8ACF00AF60FD /* crateM@2x.png */,
 				B87FC119189D859400AF60FD /* bin222M.png */,
@@ -284,10 +290,12 @@
 				B87FC11D189D859400AF60FD /* bin222M.png in Resources */,
 				B87FC123189D8ACF00AF60FD /* crateM.png in Resources */,
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
+				B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */,
 				B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */,
 				B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */,
 				B806B743189BD14600C19AC0 /* Main.storyboard in Resources */,
 				B87FC120189D859400AF60FD /* folder22@2x.png in Resources */,
+				B8094179189DAE5700FE81EB /* crateM1.png in Resources */,
 				B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */,
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,

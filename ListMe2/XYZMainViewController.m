@@ -28,7 +28,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
  
-    if(scrollView.contentOffset.y<-2230){
+    if(scrollView.contentOffset.y<-100){
         NSLog(@"%f", scrollView.contentOffset.y);
         [self performSegueWithIdentifier: @"EditSegue"
                                   sender: self];

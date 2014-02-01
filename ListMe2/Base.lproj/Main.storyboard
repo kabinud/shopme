@@ -24,7 +24,7 @@
                                             <rect key="frame" x="253" y="0.0" width="90" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <state key="normal" image="crateM.png">
+                                            <state key="normal" image="crateM1.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -306,7 +306,7 @@
     </scenes>
     <resources>
         <image name="bin222M.png" width="22" height="22"/>
-        <image name="crateM.png" width="44" height="44"/>
+        <image name="crateM1.png" width="44" height="44"/>
         <image name="finishFlag22.png" width="22" height="22"/>
         <image name="folder22.png" width="22" height="22"/>
     </resources>
