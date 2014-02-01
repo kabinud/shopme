@@ -24,6 +24,7 @@
 		B806B759189BD14600C19AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B806B757189BD14600C19AC0 /* InfoPlist.strings */; };
 		B806B75B189BD14600C19AC0 /* ListMe2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B75A189BD14600C19AC0 /* ListMe2Tests.m */; };
 		B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B765189BD1A600C19AC0 /* XYZMainViewController.m */; };
+		B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8094175189D9E6400FE81EB /* XYZEditViewController.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
@@ -68,6 +69,8 @@
 		B806B75A189BD14600C19AC0 /* ListMe2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListMe2Tests.m; sourceTree = "<group>"; };
 		B806B764189BD1A600C19AC0 /* XYZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
 		B806B765189BD1A600C19AC0 /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
+		B8094174189D9E6400FE81EB /* XYZEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZEditViewController.h; sourceTree = "<group>"; };
+		B8094175189D9E6400FE81EB /* XYZEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZEditViewController.m; sourceTree = "<group>"; };
 		B87FC119189D859400AF60FD /* bin222M.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bin222M.png; path = ListMe2/Icons/bin222M.png; sourceTree = "<group>"; };
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B806B741189BD14600C19AC0 /* Main.storyboard */,
+				B8094174189D9E6400FE81EB /* XYZEditViewController.h */,
+				B8094175189D9E6400FE81EB /* XYZEditViewController.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
 				B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */,
 				B806B764189BD1A600C19AC0 /* XYZMainViewController.h */,
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
+				B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */,
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
 				B8AB064C189D245C00E81E4F /* XYZTopViewController.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,

@@ -1,49 +1,42 @@
 //
-//  XYZMainViewController.m
+//  XYZEditViewController.m
 //  ListMe2
 //
-//  Created by Marcin Kmieć on 31.01.2014.
+//  Created by Marcin Kmieć on 01.02.2014.
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
-#define SLIDE_TIMING .95
+#import "XYZEditViewController.h"
 
-#import "XYZMainViewController.h"
+@interface XYZEditViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *editField;
 
-@interface XYZMainViewController ()
 @end
 
-@implementation XYZMainViewController
-
+@implementation XYZEditViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"item 1" style:UIBarButtonItemStylePlain target:nil action:nil];
+        UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithTitle:@"item 2" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.navigationController setToolbarHidden:NO animated:YES];
+        // WRONG: [nav setToolbarItems:[NSArray arrayWithObjects:addButton, nil]];
+        // CORRECT (for ipad apps):
+        [self.navigationController setToolbarItems:[NSArray arrayWithObjects:item1, item2, nil] animated:NO];
     }
     return self;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
- 
-    if(scrollView.contentOffset.y<-2230){
-        NSLog(@"%f", scrollView.contentOffset.y);
-        [self performSegueWithIdentifier: @"EditSegue"
-                                  sender: self];
-        
-    }
-    
-}
--(IBAction)returned:(UIStoryboardSegue *)segue {
-   NSLog(@"I'm back");
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   // self.navigationController.toolbarHidden = NO;
+ 
+    [self.editField becomeFirstResponder];
+    
+
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -63,6 +56,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+
     // Return the number of sections.
     return 1;
 }
@@ -70,46 +64,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 5;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-        return self.tableView.rowHeight;
-}
-
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    static NSString *CellIdentifier = @"Header";
-    UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    headerView.backgroundColor = [UIColor whiteColor];
-    return headerView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
-    static NSString *CellIdentifier = @"Header";
-    UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    return headerView.frame.size.height;
-}
-
-
-- (IBAction)menuButtonAction:(id)sender {
-
-    self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
-    [self.delegate bringTopPanel];
+    // Return the number of rows in the section.
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
- 
     static NSString *CellIdentifier = @"Cell";
-    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
- 
-    [cell.contentView.layer setBorderColor:[UIColor redColor].CGColor];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
 }
 
