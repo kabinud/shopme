@@ -21,19 +21,23 @@
 
 }
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
+  
+ 
     return self;
 }
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  //  [self.editField becomeFirstResponder];
+
+    if(self.editFieldAutoResponderAllowed){
+        [self.editField becomeFirstResponder];
+    }
     
 
     // Uncomment the following line to preserve selection between presentations.

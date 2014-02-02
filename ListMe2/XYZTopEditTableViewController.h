@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface XYZTopEditTableViewController : UITableViewController
-
+@property BOOL editFieldAutoResponderAllowed;
 @end
