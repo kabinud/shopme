@@ -62,7 +62,7 @@
     [super viewDidLoad];
     [self loadMainView];
     //removes toolbar border
-    self.navigationController.toolbar.clipsToBounds = YES;
+     self.navigationController.toolbar.clipsToBounds = YES;
    
 }
 

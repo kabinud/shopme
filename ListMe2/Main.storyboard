@@ -79,8 +79,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lZC-tC-raW"/>
-                        <barButtonItem image="info.png" id="pu3-hf-lhb">
+                        <barButtonItem image="info2.png" style="plain" id="pu3-hf-lhb">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="gps-CI-qHV" kind="modal" modalTransitionStyle="flipHorizontal" id="vDw-9a-lOd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vZF-At-1yi"/>
+                        <barButtonItem image="folder22-wide.png" id="p0E-Ac-ybJ">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -181,7 +187,7 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrganizeButton" id="8AI-9r-cyp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmailButton" id="8AI-9r-cyp">
                                 <rect key="frame" x="0.0" y="79" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8AI-9r-cyp" id="9lb-le-Pze">
@@ -189,14 +195,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-gQ-Dd8">
-                                            <rect key="frame" x="-57" y="16" width="336" height="23"/>
+                                            <rect key="frame" x="-35" y="16" width="336" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                            <state key="normal" title="    ORGANIZE LIST" image="folder22.png">
+                                            <state key="normal" title="    SEND LIST BY EMAIL" image="email.png">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted" title="    ORGANIZE LIST">
+                                            <state key="highlighted">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -255,6 +261,37 @@
             </objects>
             <point key="canvasLocation" x="-7" y="359"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="Mig-b1-Fml">
+            <objects>
+                <viewController id="gps-CI-qHV" customClass="XYZInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RKd-Rv-OrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qeq-Hf-OrT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHl-Xz-hyA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3F-T9-thY">
+                                <rect key="frame" x="-7" y="0.0" width="88" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="backButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CQ9-fe-eK3" kind="modal" modalTransitionStyle="flipHorizontal" id="k8T-Ih-Gob"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18J-p5-3X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="335"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FNS-yU-kBF">
             <objects>
@@ -298,11 +335,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton.png" width="44" height="44"/>
         <image name="bin222M.png" width="22" height="22"/>
         <image name="crateM1.png" width="44" height="44"/>
+        <image name="email.png" width="24" height="18"/>
         <image name="finishFlag22.png" width="22" height="22"/>
-        <image name="folder22.png" width="22" height="22"/>
-        <image name="info.png" width="22" height="22"/>
+        <image name="folder22-wide.png" width="44" height="22"/>
+        <image name="info2.png" width="44" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

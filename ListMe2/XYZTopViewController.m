@@ -86,7 +86,7 @@
         CellIdentifier = @"RemoveButton";
     }
     else if(indexPath.row == 1){
-        CellIdentifier = @"OrganizeButton";
+        CellIdentifier = @"EmailButton";
     }
     else if(indexPath.row == 2){
         CellIdentifier = @"FinishShoppingButton";
