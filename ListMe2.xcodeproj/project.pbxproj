@@ -34,8 +34,8 @@
 		B895D270189E7EC400BAF7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B895D26F189E7EC400BAF7FB /* Main.storyboard */; };
 		B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */; };
 		B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */; };
+		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
-		B8AB064C189D245C00E81E4F /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB064B189D245C00E81E4F /* XYZTopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,10 +84,10 @@
 		B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditNavigationController.m; sourceTree = "<group>"; };
 		B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditTableViewController.h; sourceTree = "<group>"; };
 		B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditTableViewController.m; sourceTree = "<group>"; };
+		B895D27A189E919D00BAF7FB /* XYZTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopViewController.h; sourceTree = "<group>"; };
+		B895D27B189E919D00BAF7FB /* XYZTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopViewController.m; sourceTree = "<group>"; };
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
-		B8AB064A189D245C00E81E4F /* XYZTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZTopViewController.h; path = ../XYZTopViewController.h; sourceTree = "<group>"; };
-		B8AB064B189D245C00E81E4F /* XYZTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZTopViewController.m; path = ../XYZTopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,13 +148,13 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B895D27A189E919D00BAF7FB /* XYZTopViewController.h */,
+				B895D27B189E919D00BAF7FB /* XYZTopViewController.m */,
 				B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */,
 				B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */,
 				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
 				B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */,
 				B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */,
-				B8AB064A189D245C00E81E4F /* XYZTopViewController.h */,
-				B8AB064B189D245C00E81E4F /* XYZTopViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
@@ -325,11 +325,11 @@
 			files = (
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
-				B8AB064C189D245C00E81E4F /* XYZTopViewController.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
+				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,8 @@
 @property XYZTopViewController *topViewController;
 @property XYZTopEditNavigationController *topEditNavigationController;
 @property BOOL showingTopPanel;
-@property BOOL showingTopEditPanel;
+@property BOOL movingTopEditPanel;
+
 
 @end
 
@@ -32,7 +33,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.showingTopPanel = NO;
-        self.showingTopEditPanel = NO;
+        self.movingTopEditPanel = NO;
+       
     }
     return self;
 }
@@ -84,7 +86,7 @@
 
 
 - (void)closeTopEditPanel{
-    if(self.showingTopEditPanel == NO){
+   
     [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                       
@@ -94,11 +96,9 @@
                          if (finished) {
                                 [self.topEditNavigationController.view removeFromSuperview];
                              self.topEditNavigationController = nil;
-                             self.showingTopEditPanel = NO;
-                     
                          }
                      }];
-    }
+
    
     
     
@@ -122,7 +122,7 @@
 - (void)bringTopEditPanelToAnExtend: (int)topY{
     
 
-    if(_mainViewController.view.frame.origin.y<66 ){
+    if(_mainViewController.view.frame.origin.y<44){
         UITableView *childView = [self getTopEditView];
         [self.view sendSubviewToBack:childView];
         [UIView animateWithDuration:0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState
@@ -134,11 +134,33 @@
                               
                              }
                          }];
-        self.showingTopEditPanel = NO;
     }
     else{
-        [self performSegueWithIdentifier: @"EditSegue" sender: self];
-           [self closeTopEditPanel];
+        if(self.movingTopEditPanel==NO){
+            self.movingTopEditPanel = YES;
+        NSLog(@"Moving");
+        UITableView *childView = [self getTopEditView];
+        [self.view sendSubviewToBack:childView];
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             _mainViewController.view.frame = CGRectMake(0, 300, self.view.frame.size.width, self.view.frame.size.height);
+                         }
+                         completion:^(BOOL finished) {
+                             if (finished ) {
+                                 self.movingTopEditPanel = NO;
+                                 _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
+                                 
+                               [self performSegueWithIdentifier: @"EditSegue" sender: self];
+                               [self.topEditNavigationController.view removeFromSuperview];
+                               self.topEditNavigationController = nil;
+                             }
+                         }];
+        
+        
+        
+        
+
+        }
     }
     
     

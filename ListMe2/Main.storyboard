@@ -133,6 +133,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editField" destination="IOq-Cf-X2v" id="bsO-4i-XAI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIr-kv-zdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

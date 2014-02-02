@@ -49,6 +49,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if(scrollView.contentOffset.y<0){
+        NSLog(@"scroll");
         [self.delegate bringTopEditPanelToAnExtend:(-1)*scrollView.contentOffset.y];
     }
 
