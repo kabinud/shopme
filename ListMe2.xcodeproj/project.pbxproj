@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B8006964189D8207001F03BD /* finishFlag22.png in Resources */ = {isa = PBXBuildFile; fileRef = B8006962189D8207001F03BD /* finishFlag22.png */; };
 		B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8006963189D8207001F03BD /* finishFlag22@2x.png */; };
+		B802CC54189EB131006D607C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC52189EB131006D607C /* info.png */; };
+		B802CC55189EB131006D607C /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC53189EB131006D607C /* info@2x.png */; };
 		B806B730189BD14600C19AC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B72F189BD14600C19AC0 /* Foundation.framework */; };
 		B806B732189BD14600C19AC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B731189BD14600C19AC0 /* CoreGraphics.framework */; };
 		B806B734189BD14600C19AC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B733189BD14600C19AC0 /* UIKit.framework */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		B8006962189D8207001F03BD /* finishFlag22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finishFlag22.png; path = ListMe2/Icons/finishFlag22.png; sourceTree = "<group>"; };
 		B8006963189D8207001F03BD /* finishFlag22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "finishFlag22@2x.png"; path = "ListMe2/Icons/finishFlag22@2x.png"; sourceTree = "<group>"; };
+		B802CC52189EB131006D607C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ListMe2/Icons/info.png; sourceTree = "<group>"; };
+		B802CC53189EB131006D607C /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "ListMe2/Icons/info@2x.png"; sourceTree = "<group>"; };
 		B806B72C189BD14600C19AC0 /* ListMe2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListMe2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806B72F189BD14600C19AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B806B731189BD14600C19AC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -201,6 +205,8 @@
 		B806B767189BDF6400C19AC0 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B802CC52189EB131006D607C /* info.png */,
+				B802CC53189EB131006D607C /* info@2x.png */,
 				B8094177189DAE5700FE81EB /* crateM1.png */,
 				B8094178189DAE5700FE81EB /* crateM1@2x.png */,
 				B87FC121189D8ACF00AF60FD /* crateM.png */,
@@ -293,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B87FC11D189D859400AF60FD /* bin222M.png in Resources */,
+				B802CC54189EB131006D607C /* info.png in Resources */,
 				B87FC123189D8ACF00AF60FD /* crateM.png in Resources */,
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
 				B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */,
@@ -303,6 +310,7 @@
 				B8094179189DAE5700FE81EB /* crateM1.png in Resources */,
 				B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */,
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
+				B802CC55189EB131006D607C /* info@2x.png in Resources */,
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,
 				B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */,
 			);
@@ -452,6 +460,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListMe2/ListMe2-Prefix.pch";
 				INFOPLIST_FILE = "ListMe2/ListMe2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -465,6 +474,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListMe2/ListMe2-Prefix.pch";
 				INFOPLIST_FILE = "ListMe2/ListMe2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
