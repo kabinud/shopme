@@ -1,20 +1,18 @@
 //
-//  XYZTopEditViewController.m
+//  XYZTopEditNavigationController.m
 //  ListMe2
 //
-//  Created by Marcin Kmieć on 01.02.2014.
+//  Created by Marcin Kmieć on 02.02.2014.
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
-#import "XYZTopEditViewController.h"
-#import "XYZOberViewController.h"
+#import "XYZTopEditNavigationController.h"
 
-@interface XYZTopEditViewController ()
-
+@interface XYZTopEditNavigationController ()
 
 @end
 
-@implementation XYZTopEditViewController
+@implementation XYZTopEditNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,13 +21,6 @@
         // Custom initialization
     }
     return self;
-}
-- (IBAction)segue2back:(id)sender {
-    
-
-    [self dismissViewControllerAnimated:NO completion:^{
-     
-    }];
 }
 
 - (void)viewDidLoad

@@ -9,7 +9,7 @@
 #import "XYZOberViewController.h"
 #import "XYZMainViewController.h"
 #import "XYZTopViewController.h"
-#import "XYZTopEditViewController.h"
+#import "XYZTopEditNavigationController.h"
 
 #define SLIDE_TIMING .45
 
@@ -17,7 +17,7 @@
 
 @property XYZMainViewController *mainViewController;
 @property XYZTopViewController *topViewController;
-@property XYZTopEditViewController *topEditViewController;
+@property XYZTopEditNavigationController *topEditNavigationController;
 @property BOOL showingTopPanel;
 @property BOOL showingTopEditPanel;
 
@@ -92,8 +92,8 @@
                      }
                      completion:^(BOOL finished) {
                          if (finished) {
-                                [self.topEditViewController.view removeFromSuperview];
-                             self.topEditViewController = nil;
+                                [self.topEditNavigationController.view removeFromSuperview];
+                             self.topEditNavigationController = nil;
                              self.showingTopEditPanel = NO;
                      
                          }
@@ -106,16 +106,16 @@
 
 - (UITableView *)getTopEditView
 {
-    if(_topEditViewController == nil){
+    if(_topEditNavigationController == nil){
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-        self.topEditViewController = (XYZTopEditViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topEditViewId"];
-        [self addChildViewController:_topEditViewController];
-        [self.view addSubview:self.topEditViewController.view];
-        [_topEditViewController didMoveToParentViewController:self];
-        _topEditViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        self.topEditNavigationController = (XYZTopEditNavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topEditViewId"];
+        [self addChildViewController:_topEditNavigationController];
+        [self.view addSubview:self.topEditNavigationController.view];
+        [_topEditNavigationController didMoveToParentViewController:self];
+        _topEditNavigationController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     }
     
-    UITableView *view = (UITableView *)self.topEditViewController.view;
+    UITableView *view = (UITableView *)self.topEditNavigationController.view;
     return view;
 }
 
