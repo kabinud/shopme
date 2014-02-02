@@ -27,6 +27,7 @@
 		B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8094175189D9E6400FE81EB /* XYZEditViewController.m */; };
 		B8094179189DAE5700FE81EB /* crateM1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094177189DAE5700FE81EB /* crateM1.png */; };
 		B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094178189DAE5700FE81EB /* crateM1@2x.png */; };
+		B809417D189DB1F500FE81EB /* XYZTopEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B809417C189DB1F500FE81EB /* XYZTopEditViewController.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
@@ -75,6 +76,8 @@
 		B8094175189D9E6400FE81EB /* XYZEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZEditViewController.m; sourceTree = "<group>"; };
 		B8094177189DAE5700FE81EB /* crateM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM1.png; path = ListMe2/Icons/crateM1.png; sourceTree = "<group>"; };
 		B8094178189DAE5700FE81EB /* crateM1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM1@2x.png"; path = "ListMe2/Icons/crateM1@2x.png"; sourceTree = "<group>"; };
+		B809417B189DB1F500FE81EB /* XYZTopEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditViewController.h; sourceTree = "<group>"; };
+		B809417C189DB1F500FE81EB /* XYZTopEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditViewController.m; sourceTree = "<group>"; };
 		B87FC119189D859400AF60FD /* bin222M.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bin222M.png; path = ListMe2/Icons/bin222M.png; sourceTree = "<group>"; };
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B806B741189BD14600C19AC0 /* Main.storyboard */,
+				B809417B189DB1F500FE81EB /* XYZTopEditViewController.h */,
+				B809417C189DB1F500FE81EB /* XYZTopEditViewController.m */,
 				B8094174189D9E6400FE81EB /* XYZEditViewController.h */,
 				B8094175189D9E6400FE81EB /* XYZEditViewController.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
@@ -318,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B809417D189DB1F500FE81EB /* XYZTopEditViewController.m in Sources */,
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
 				B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */,
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,

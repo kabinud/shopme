@@ -11,7 +11,8 @@
 @protocol OberViewControllerDelegate <NSObject>
 
 - (void)bringTopPanel;
-- (BOOL)isTopPanelOn;
+- (void)bringTopEditPanelToAnExtend: (int)topY;
+- (void)closeTopEditPanel;
 
 @end
 

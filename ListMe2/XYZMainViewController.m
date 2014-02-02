@@ -12,9 +12,30 @@
 
 
 @interface XYZMainViewController ()
+
 @end
 
 @implementation XYZMainViewController
+
+//call (void)stoppedScrolling when user lifts their finger
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self stoppedScrolling];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        [self stoppedScrolling];
+    }
+}
+
+- (void)stoppedScrolling
+{
+    [self.delegate closeTopEditPanel];
+}
+////////////
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -27,15 +48,10 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
- 
-    if(scrollView.contentOffset.y<-100){
-        NSLog(@"%f", scrollView.contentOffset.y);
-        [self performSegueWithIdentifier: @"EditSegue"
-                                  sender: self];
-        
-    }
-    
+        [self.delegate bringTopEditPanelToAnExtend:(-1)*scrollView.contentOffset.y];
 }
+
+
 -(IBAction)returned:(UIStoryboardSegue *)segue {
    NSLog(@"I'm back");
 }
@@ -70,7 +86,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 5;
+    return 25;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

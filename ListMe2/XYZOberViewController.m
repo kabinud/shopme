@@ -9,6 +9,7 @@
 #import "XYZOberViewController.h"
 #import "XYZMainViewController.h"
 #import "XYZTopViewController.h"
+#import "XYZTopEditViewController.h"
 
 #define SLIDE_TIMING .45
 
@@ -16,21 +17,22 @@
 
 @property XYZMainViewController *mainViewController;
 @property XYZTopViewController *topViewController;
+@property XYZTopEditViewController *topEditViewController;
 @property BOOL showingTopPanel;
+@property BOOL showingTopEditPanel;
 
 @end
 
 @implementation XYZOberViewController
 
-- (BOOL)isTopPanelOn{
-    return self.showingTopPanel;
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.showingTopPanel = NO;
+        self.showingTopEditPanel = NO;
     }
     return self;
 }
@@ -80,6 +82,67 @@
 
 
 
+
+- (void)closeTopEditPanel{
+    [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                      
+                         _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
+                     }
+                     completion:^(BOOL finished) {
+                         if (finished) {
+                                [self.topEditViewController.view removeFromSuperview];
+                             self.topEditViewController = nil;
+                             self.showingTopEditPanel = NO;
+                     
+                         }
+                     }];
+    
+   
+    
+    
+}
+
+- (UITableView *)getTopEditView
+{
+    if(_topEditViewController == nil){
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        self.topEditViewController = (XYZTopEditViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topEditViewId"];
+        [self addChildViewController:_topEditViewController];
+        [self.view addSubview:self.topEditViewController.view];
+        [_topEditViewController didMoveToParentViewController:self];
+        _topEditViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }
+    self.showingTopEditPanel = YES;
+    
+    UITableView *view = (UITableView *)self.topEditViewController.view;
+    return view;
+}
+
+- (void)bringTopEditPanelToAnExtend: (int)topY{
+    
+
+    if(_mainViewController.view.frame.origin.y<100 ){
+        UITableView *childView = [self getTopEditView];
+        [self.view sendSubviewToBack:childView];
+        [UIView animateWithDuration:0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             _mainViewController.view.frame = CGRectMake(0, topY + _mainViewController.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+                         }
+                         completion:^(BOOL finished) {
+                             if (finished ) {
+                              
+                             }
+                         }];
+        self.showingTopEditPanel = YES;
+    }
+    
+    
+    
+    
+    //}
+}
+
 - (void)bringTopPanel{
     
     if(self.showingTopPanel){
@@ -91,13 +154,14 @@
                          completion:^(BOOL finished) {
                              if (finished) {
                                  
+                                 NSLog(@"Done");
                                  [self.topViewController.view removeFromSuperview];
-                            
+                                 self.topViewController = nil;
+                                 self.showingTopPanel = NO;
                              }
                          }];
     
-        self.topViewController = nil;
-        self.showingTopPanel = NO;
+        
     }
     
     else{

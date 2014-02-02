@@ -12,6 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" rowHeight="44" id="7gD-63-wTe">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -151,6 +152,24 @@
                 </toolbar>
             </objects>
             <point key="canvasLocation" x="512" y="-381"/>
+        </scene>
+        <!--Top Edit View Controller-->
+        <scene sceneID="6fc-aN-pfn">
+            <objects>
+                <viewController storyboardIdentifier="topEditViewId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eef-kP-7Z5" customClass="XYZTopEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JxH-4P-6xP"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvg-l7-wqN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lPu-eI-wqH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.97078035669999996" blue="0.09382238389" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R39-bO-zmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="289"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="ybw-tn-Szv">
