@@ -22,6 +22,8 @@
 		B802CC68189ED8E8006D607C /* email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC66189ED8E8006D607C /* email@2x.png */; };
 		B802CC6B189EE19A006D607C /* folder22-wide.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC69189EE19A006D607C /* folder22-wide.png */; };
 		B802CC6C189EE19A006D607C /* folder22-wide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC6A189EE19A006D607C /* folder22-wide@2x.png */; };
+		B802CC73189EEC91006D607C /* compose.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC71189EEC91006D607C /* compose.png */; };
+		B802CC74189EEC91006D607C /* compose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC72189EEC91006D607C /* compose@2x.png */; };
 		B806B730189BD14600C19AC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B72F189BD14600C19AC0 /* Foundation.framework */; };
 		B806B732189BD14600C19AC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B731189BD14600C19AC0 /* CoreGraphics.framework */; };
 		B806B734189BD14600C19AC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B733189BD14600C19AC0 /* UIKit.framework */; };
@@ -76,8 +78,10 @@
 		B802CC62189ED285006D607C /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButton@2x.png"; path = "ListMe2/Icons/backButton@2x.png"; sourceTree = "<group>"; };
 		B802CC65189ED8E8006D607C /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = ListMe2/Icons/email.png; sourceTree = "<group>"; };
 		B802CC66189ED8E8006D607C /* email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "email@2x.png"; path = "ListMe2/Icons/email@2x.png"; sourceTree = "<group>"; };
-		B802CC69189EE19A006D607C /* folder22-wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22-wide.png"; path = "Icons/folder22-wide.png"; sourceTree = "<group>"; };
-		B802CC6A189EE19A006D607C /* folder22-wide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22-wide@2x.png"; path = "Icons/folder22-wide@2x.png"; sourceTree = "<group>"; };
+		B802CC69189EE19A006D607C /* folder22-wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22-wide.png"; path = "ListMe2/Icons/folder22-wide.png"; sourceTree = "<group>"; };
+		B802CC6A189EE19A006D607C /* folder22-wide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22-wide@2x.png"; path = "ListMe2/Icons/folder22-wide@2x.png"; sourceTree = "<group>"; };
+		B802CC71189EEC91006D607C /* compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compose.png; path = ListMe2/Icons/compose.png; sourceTree = "<group>"; };
+		B802CC72189EEC91006D607C /* compose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "compose@2x.png"; path = "ListMe2/Icons/compose@2x.png"; sourceTree = "<group>"; };
 		B806B72C189BD14600C19AC0 /* ListMe2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListMe2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806B72F189BD14600C19AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B806B731189BD14600C19AC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -182,8 +186,6 @@
 				B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */,
 				B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */,
 				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
-				B802CC69189EE19A006D607C /* folder22-wide.png */,
-				B802CC6A189EE19A006D607C /* folder22-wide@2x.png */,
 				B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */,
 				B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
@@ -232,6 +234,8 @@
 		B806B767189BDF6400C19AC0 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B802CC71189EEC91006D607C /* compose.png */,
+				B802CC72189EEC91006D607C /* compose@2x.png */,
 				B802CC65189ED8E8006D607C /* email.png */,
 				B802CC66189ED8E8006D607C /* email@2x.png */,
 				B802CC61189ED285006D607C /* backButton.png */,
@@ -250,6 +254,8 @@
 				B87FC11A189D859400AF60FD /* bin222M@2x.png */,
 				B87FC11B189D859400AF60FD /* folder22.png */,
 				B87FC11C189D859400AF60FD /* folder22@2x.png */,
+				B802CC69189EE19A006D607C /* folder22-wide.png */,
+				B802CC6A189EE19A006D607C /* folder22-wide@2x.png */,
 				B8006963189D8207001F03BD /* finishFlag22@2x.png */,
 				B8006962189D8207001F03BD /* finishFlag22.png */,
 			);
@@ -339,6 +345,7 @@
 				B802CC64189ED285006D607C /* backButton@2x.png in Resources */,
 				B802CC54189EB131006D607C /* info.png in Resources */,
 				B802CC63189ED285006D607C /* backButton.png in Resources */,
+				B802CC73189EEC91006D607C /* compose.png in Resources */,
 				B802CC5B189EC47D006D607C /* xbutton.png in Resources */,
 				B802CC68189ED8E8006D607C /* email@2x.png in Resources */,
 				B802CC60189ECEFA006D607C /* info2@2x.png in Resources */,
@@ -354,6 +361,7 @@
 				B895D270189E7EC400BAF7FB /* Main.storyboard in Resources */,
 				B8094179189DAE5700FE81EB /* crateM1.png in Resources */,
 				B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */,
+				B802CC74189EEC91006D607C /* compose@2x.png in Resources */,
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
 				B802CC55189EB131006D607C /* info@2x.png in Resources */,
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,
