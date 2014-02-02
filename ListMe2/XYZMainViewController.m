@@ -48,13 +48,14 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView.contentOffset.y<0){
         [self.delegate bringTopEditPanelToAnExtend:(-1)*scrollView.contentOffset.y];
+    }
+
 }
 
 
--(IBAction)returned:(UIStoryboardSegue *)segue {
-   NSLog(@"I'm back");
-}
+
 
 - (void)viewDidLoad
 {

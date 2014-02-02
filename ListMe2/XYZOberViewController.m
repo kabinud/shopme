@@ -84,6 +84,7 @@
 
 
 - (void)closeTopEditPanel{
+    if(self.showingTopEditPanel == NO){
     [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                       
@@ -97,7 +98,7 @@
                      
                          }
                      }];
-    
+    }
    
     
     
@@ -113,7 +114,6 @@
         [_topEditViewController didMoveToParentViewController:self];
         _topEditViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     }
-    self.showingTopEditPanel = YES;
     
     UITableView *view = (UITableView *)self.topEditViewController.view;
     return view;
@@ -122,7 +122,7 @@
 - (void)bringTopEditPanelToAnExtend: (int)topY{
     
 
-    if(_mainViewController.view.frame.origin.y<100 ){
+    if(_mainViewController.view.frame.origin.y<66 ){
         UITableView *childView = [self getTopEditView];
         [self.view sendSubviewToBack:childView];
         [UIView animateWithDuration:0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState
@@ -134,13 +134,18 @@
                               
                              }
                          }];
-        self.showingTopEditPanel = YES;
+        self.showingTopEditPanel = NO;
+    }
+    else{
+        [self performSegueWithIdentifier: @"EditSegue" sender: self];
+           [self closeTopEditPanel];
     }
     
     
-    
-    
-    //}
+}
+
+-(IBAction)returned1:(UIStoryboardSegue *)segue animated:(BOOL)animated{
+    [self closeTopEditPanel];
 }
 
 - (void)bringTopPanel{

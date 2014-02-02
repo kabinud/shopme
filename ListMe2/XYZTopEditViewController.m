@@ -7,6 +7,7 @@
 //
 
 #import "XYZTopEditViewController.h"
+#import "XYZOberViewController.h"
 
 @interface XYZTopEditViewController ()
 
@@ -22,6 +23,13 @@
         // Custom initialization
     }
     return self;
+}
+- (IBAction)segue2back:(id)sender {
+    
+
+    [self dismissViewControllerAnimated:NO completion:^{
+     
+    }];
 }
 
 - (void)viewDidLoad

@@ -17,5 +17,5 @@
 @end
 
 @interface XYZOberViewController : UIViewController
-
+-(IBAction)returned1:(UIStoryboardSegue *)segue animated:(BOOL)animated;
 @end

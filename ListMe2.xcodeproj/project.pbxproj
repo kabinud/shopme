@@ -15,7 +15,6 @@
 		B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B806B738189BD14600C19AC0 /* InfoPlist.strings */; };
 		B806B73C189BD14600C19AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B73B189BD14600C19AC0 /* main.m */; };
 		B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */; };
-		B806B743189BD14600C19AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B806B741189BD14600C19AC0 /* Main.storyboard */; };
 		B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B745189BD14600C19AC0 /* XYZViewController.m */; };
 		B806B748189BD14600C19AC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B806B747189BD14600C19AC0 /* Images.xcassets */; };
 		B806B74F189BD14600C19AC0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B74E189BD14600C19AC0 /* XCTest.framework */; };
@@ -24,7 +23,6 @@
 		B806B759189BD14600C19AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B806B757189BD14600C19AC0 /* InfoPlist.strings */; };
 		B806B75B189BD14600C19AC0 /* ListMe2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B75A189BD14600C19AC0 /* ListMe2Tests.m */; };
 		B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B765189BD1A600C19AC0 /* XYZMainViewController.m */; };
-		B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8094175189D9E6400FE81EB /* XYZEditViewController.m */; };
 		B8094179189DAE5700FE81EB /* crateM1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094177189DAE5700FE81EB /* crateM1.png */; };
 		B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094178189DAE5700FE81EB /* crateM1@2x.png */; };
 		B809417D189DB1F500FE81EB /* XYZTopEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B809417C189DB1F500FE81EB /* XYZTopEditViewController.m */; };
@@ -34,6 +32,7 @@
 		B87FC120189D859400AF60FD /* folder22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11C189D859400AF60FD /* folder22@2x.png */; };
 		B87FC123189D8ACF00AF60FD /* crateM.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC121189D8ACF00AF60FD /* crateM.png */; };
 		B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC122189D8ACF00AF60FD /* crateM@2x.png */; };
+		B895D270189E7EC400BAF7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B895D26F189E7EC400BAF7FB /* Main.storyboard */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8AB064C189D245C00E81E4F /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB064B189D245C00E81E4F /* XYZTopViewController.m */; };
 /* End PBXBuildFile section */
@@ -61,7 +60,6 @@
 		B806B73D189BD14600C19AC0 /* ListMe2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListMe2-Prefix.pch"; sourceTree = "<group>"; };
 		B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
 		B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
-		B806B742189BD14600C19AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B806B744189BD14600C19AC0 /* XYZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZViewController.h; sourceTree = "<group>"; };
 		B806B745189BD14600C19AC0 /* XYZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZViewController.m; sourceTree = "<group>"; };
 		B806B747189BD14600C19AC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -72,8 +70,6 @@
 		B806B75A189BD14600C19AC0 /* ListMe2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListMe2Tests.m; sourceTree = "<group>"; };
 		B806B764189BD1A600C19AC0 /* XYZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
 		B806B765189BD1A600C19AC0 /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
-		B8094174189D9E6400FE81EB /* XYZEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZEditViewController.h; sourceTree = "<group>"; };
-		B8094175189D9E6400FE81EB /* XYZEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZEditViewController.m; sourceTree = "<group>"; };
 		B8094177189DAE5700FE81EB /* crateM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM1.png; path = ListMe2/Icons/crateM1.png; sourceTree = "<group>"; };
 		B8094178189DAE5700FE81EB /* crateM1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM1@2x.png"; path = "ListMe2/Icons/crateM1@2x.png"; sourceTree = "<group>"; };
 		B809417B189DB1F500FE81EB /* XYZTopEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditViewController.h; sourceTree = "<group>"; };
@@ -84,6 +80,7 @@
 		B87FC11C189D859400AF60FD /* folder22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22@2x.png"; path = "ListMe2/Icons/folder22@2x.png"; sourceTree = "<group>"; };
 		B87FC121189D8ACF00AF60FD /* crateM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM.png; path = ListMe2/Icons/crateM.png; sourceTree = "<group>"; };
 		B87FC122189D8ACF00AF60FD /* crateM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM@2x.png"; path = "ListMe2/Icons/crateM@2x.png"; sourceTree = "<group>"; };
+		B895D26F189E7EC400BAF7FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8AB064A189D245C00E81E4F /* XYZTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZTopViewController.h; path = ../XYZTopViewController.h; sourceTree = "<group>"; };
@@ -148,15 +145,13 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
 				B8AB064A189D245C00E81E4F /* XYZTopViewController.h */,
 				B8AB064B189D245C00E81E4F /* XYZTopViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
-				B806B741189BD14600C19AC0 /* Main.storyboard */,
 				B809417B189DB1F500FE81EB /* XYZTopEditViewController.h */,
 				B809417C189DB1F500FE81EB /* XYZTopEditViewController.m */,
-				B8094174189D9E6400FE81EB /* XYZEditViewController.h */,
-				B8094175189D9E6400FE81EB /* XYZEditViewController.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
 				B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */,
 				B806B764189BD1A600C19AC0 /* XYZMainViewController.h */,
@@ -298,8 +293,8 @@
 				B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */,
 				B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */,
 				B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */,
-				B806B743189BD14600C19AC0 /* Main.storyboard in Resources */,
 				B87FC120189D859400AF60FD /* folder22@2x.png in Resources */,
+				B895D270189E7EC400BAF7FB /* Main.storyboard in Resources */,
 				B8094179189DAE5700FE81EB /* crateM1.png in Resources */,
 				B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */,
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
@@ -325,7 +320,6 @@
 			files = (
 				B809417D189DB1F500FE81EB /* XYZTopEditViewController.m in Sources */,
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
-				B8094176189D9E6400FE81EB /* XYZEditViewController.m in Sources */,
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
 				B8AB064C189D245C00E81E4F /* XYZTopViewController.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
@@ -359,14 +353,6 @@
 				B806B739189BD14600C19AC0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B806B741189BD14600C19AC0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B806B742189BD14600C19AC0 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		B806B757189BD14600C19AC0 /* InfoPlist.strings */ = {
