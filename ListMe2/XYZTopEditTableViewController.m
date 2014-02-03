@@ -130,7 +130,6 @@ XYZTopEditTableViewController
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-  
  
     return self;
 }
@@ -165,13 +164,23 @@ XYZTopEditTableViewController
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.historicalItemsToShow count];
+    if(section == 0 ){
+        if([self.globalContainer.toDoItems count]>0){
+            return 1;
+        }
+        else{
+        return [self.globalContainer.toDoItems count];
+        }
+    }
+    else{
+        return [self.historicalItemsToShow count];
+    }
 }
 
 - (void)checkButtonTapped:(id)sender event:(id)event
@@ -198,22 +207,36 @@ XYZTopEditTableViewController
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    XYZToDoItem *item = [self.historicalItemsToShow objectAtIndex:indexPath.row];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    cell.textLabel.text = item.itemName;
-    
-    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
-    cell.textLabel.font  = myFont;
-    cell.textLabel.textColor = [UIColor grayColor];
-    
-    UIImage *image = [UIImage imageNamed:@"clear-button-114.png"];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    CGRect frame = CGRectMake(0.0, 0.0, 42.0, 42.0);
-    button.frame = frame;
-    [button setBackgroundImage:image forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(checkButtonTapped:event:)  forControlEvents:UIControlEventTouchUpInside];
-    button.backgroundColor = [UIColor clearColor];
-    cell.accessoryView = button;
+    if([indexPath section] == 0 ){
+        XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text = item.itemName;
+        
+        UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
+        cell.textLabel.font  = myFont;
+    }
+    else{
+        XYZToDoItem *item = [self.historicalItemsToShow objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text = item.itemName;
+        
+        UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
+        cell.textLabel.font  = myFont;
+        cell.textLabel.textColor = [UIColor grayColor];
+        
+        UIImage *image = [UIImage imageNamed:@"clear-button-114.png"];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        CGRect frame = CGRectMake(0.0, 0.0, 42.0, 42.0);
+        button.frame = frame;
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(checkButtonTapped:event:)  forControlEvents:UIControlEventTouchUpInside];
+        button.backgroundColor = [UIColor clearColor];
+        cell.accessoryView = button;
+    }
 
     
     return cell;

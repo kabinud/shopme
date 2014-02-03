@@ -114,6 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="og9-0A-h7g">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -127,6 +128,9 @@
                         <connections>
                             <outlet property="dataSource" destination="4wv-d4-d2U" id="376-ER-fKm"/>
                             <outlet property="delegate" destination="4wv-d4-d2U" id="9AB-N7-jKN"/>
+                            <outletCollection property="gestureRecognizers" destination="09b-Ez-lZL" appends="YES" id="OHq-bI-623"/>
+                            <outletCollection property="gestureRecognizers" destination="Zpg-wK-wW5" appends="YES" id="40f-hn-ncF"/>
+                            <outletCollection property="gestureRecognizers" destination="Rc4-fY-Fnn" appends="YES" id="Uwe-0C-gSp"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="UJe-Hf-yOT">
@@ -153,9 +157,27 @@
                     </navigationItem>
                     <connections>
                         <outlet property="editField" destination="IOq-Cf-X2v" id="bsO-4i-XAI"/>
+                        <outlet property="swipeLeftGestureRecognizer" destination="Rc4-fY-Fnn" id="4ee-6n-HcK"/>
+                        <outlet property="swipeRightGestureRecognizer" destination="Zpg-wK-wW5" id="aEe-qh-gP4"/>
+                        <outlet property="tapGestureRecognizer" destination="09b-Ez-lZL" id="Gfs-3n-Pa9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIr-kv-zdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="09b-Ez-lZL">
+                    <connections>
+                        <action selector="recognizeTapGesture:" destination="4wv-d4-d2U" id="ajn-IO-RpH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Zpg-wK-wW5">
+                    <connections>
+                        <action selector="recognizeSwipeRightGesture:" destination="4wv-d4-d2U" id="uYD-FX-qTB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Rc4-fY-Fnn">
+                    <connections>
+                        <action selector="recognizeSwipeLeftGesture:" destination="4wv-d4-d2U" id="OKy-RS-VI1"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1575" y="-381"/>
         </scene>

@@ -54,6 +54,7 @@
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
+		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
+		B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZTopEditTableViewController+TapRecognizers.h"; sourceTree = "<group>"; };
+		B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYZTopEditTableViewController+TapRecognizers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
 				B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */,
 				B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */,
+				B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.h */,
+				B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
@@ -417,6 +422,7 @@
 				B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */,
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
 				B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */,
+				B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
