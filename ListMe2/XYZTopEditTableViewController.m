@@ -119,10 +119,14 @@ XYZTopEditTableViewController
         if(self.itemAdded == NO){
             self.itemAdded = YES;
         }
-
+        [self updateBadge];
+    }
+    //if data empty go back to main view
+    else{
+        [self dismissViewControllerAnimated:NO completion:^{}];
     }
     
-    [self updateBadge];
+    
   
 }
 
@@ -142,7 +146,6 @@ XYZTopEditTableViewController
 
 - (IBAction)backButtonPressed:(id)sender {
     [self addData: self.editField.text];
-    [self.editField resignFirstResponder];
     [self dismissViewControllerAnimated:NO completion:^{}];
 }
 
@@ -161,16 +164,11 @@ XYZTopEditTableViewController
     self.historicalItemsToShow = [NSMutableArray new];
     self.itemAdded = NO;
 
-    
     if(self.editFieldAutoResponderAllowed){
         [self.editField becomeFirstResponder];
     }
     
     self.editField.delegate = self;
-    
-
-
-
 }
 
 - (void)didReceiveMemoryWarning
