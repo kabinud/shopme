@@ -123,7 +123,8 @@
 - (void)bringTopEditPanelToAnExtend: (int)topY{
     
     
-    if(_mainViewController.view.frame.origin.y<44){
+    if(_mainViewController.view.frame.origin.y<100){
+       // NSLog(@"%f", _mainViewController.view.frame.origin.y);
         UITableView *childView = [self getTopEditView];
         [self.view sendSubviewToBack:childView];
         [UIView animateWithDuration:0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState

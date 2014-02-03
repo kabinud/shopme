@@ -55,13 +55,36 @@
                         <connections>
                             <outlet property="dataSource" destination="BLp-rU-jm8" id="tai-kD-kDs"/>
                             <outlet property="delegate" destination="BLp-rU-jm8" id="hvy-kV-WVf"/>
+                            <outletCollection property="gestureRecognizers" destination="8L9-pO-nGj" appends="YES" id="2Gj-zu-UOn"/>
+                            <outletCollection property="gestureRecognizers" destination="YGR-ya-G9n" appends="YES" id="c2M-Jl-aJV"/>
+                            <outletCollection property="gestureRecognizers" destination="yI8-Pd-Gfa" appends="YES" id="dQw-2Y-ALT"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6rd-4q-BuS"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="swipeLeftGestureRecognizer" destination="yI8-Pd-Gfa" id="ylE-Mx-PVo"/>
+                        <outlet property="swipeRightGestureRecognizer" destination="YGR-ya-G9n" id="5PN-eV-0hB"/>
+                        <outlet property="tapGestureRecognizer" destination="8L9-pO-nGj" id="kb8-d7-f00"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHx-8Z-JqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8L9-pO-nGj">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="BLp-rU-jm8" id="NHB-Lc-7Wl"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="YGR-ya-G9n">
+                    <connections>
+                        <action selector="swipeRightGestureRecognizer:" destination="BLp-rU-jm8" id="K8c-AP-M7x"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="yI8-Pd-Gfa">
+                    <connections>
+                        <action selector="swipeLeftGestureRecognizer:" destination="BLp-rU-jm8" id="sHb-BI-ggS"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-14" y="-1130"/>
         </scene>
@@ -122,6 +145,30 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="og9-0A-h7g" id="6UX-CR-fDT">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellSubtitled" textLabel="7MJ-Ff-PDg" detailTextLabel="R72-tl-Ljf" style="IBUITableViewCellStyleSubtitle" id="agJ-lV-tBt">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="agJ-lV-tBt" id="hTd-XM-yQE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7MJ-Ff-PDg">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R72-tl-Ljf">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

@@ -16,4 +16,9 @@
 
 @property XYZGlobalContainer *globalContainer;
 
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRightGestureRecognizer;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeftGestureRecognizer;
+
+
 @end

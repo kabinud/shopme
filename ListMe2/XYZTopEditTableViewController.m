@@ -13,7 +13,7 @@
 
 @interface XYZTopEditTableViewController ()
 
-
+@property BOOL itemAdded;
 
 @end
 
@@ -115,6 +115,10 @@ XYZTopEditTableViewController
         [self.globalContainer saveItemsToFile];
         
         [self addHistoricalItem:toDoItem];
+        
+        if(self.itemAdded == NO){
+            self.itemAdded = YES;
+        }
 
     }
     
@@ -155,6 +159,7 @@ XYZTopEditTableViewController
     [super viewDidLoad];
     self.globalContainer = [XYZGlobalContainer globalContainer];
     self.historicalItemsToShow = [NSMutableArray new];
+    self.itemAdded = NO;
 
     
     if(self.editFieldAutoResponderAllowed){
@@ -186,11 +191,11 @@ XYZTopEditTableViewController
 {
     // Return the number of rows in the section.
     if(section == 0 ){
-        if([self.globalContainer.toDoItems count]>0){
+        if(self.itemAdded){
             return 1;
         }
         else{
-        return [self.globalContainer.toDoItems count];
+            return 0;
         }
     }
     else{
@@ -219,22 +224,29 @@ XYZTopEditTableViewController
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    UITableViewCell *cell;
+  
     
     if([indexPath section] == 0 ){
+        
+        NSString *CellIdentifier = @"CellSubtitled";
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+        
         XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
         
         cell.textLabel.text = item.itemName;
+        cell.detailTextLabel.text = @"has been added";
 //        
 //        UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
 //        cell.textLabel.font  = myFont;
     }
     else{
+        
+        NSString *CellIdentifier = @"Cell";
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+        
         XYZToDoItem *item = [self.historicalItemsToShow objectAtIndex:indexPath.row];
         
         cell.textLabel.text = item.itemName;
