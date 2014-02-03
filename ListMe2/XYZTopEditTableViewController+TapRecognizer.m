@@ -27,6 +27,7 @@
             
         [self.globalContainer.toDoItems insertObject:item atIndex:0];
         [self.globalContainer saveItemsToFile];
+        self.itemAdded = YES;
         
         [self.tableView reloadData];
     }

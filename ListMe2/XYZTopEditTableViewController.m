@@ -13,8 +13,6 @@
 
 @interface XYZTopEditTableViewController ()
 
-@property BOOL itemAdded;
-
 @end
 
 @implementation
@@ -59,15 +57,7 @@ XYZTopEditTableViewController
 }
 
 
-- (BOOL)firstUseItemsRemoved{
-    for(XYZToDoItem *item in self.globalContainer.toDoItems){
-        if([item.itemName isEqualToString:@"Swipe right to mark as completed"]
-           || [item.itemName isEqualToString:@"Swipe left to undo"]){
-            return NO;
-        }
-    }
-    return YES;
-}
+
 
 -(void)sortHistoricalItems
 {
@@ -95,14 +85,7 @@ XYZTopEditTableViewController
     NSLog(@"His added");
 }
 
-- (void) updateBadge{
-    if([self firstUseItemsRemoved] && [self.globalContainer.toDoItems count] > 0){
-        [UIApplication sharedApplication].applicationIconBadgeNumber=[self.globalContainer.toDoItems count];
-    }
-    else{
-        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
-    }
-}
+
 
 - (void)addData: (NSString *) text {
     if(![self.editField.text isStringEmpty]){
@@ -119,7 +102,7 @@ XYZTopEditTableViewController
         if(self.itemAdded == NO){
             self.itemAdded = YES;
         }
-        [self updateBadge];
+        [self.globalContainer updateBadge];
     }
     //if data empty go back to main view
     else{

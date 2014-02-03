@@ -25,6 +25,7 @@
 - (void)readItemsFromFile;
 - (void)saveHistoricalItemsToFile;
 - (void)readHistoricalItemsFromFile;
+- (void)updateBadge;
 
 @end
 

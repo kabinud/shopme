@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UITextField *editField;
 @property NSMutableArray *historicalItemsToShow;
+@property BOOL itemAdded;
 
 - (void)addData: (NSString *) text;
 

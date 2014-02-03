@@ -86,4 +86,25 @@
     }
 }
 
+- (BOOL)firstUseItemsRemoved{
+    for(XYZToDoItem *item in self.toDoItems){
+        if([item.itemName isEqualToString:@"Swipe right to mark as completed"]
+           || [item.itemName isEqualToString:@"Swipe left to undo"]){
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (void) updateBadge{
+    if([self firstUseItemsRemoved] && [self.toDoItems count] > 0){
+        [UIApplication sharedApplication].applicationIconBadgeNumber=[self.toDoItems count];
+    }
+    else{
+        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
+    }
+    
+}
+
+
 @end

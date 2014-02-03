@@ -13,6 +13,7 @@
 - (void)bringTopPanel;
 - (void)bringTopEditPanelToAnExtend: (int)topY;
 - (void)closeTopEditPanel;
+- (void)performEditSegue;
 
 @end
 

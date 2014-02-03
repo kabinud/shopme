@@ -27,7 +27,9 @@
 
 @implementation XYZOberViewController
 
-
+- (void)performEditSegue{
+    [self performSegueWithIdentifier: @"EditSegue" sender: self];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
