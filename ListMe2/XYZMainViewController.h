@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "XYZOberViewController.h"
+#import "XYZGlobalContainer.h"
 
 @interface XYZMainViewController : UITableViewController
 
 @property (nonatomic, assign) id<OberViewControllerDelegate> delegate;
 
-
+@property XYZGlobalContainer *globalContainer;
 
 @end

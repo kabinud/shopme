@@ -24,6 +24,8 @@
 		B802CC6C189EE19A006D607C /* folder22-wide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC6A189EE19A006D607C /* folder22-wide@2x.png */; };
 		B802CC73189EEC91006D607C /* compose.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC71189EEC91006D607C /* compose.png */; };
 		B802CC74189EEC91006D607C /* compose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC72189EEC91006D607C /* compose@2x.png */; };
+		B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B802CC76189EF146006D607C /* XYZGlobalContainer.m */; };
+		B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B802CC79189EF180006D607C /* XYZToDoItem.m */; };
 		B806B730189BD14600C19AC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B72F189BD14600C19AC0 /* Foundation.framework */; };
 		B806B732189BD14600C19AC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B731189BD14600C19AC0 /* CoreGraphics.framework */; };
 		B806B734189BD14600C19AC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B733189BD14600C19AC0 /* UIKit.framework */; };
@@ -82,6 +84,10 @@
 		B802CC6A189EE19A006D607C /* folder22-wide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22-wide@2x.png"; path = "ListMe2/Icons/folder22-wide@2x.png"; sourceTree = "<group>"; };
 		B802CC71189EEC91006D607C /* compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compose.png; path = ListMe2/Icons/compose.png; sourceTree = "<group>"; };
 		B802CC72189EEC91006D607C /* compose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "compose@2x.png"; path = "ListMe2/Icons/compose@2x.png"; sourceTree = "<group>"; };
+		B802CC75189EF146006D607C /* XYZGlobalContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZGlobalContainer.h; sourceTree = "<group>"; };
+		B802CC76189EF146006D607C /* XYZGlobalContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZGlobalContainer.m; sourceTree = "<group>"; };
+		B802CC78189EF180006D607C /* XYZToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoItem.h; sourceTree = "<group>"; };
+		B802CC79189EF180006D607C /* XYZToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoItem.m; sourceTree = "<group>"; };
 		B806B72C189BD14600C19AC0 /* ListMe2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListMe2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806B72F189BD14600C19AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B806B731189BD14600C19AC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,6 +151,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B802CC7B189EF1A1006D607C /* Data Persist Files */ = {
+			isa = PBXGroup;
+			children = (
+				B802CC75189EF146006D607C /* XYZGlobalContainer.h */,
+				B802CC78189EF180006D607C /* XYZToDoItem.h */,
+				B802CC79189EF180006D607C /* XYZToDoItem.m */,
+				B802CC76189EF146006D607C /* XYZGlobalContainer.m */,
+			);
+			name = "Data Persist Files";
+			sourceTree = "<group>";
+		};
 		B806B723189BD14600C19AC0 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +196,7 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B802CC7B189EF1A1006D607C /* Data Persist Files */,
 				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
 				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
 				B895D27A189E919D00BAF7FB /* XYZTopViewController.h */,
@@ -386,6 +404,7 @@
 			files = (
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
 				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
+				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
@@ -393,6 +412,7 @@
 				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
 				B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */,
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
+				B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +489,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -501,6 +522,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

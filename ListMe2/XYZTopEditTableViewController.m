@@ -7,6 +7,8 @@
 //
 
 #import "XYZTopEditTableViewController.h"
+#import "XYZGlobalContainer.h"
+#import "XYZToDoItem.h"
 
 @interface XYZTopEditTableViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *editField;
@@ -14,11 +16,69 @@
 
 @end
 
-@implementation XYZTopEditTableViewController
+@implementation
+XYZTopEditTableViewController
+
+- (BOOL)firstUseItemsRemoved{
+    for(XYZToDoItem *item in self.globalContainer.toDoItems){
+        if([item.itemName isEqualToString:@"Swipe right to mark as completed"]
+           || [item.itemName isEqualToString:@"Swipe left to undo"]){
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (IBAction)editingDidEnd:(id)sender {
+}
+- (IBAction)didEndOnExit:(id)sender {
+    if(self.editField.text.length>0){
+        
+        NSLog(@"didendoneit");
+        
+        XYZToDoItem *toDoItem = [XYZToDoItem new];
+        toDoItem.itemName = self.editField.text;
+        toDoItem.completed = NO;
+        
+        [self.globalContainer.toDoItems insertObject:toDoItem atIndex:0];
+        [self.globalContainer saveItemsToFile];
+        
+         NSLog(@"Count = %d", [self.globalContainer.toDoItems count]);
+        
+//        NSManagedObjectContext *context = [self managedObjectContext];
+//        
+//        
+//        if(![self isThisItemInHistoryItems:self.textField.text]){
+//            HistoricalItem *historicalItem = [NSEntityDescription
+//                                              insertNewObjectForEntityForName:@"HistoricalItem"
+//                                              inManagedObjectContext:context];
+//            historicalItem.name = self.textField.text;
+//        }
+//        
+//        NSError *error;
+//        if (![context save:&error]) {
+//            NSLog(@"Could not save data: %@", [error localizedDescription]);
+//        }
+//        
+//        
+//        [self updateHistoricalItemsArrayForTableView];
+        
+    }
+    
+    if([self firstUseItemsRemoved] && [self.globalContainer.toDoItems count] > 0){
+        [UIApplication sharedApplication].applicationIconBadgeNumber=[self.globalContainer.toDoItems count];
+    }
+    else{
+        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
+    }
+    
+       [self dismissViewControllerAnimated:NO completion:^{}];
+    
+}
+
+
 - (IBAction)backButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:NO completion:^{}];
-    
-
 }
 
 
@@ -34,17 +94,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.globalContainer = [XYZGlobalContainer globalContainer];
 
     if(self.editFieldAutoResponderAllowed){
         [self.editField becomeFirstResponder];
     }
     
+    if(self.globalContainer.toDoItems == nil)
+    {
+        self.globalContainer.toDoItems = [NSMutableArray new];
+    }
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning

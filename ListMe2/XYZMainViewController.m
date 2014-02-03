@@ -9,6 +9,8 @@
 #define SLIDE_TIMING .95
 
 #import "XYZMainViewController.h"
+#import "XYZGlobalContainer.h"
+#import "XYZToDoItem.h"
 
 
 @interface XYZMainViewController ()
@@ -55,19 +57,24 @@
 }
 
 
-
+- (void)viewWillAppear:(BOOL)animated {
+     NSLog(@"View will appear");
+    [self.tableView reloadData];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   // self.navigationController.toolbarHidden = NO;
     
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    [self.globalContainer readItemsFromFile];
+    
+    if(self.globalContainer.toDoItems == nil)
+    {
+        self.globalContainer.toDoItems = [NSMutableArray new];
+    }
+    
+    NSLog(@"View did load");
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +82,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)menuButtonAction:(id)sender {
+    
+    self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
+    [self.delegate bringTopPanel];
+}
+
 
 #pragma mark - Table view data source
 
@@ -86,8 +100,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"Count = %d", [self.globalContainer.toDoItems count]);
 
-    return 25;
+    return [self.globalContainer.toDoItems count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,11 +127,6 @@
 }
 
 
-- (IBAction)menuButtonAction:(id)sender {
-
-    self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
-    [self.delegate bringTopPanel];
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -124,7 +134,9 @@
  
     static NSString *CellIdentifier = @"Cell";
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    
+    XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.itemName;
  
     [cell.contentView.layer setBorderColor:[UIColor redColor].CGColor];
     return cell;
