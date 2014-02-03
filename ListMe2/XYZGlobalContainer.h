@@ -16,13 +16,15 @@
 
 @property (nonatomic, retain) NSMutableArray *lists;
 @property NSMutableArray *toDoItems;
+@property NSMutableArray *historicalItems;
 
 + (id)globalContainer;
 - (void)saveListsToFile;
 - (void)readListsFromFile;
 - (void)saveItemsToFile;
 - (void)readItemsFromFile;
-
+- (void)saveHistoricalItemsToFile;
+- (void)readHistoricalItemsFromFile;
 
 @end
 

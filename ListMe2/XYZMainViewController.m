@@ -68,13 +68,7 @@
     
     self.globalContainer = [XYZGlobalContainer globalContainer];
     [self.globalContainer readItemsFromFile];
-    
-    if(self.globalContainer.toDoItems == nil)
-    {
-        self.globalContainer.toDoItems = [NSMutableArray new];
-    }
-    
-    NSLog(@"View did load");
+    [self.globalContainer readHistoricalItemsFromFile];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,8 +94,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Count = %d", [self.globalContainer.toDoItems count]);
-
     return [self.globalContainer.toDoItems count];
 }
 

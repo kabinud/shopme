@@ -14,7 +14,7 @@
 
 @synthesize lists;
 @synthesize toDoItems;
-
+@synthesize historicalItems;
 
 + (id)globalContainer {
     static XYZGlobalContainer *sharedGlobalContainer = nil;
@@ -50,6 +50,23 @@
     }
 }
 
+- (void)saveHistoricalItemsToFile{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"historicalItemsGlobal.plist"];
+    [NSKeyedArchiver archiveRootObject:historicalItems toFile:finalPath];
+}
+
+- (void)readHistoricalItemsFromFile{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"historicalItemsGlobal.plist"];
+    NSMutableArray* arr = [NSKeyedUnarchiver unarchiveObjectWithFile:finalPath];
+    if(arr!=nil){
+        self.historicalItems = arr;
+    }
+    else{
+        self.historicalItems = [NSMutableArray new];
+    }
+}
 
 - (void)saveListsToFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];

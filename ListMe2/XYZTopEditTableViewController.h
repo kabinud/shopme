@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "XYZGlobalContainer.h"
 
-@interface XYZTopEditTableViewController : UITableViewController
+@interface XYZTopEditTableViewController : UITableViewController<UITextFieldDelegate>
 
 @property BOOL editFieldAutoResponderAllowed;
 @property XYZGlobalContainer *globalContainer;

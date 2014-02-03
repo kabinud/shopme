@@ -12,12 +12,43 @@
 
 @interface XYZTopEditTableViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *editField;
-
+@property NSMutableArray *historicalItemsToShow;
 
 @end
 
 @implementation
 XYZTopEditTableViewController
+
+- (void)updateHistoricalItemsArrayForTableViewDuringEditing:(NSString *) searchedString
+{
+    [self.historicalItemsToShow removeAllObjects];
+    [self sortHistoricalItems];
+    
+    if([searchedString isEqualToString:@""]){
+        for(XYZToDoItem *item in self.globalContainer.historicalItems){
+            [self.historicalItemsToShow addObject:item];
+        }
+    }
+    else{
+        for(XYZToDoItem *item in self.globalContainer.historicalItems){
+            if ([item.itemName rangeOfString:searchedString options:NSCaseInsensitiveSearch].location != NSNotFound){
+                [self.historicalItemsToShow addObject:item];
+            }
+        }
+    }
+
+}
+
+- (IBAction)editingChanged:(id)sender {
+    [self updateHistoricalItemsArrayForTableViewDuringEditing:self.editField.text];
+    [self.tableView reloadData];
+}
+
+- (IBAction)editingDidBegin:(id)sender {
+    [self updateHistoricalItemsArrayForTableViewDuringEditing:@""];
+    [self.tableView reloadData];
+}
+
 
 - (BOOL)firstUseItemsRemoved{
     for(XYZToDoItem *item in self.globalContainer.toDoItems){
@@ -29,13 +60,35 @@ XYZTopEditTableViewController
     return YES;
 }
 
-- (IBAction)editingDidEnd:(id)sender {
+-(void)sortHistoricalItems
+{
+    NSSortDescriptor *descriptorAlphabet = [[NSSortDescriptor alloc] initWithKey:@"itemName" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    [self.globalContainer.historicalItems sortUsingDescriptors:[NSArray arrayWithObjects:descriptorAlphabet, nil]];
+    
+    NSLog(@"Sorting");
 }
-- (IBAction)didEndOnExit:(id)sender {
+
+- (void)addHistoricalItem:(XYZToDoItem *)itemToAdd{
+    BOOL itemAlreadyInHistory = NO;
+    
+    for(XYZToDoItem *item in self.globalContainer.historicalItems){
+        if([item.itemName isEqualToString:itemToAdd.itemName]){
+            itemAlreadyInHistory = YES;
+            break;
+        }
+    }
+    
+    if(!itemAlreadyInHistory){
+        [self.globalContainer.historicalItems insertObject:itemToAdd atIndex:0];
+        [self.globalContainer saveHistoricalItemsToFile];
+    }
+    NSLog(@"His added");
+}
+
+- (void)addData: (NSString *) text {
     if(self.editField.text.length>0){
-        
-        NSLog(@"didendoneit");
-        
+    
         XYZToDoItem *toDoItem = [XYZToDoItem new];
         toDoItem.itemName = self.editField.text;
         toDoItem.completed = NO;
@@ -43,26 +96,8 @@ XYZTopEditTableViewController
         [self.globalContainer.toDoItems insertObject:toDoItem atIndex:0];
         [self.globalContainer saveItemsToFile];
         
-         NSLog(@"Count = %d", [self.globalContainer.toDoItems count]);
-        
-//        NSManagedObjectContext *context = [self managedObjectContext];
-//        
-//        
-//        if(![self isThisItemInHistoryItems:self.textField.text]){
-//            HistoricalItem *historicalItem = [NSEntityDescription
-//                                              insertNewObjectForEntityForName:@"HistoricalItem"
-//                                              inManagedObjectContext:context];
-//            historicalItem.name = self.textField.text;
-//        }
-//        
-//        NSError *error;
-//        if (![context save:&error]) {
-//            NSLog(@"Could not save data: %@", [error localizedDescription]);
-//        }
-//        
-//        
-//        [self updateHistoricalItemsArrayForTableView];
-        
+        [self addHistoricalItem:toDoItem];
+
     }
     
     if([self firstUseItemsRemoved] && [self.globalContainer.toDoItems count] > 0){
@@ -71,16 +106,26 @@ XYZTopEditTableViewController
     else{
         [UIApplication sharedApplication].applicationIconBadgeNumber=0;
     }
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
-       [self dismissViewControllerAnimated:NO completion:^{}];
-    
+    if(textField == self.editField){
+        [self addData: textField.text];
+        textField.text = nil;
+        [self updateHistoricalItemsArrayForTableViewDuringEditing:@""];
+        [self.tableView reloadData];
+    }
+    return YES;
 }
 
 
 - (IBAction)backButtonPressed:(id)sender {
+    
+    [self.editField resignFirstResponder];
     [self dismissViewControllerAnimated:NO completion:^{}];
 }
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -95,15 +140,16 @@ XYZTopEditTableViewController
 {
     [super viewDidLoad];
     self.globalContainer = [XYZGlobalContainer globalContainer];
+    self.historicalItemsToShow = [NSMutableArray new];
 
+    
     if(self.editFieldAutoResponderAllowed){
         [self.editField becomeFirstResponder];
     }
     
-    if(self.globalContainer.toDoItems == nil)
-    {
-        self.globalContainer.toDoItems = [NSMutableArray new];
-    }
+    self.editField.delegate = self;
+    
+
 
 
 }
@@ -119,21 +165,56 @@ XYZTopEditTableViewController
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [self.historicalItemsToShow count];
 }
+
+- (void)checkButtonTapped:(id)sender event:(id)event
+{
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
+    
+    if (indexPath != nil)
+    {
+        [self.globalContainer.historicalItems removeObject:[self.globalContainer.historicalItems objectAtIndex:indexPath.row]];
+        [self.globalContainer saveHistoricalItemsToFile];
+        [self updateHistoricalItemsArrayForTableViewDuringEditing:self.editField.text];
+        [self.tableView reloadData];
+    }
+}
+
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    XYZToDoItem *item = [self.historicalItemsToShow objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = item.itemName;
+    
+    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
+    cell.textLabel.font  = myFont;
+    cell.textLabel.textColor = [UIColor grayColor];
+    
+    UIImage *image = [UIImage imageNamed:@"clear-button-114.png"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGRect frame = CGRectMake(0.0, 0.0, 42.0, 42.0);
+    button.frame = frame;
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(checkButtonTapped:event:)  forControlEvents:UIControlEventTouchUpInside];
+    button.backgroundColor = [UIColor clearColor];
+    cell.accessoryView = button;
+
     
     return cell;
 }
