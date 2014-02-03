@@ -86,23 +86,27 @@
     }
 }
 
-- (BOOL)firstUseItemsRemoved{
-    for(XYZToDoItem *item in self.toDoItems){
-        if([item.itemName isEqualToString:@"Swipe right to mark as completed"]
-           || [item.itemName isEqualToString:@"Swipe left to undo"]){
-            return NO;
-        }
+
+- (BOOL)isNotFirstExampleItem: (NSString *)string{
+    if([string isEqualToString:@"Swipe right to mark as completed"] || [string isEqualToString:@"Swipe left to undo"]){
+        return NO;
     }
     return YES;
 }
 
+-(int)howManyPendingItems{
+    int count = 0;
+    for(XYZToDoItem *item in self.toDoItems){
+        if(item.completed == NO && [self isNotFirstExampleItem:item.itemName]){
+            count++;
+        }
+    }
+    return count;
+}
+
 - (void) updateBadge{
-    if([self firstUseItemsRemoved] && [self.toDoItems count] > 0){
-        [UIApplication sharedApplication].applicationIconBadgeNumber=[self.toDoItems count];
-    }
-    else{
-        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
-    }
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = [self howManyPendingItems];
     
 }
 

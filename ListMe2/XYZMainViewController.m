@@ -122,17 +122,69 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
- 
-    static NSString *CellIdentifier = @"Cell";
-    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    [self.globalContainer updateBadge];
     
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
+
     XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = item.itemName;
- 
-    [cell.contentView.layer setBorderColor:[UIColor redColor].CGColor];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    if(item.toBeDeleted){
+        UIImage *image = [UIImage imageNamed:@"clear-button-114.png"];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        CGRect frame = CGRectMake(0.0, 0.0, 42.0, 42.0);
+        button.frame = frame;
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(checkButtonTapped:event:)  forControlEvents:UIControlEventTouchUpInside];
+        button.backgroundColor = [UIColor clearColor];
+        cell.accessoryView = button;
+    }
+    else{
+        cell.accessoryView = nil;
+    }
+    
+    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 17.0 ];
+    cell.textLabel.font  = myFont;
+    cell.textLabel.textColor = [UIColor blackColor];
+    
+    if(item.completed)
+    {
+        NSDictionary* attributes = @{
+                                     NSStrikethroughStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle]
+                                     };
+        NSAttributedString* attrText = [[NSAttributedString alloc] initWithString:item.itemName attributes:attributes];
+        cell.textLabel.attributedText = attrText;
+        
+    }
+    else
+    {
+        cell.textLabel.text = item.itemName;
+    }
+    
     return cell;
 }
+
+- (void)checkButtonTapped:(id)sender event:(id)event
+{
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
+    
+    if (indexPath != nil)
+    {
+        [self.globalContainer.toDoItems removeObject:[self.globalContainer.toDoItems objectAtIndex:indexPath.row]];
+        [self.globalContainer saveItemsToFile];
+        [self.tableView reloadData];
+    }
+}
+
 
 /*
 // Override to support conditional editing of the table view.

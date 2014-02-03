@@ -30,6 +30,7 @@
     
     if (self) {
         _toBeDeleted = NO;
+        _completed = NO;
     }
     return self;
 }

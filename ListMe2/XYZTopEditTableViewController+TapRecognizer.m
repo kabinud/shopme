@@ -11,7 +11,6 @@
 
 @implementation XYZTopEditTableViewController (TapRecognizers)
 
-
 - (IBAction)recognizeTapGesture:(id)sender {
     CGPoint location = [self.tapGestureRecognizer locationInView:self.tableView];
     NSIndexPath *swippedIndexPath = [self.tableView indexPathForRowAtPoint:location];

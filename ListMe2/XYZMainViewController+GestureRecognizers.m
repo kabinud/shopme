@@ -42,9 +42,6 @@
                 
                 [self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfLastItem];
                 [self tableView:self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfLastItem];
-                
-                
-                [self.globalContainer saveItemsToFile];
             }
             
             else if(tappedItem.toBeDeleted == YES){
@@ -52,11 +49,42 @@
                 [self.tableView reloadRowsAtIndexPaths:@[swippedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
             }
             
+            [self.globalContainer saveItemsToFile];
+            
         }
     
 }
 
 - (IBAction)swipeLeftGestureRecognizer:(id)sender {
+
+        CGPoint location = [self.swipeLeftGestureRecognizer locationInView:self.tableView];
+        NSIndexPath *swippedIndexPath = [self.tableView indexPathForRowAtPoint:location];
+        
+        if(swippedIndexPath != nil){
+            
+            XYZToDoItem *tappedItem = [self.globalContainer.toDoItems objectAtIndex:swippedIndexPath.row];
+            [self.tableView deselectRowAtIndexPath:swippedIndexPath animated:NO];
+            
+            if(tappedItem.completed == YES){
+                
+                tappedItem.completed = NO;
+                
+                [self.tableView reloadRowsAtIndexPaths:@[swippedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+                
+                NSIndexPath *indexPathOfFirstItem =
+                [NSIndexPath indexPathForRow:(0) inSection:0];
+                
+                [self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfFirstItem];
+                [self tableView:self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfFirstItem];
+                [self.globalContainer saveItemsToFile];
+            }
+            else{
+                tappedItem.toBeDeleted = YES;
+                [self.globalContainer saveItemsToFile];
+                [self.tableView reloadRowsAtIndexPaths:@[swippedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+                
+            }
+        }
 }
 
 
