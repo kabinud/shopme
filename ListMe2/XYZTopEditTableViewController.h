@@ -15,8 +15,10 @@
 @property XYZGlobalContainer *globalContainer;
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
+@property (weak, nonatomic) IBOutlet UITextField *editField;
+@property NSMutableArray *historicalItemsToShow;
 
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRightGestureRecognizer;
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeftGestureRecognizer;
+- (void)addData: (NSString *) text;
+
 
 @end

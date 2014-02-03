@@ -11,8 +11,8 @@
 #import "XYZToDoItem.h"
 
 @interface XYZTopEditTableViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *editField;
-@property NSMutableArray *historicalItemsToShow;
+
+
 
 @end
 
@@ -123,6 +123,7 @@ XYZTopEditTableViewController
 
 - (IBAction)backButtonPressed:(id)sender {
     
+    [self addData: self.editField.text];
     [self.editField resignFirstResponder];
     [self dismissViewControllerAnimated:NO completion:^{}];
 }

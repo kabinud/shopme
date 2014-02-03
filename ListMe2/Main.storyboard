@@ -129,17 +129,15 @@
                             <outlet property="dataSource" destination="4wv-d4-d2U" id="376-ER-fKm"/>
                             <outlet property="delegate" destination="4wv-d4-d2U" id="9AB-N7-jKN"/>
                             <outletCollection property="gestureRecognizers" destination="09b-Ez-lZL" appends="YES" id="OHq-bI-623"/>
-                            <outletCollection property="gestureRecognizers" destination="Zpg-wK-wW5" appends="YES" id="40f-hn-ncF"/>
-                            <outletCollection property="gestureRecognizers" destination="Rc4-fY-Fnn" appends="YES" id="Uwe-0C-gSp"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="UJe-Hf-yOT">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="compose.png" id="1yt-fv-Y4d">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="compose.png" id="1yt-fv-Y4d">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a new item here" minimumFontSize="17" id="IOq-Cf-X2v">
-                            <rect key="frame" x="58" y="7" width="212" height="30"/>
+                            <rect key="frame" x="55" y="7" width="209" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -148,7 +146,7 @@
                                 <action selector="editingDidBegin:" destination="4wv-d4-d2U" eventType="editingDidBegin" id="ANd-i7-hiv"/>
                             </connections>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="coW-sU-NJC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="coW-sU-NJC">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="4wv-d4-d2U" id="tqK-if-S5u"/>
@@ -157,8 +155,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="editField" destination="IOq-Cf-X2v" id="bsO-4i-XAI"/>
-                        <outlet property="swipeLeftGestureRecognizer" destination="Rc4-fY-Fnn" id="4ee-6n-HcK"/>
-                        <outlet property="swipeRightGestureRecognizer" destination="Zpg-wK-wW5" id="aEe-qh-gP4"/>
                         <outlet property="tapGestureRecognizer" destination="09b-Ez-lZL" id="Gfs-3n-Pa9"/>
                     </connections>
                 </tableViewController>
@@ -168,16 +164,6 @@
                         <action selector="recognizeTapGesture:" destination="4wv-d4-d2U" id="ajn-IO-RpH"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="Zpg-wK-wW5">
-                    <connections>
-                        <action selector="recognizeSwipeRightGesture:" destination="4wv-d4-d2U" id="uYD-FX-qTB"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="Rc4-fY-Fnn">
-                    <connections>
-                        <action selector="recognizeSwipeLeftGesture:" destination="4wv-d4-d2U" id="OKy-RS-VI1"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1575" y="-381"/>
         </scene>
