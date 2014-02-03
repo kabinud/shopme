@@ -12,6 +12,9 @@
 #import "NSString+IsEmpty.h"
 
 @interface XYZTopEditTableViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *pencilAddButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+
 
 @end
 
@@ -152,6 +155,15 @@ XYZTopEditTableViewController
     }
     
     self.editField.delegate = self;
+
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        self.pencilAddButton.tintColor = [UIColor magentaColor];
+        self.doneButton.tintColor = [UIColor blackColor];
+    }
+    else {
+        self.pencilAddButton.tintColor = [UIColor whiteColor];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -171,7 +171,6 @@
                     <navigationItem key="navigationItem" id="UJe-Hf-yOT">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="compose.png" id="1yt-fv-Y4d">
-                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="pencilButtonPressed:" destination="4wv-d4-d2U" id="faT-IE-r7V"/>
                             </connections>
@@ -187,14 +186,15 @@
                             </connections>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="coW-sU-NJC">
-                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="4wv-d4-d2U" id="tqK-if-S5u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="coW-sU-NJC" id="f1P-rG-f4B"/>
                         <outlet property="editField" destination="IOq-Cf-X2v" id="bsO-4i-XAI"/>
+                        <outlet property="pencilAddButton" destination="1yt-fv-Y4d" id="sHz-3u-zIz"/>
                         <outlet property="tapGestureRecognizer" destination="09b-Ez-lZL" id="Gfs-3n-Pa9"/>
                     </connections>
                 </tableViewController>
