@@ -10,16 +10,7 @@
 #import "XYZToDoItem.h"
 
 @implementation XYZMainViewController (GestureRecognizers)
-- (IBAction)tapGestureRecognizer:(id)sender {
-    
-        CGPoint location = [self.swipeRightGestureRecognizer locationInView:self.tableView];
-        NSIndexPath *swippedIndexPath = [self.tableView indexPathForRowAtPoint:location];
-        //an empty cell tapped
-        if(swippedIndexPath == nil){
-            [self.delegate performEditSegue];
-        }
-    
-}
+
 
 - (IBAction)swipeRightGestureRecognizer:(id)sender {
   

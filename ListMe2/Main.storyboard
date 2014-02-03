@@ -9,7 +9,7 @@
         <scene sceneID="8IK-nu-F64">
             <objects>
                 <tableViewController storyboardIdentifier="mainViewId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BLp-rU-jm8" customClass="XYZMainViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eMG-O6-4Ct">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eMG-O6-4Ct" customClass="BVReorderTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,34 +55,27 @@
                         <connections>
                             <outlet property="dataSource" destination="BLp-rU-jm8" id="tai-kD-kDs"/>
                             <outlet property="delegate" destination="BLp-rU-jm8" id="hvy-kV-WVf"/>
-                            <outletCollection property="gestureRecognizers" destination="8L9-pO-nGj" appends="YES" id="2Gj-zu-UOn"/>
-                            <outletCollection property="gestureRecognizers" destination="YGR-ya-G9n" appends="YES" id="c2M-Jl-aJV"/>
-                            <outletCollection property="gestureRecognizers" destination="yI8-Pd-Gfa" appends="YES" id="dQw-2Y-ALT"/>
+                            <outletCollection property="gestureRecognizers" destination="xc0-Wi-nj0" appends="YES" id="67Y-bF-x2u"/>
+                            <outletCollection property="gestureRecognizers" destination="F1P-eu-h7t" appends="YES" id="PkF-b5-T6S"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6rd-4q-BuS"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="swipeLeftGestureRecognizer" destination="yI8-Pd-Gfa" id="ylE-Mx-PVo"/>
-                        <outlet property="swipeRightGestureRecognizer" destination="YGR-ya-G9n" id="5PN-eV-0hB"/>
-                        <outlet property="tapGestureRecognizer" destination="8L9-pO-nGj" id="kb8-d7-f00"/>
+                        <outlet property="swipeLeftGestureRecognizer" destination="F1P-eu-h7t" id="lJz-23-4yd"/>
+                        <outlet property="swipeRightGestureRecognizer" destination="xc0-Wi-nj0" id="P0A-Rc-zfT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHx-8Z-JqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="8L9-pO-nGj">
+                <swipeGestureRecognizer direction="right" id="xc0-Wi-nj0">
                     <connections>
-                        <action selector="tapGestureRecognizer:" destination="BLp-rU-jm8" id="NHB-Lc-7Wl"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="YGR-ya-G9n">
-                    <connections>
-                        <action selector="swipeRightGestureRecognizer:" destination="BLp-rU-jm8" id="K8c-AP-M7x"/>
+                        <action selector="swipeRightGestureRecognizer:" destination="BLp-rU-jm8" id="t9F-NH-Qcs"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="yI8-Pd-Gfa">
+                <swipeGestureRecognizer direction="left" id="F1P-eu-h7t">
                     <connections>
-                        <action selector="swipeLeftGestureRecognizer:" destination="BLp-rU-jm8" id="sHb-BI-ggS"/>
+                        <action selector="swipeLeftGestureRecognizer:" destination="BLp-rU-jm8" id="pCe-AL-xjt"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

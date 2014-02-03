@@ -56,6 +56,7 @@
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
 		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
+		B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,9 @@
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
 		B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZTopEditTableViewController+TapRecognizer.h"; sourceTree = "<group>"; };
 		B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYZTopEditTableViewController+TapRecognizer.m"; sourceTree = "<group>"; };
+		B8BA195018A03FED00EB49A1 /* BVReorderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVReorderTableView.h; sourceTree = "<group>"; };
+		B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVReorderTableView.m; sourceTree = "<group>"; };
+		B8BA195318A041A200EB49A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 		B806B72E189BD14600C19AC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8BA195318A041A200EB49A1 /* QuartzCore.framework */,
 				B806B72F189BD14600C19AC0 /* Foundation.framework */,
 				B806B731189BD14600C19AC0 /* CoreGraphics.framework */,
 				B806B733189BD14600C19AC0 /* UIKit.framework */,
@@ -204,6 +209,8 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B8BA195018A03FED00EB49A1 /* BVReorderTableView.h */,
+				B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */,
 				B8361BF5189FFEEF00787AE5 /* Main Table View */,
 				B8361BF4189FFED500787AE5 /* TopMenu */,
 				B8361BF3189FFDA400787AE5 /* Top Edit */,
@@ -461,6 +468,7 @@
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
 				B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */,
 				B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */,
+				B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

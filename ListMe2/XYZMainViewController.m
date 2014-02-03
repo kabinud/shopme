@@ -11,6 +11,7 @@
 #import "XYZMainViewController.h"
 #import "XYZGlobalContainer.h"
 #import "XYZToDoItem.h"
+#import "BVReorderTableView.h"
 
 
 @interface XYZMainViewController ()
@@ -252,5 +253,39 @@
 }
 
  */
+
+//////////////////////////////////////////////////////////////////
+// reordering methods for BVBReorderTableView delegate
+// BVReorderTableView.h set as class for TABLEVIEW in storyboard
+//////////////////////////////////////////////////////////////////
+
+- (id)saveObjectAndInsertBlankRowAtIndexPath:(NSIndexPath *)indexPath {
+    id object = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
+    
+    XYZToDoItem *dummyItem = [XYZToDoItem new];
+    dummyItem.itemName = @" ";
+
+    [self.globalContainer.toDoItems replaceObjectAtIndex:indexPath.row withObject:dummyItem];
+    return object;
+}
+
+// This method is called when the selected row is dragged to a new position. You simply update your
+// data source to reflect that the rows have switched places. This can be called multiple times
+// during the reordering process.
+- (void)moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    id object = [self.globalContainer.toDoItems objectAtIndex:fromIndexPath.row];
+    [self.globalContainer.toDoItems removeObjectAtIndex:fromIndexPath.row];
+    [self.globalContainer.toDoItems insertObject:object atIndex:toIndexPath.row];
+}
+
+
+// This method is called when the selected row is released to its new position. The object is the same
+// object you returned in saveObjectAndInsertBlankRowAtIndexPath:. Simply update the data source so the
+// object is in its new position. You should do any saving/cleanup here.
+- (void)finishReorderingWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath; {
+    [self.globalContainer.toDoItems replaceObjectAtIndex:indexPath.row withObject:object];
+    [self.globalContainer saveItemsToFile];
+}
+//////////////////////////////////////////////////////////////////
 
 @end
