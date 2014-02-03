@@ -200,13 +200,9 @@ XYZTopEditTableViewController
     }
 }
 
-
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-  
     
     if([indexPath section] == 0 ){
         
@@ -217,7 +213,7 @@ XYZTopEditTableViewController
         XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
         
         cell.textLabel.text = item.itemName;
-        cell.detailTextLabel.text = @"has been added";
+        cell.detailTextLabel.text = @"added";
 //        
 //        UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
 //        cell.textLabel.font  = myFont;
