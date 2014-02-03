@@ -27,10 +27,6 @@
 
 @implementation XYZOberViewController
 
-- (IBAction)enterEditModeButtonPressed:(id)sender {
-        [self.mainViewController.tableView setEditing:!self.mainViewController.tableView.editing animated:YES];
-}
-
 
 - (void)performEditSegue{
     [self performSegueWithIdentifier: @"EditSegue" sender: self];
