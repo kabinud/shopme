@@ -6,14 +6,13 @@
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
-#import "XYZTopEditTableViewController+TapRecognizers.h"
+#import "XYZTopEditTableViewController+TapRecognizer.h"
 #import "XYZToDoItem.h"
 
 @implementation XYZTopEditTableViewController (TapRecognizers)
 
 
 - (IBAction)recognizeTapGesture:(id)sender {
-
     CGPoint location = [self.tapGestureRecognizer locationInView:self.tableView];
     NSIndexPath *swippedIndexPath = [self.tableView indexPathForRowAtPoint:location];
     //if clicked on an empty table cell return to main table view
@@ -22,8 +21,7 @@
         [self.editField resignFirstResponder];
         [self dismissViewControllerAnimated:NO completion:^{}];
     }
-    else{
-       
+    else if([swippedIndexPath section]==1){
         XYZToDoItem *item;
         item = [self.historicalItemsToShow objectAtIndex:swippedIndexPath.row];
             
@@ -31,7 +29,6 @@
         [self.globalContainer saveItemsToFile];
         
         [self.tableView reloadData];
- 
     }
 }
 

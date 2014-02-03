@@ -1,5 +1,5 @@
 //
-//  XYZTopEditTableViewController+TapRecognizers.h
+//  XYZTopEditTableViewController+TapRecognizer.h
 //  ListMe2
 //
 //  Created by Marcin Kmieć on 03.02.2014.
@@ -8,6 +8,6 @@
 
 #import "XYZTopEditTableViewController.h"
 
-@interface XYZTopEditTableViewController (TapRecognizers)
+@interface XYZTopEditTableViewController (TapRecognizer)
 
 @end

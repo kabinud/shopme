@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ListMe2/XYZTopEditTableViewController+TapRecognizers.m"
-            timestampString = "413132807.727368"
+            timestampString = "413132958.579678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "-recognizeTapGesture:"
             landmarkType = "5">
          </BreakpointContent>

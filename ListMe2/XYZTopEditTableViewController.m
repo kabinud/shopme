@@ -9,6 +9,7 @@
 #import "XYZTopEditTableViewController.h"
 #import "XYZGlobalContainer.h"
 #import "XYZToDoItem.h"
+#import "NSString+IsEmpty.h"
 
 @interface XYZTopEditTableViewController ()
 
@@ -18,6 +19,14 @@
 
 @implementation
 XYZTopEditTableViewController
+
+- (IBAction)pencilButtonPressed:(id)sender {
+    [self addData: self.editField.text];
+    self.editField.text = nil;
+    [self updateHistoricalItemsArrayForTableViewDuringEditing:@""];
+    [self.tableView reloadData];
+}
+
 
 - (void)updateHistoricalItemsArrayForTableViewDuringEditing:(NSString *) searchedString
 {
@@ -86,8 +95,17 @@ XYZTopEditTableViewController
     NSLog(@"His added");
 }
 
+- (void) updateBadge{
+    if([self firstUseItemsRemoved] && [self.globalContainer.toDoItems count] > 0){
+        [UIApplication sharedApplication].applicationIconBadgeNumber=[self.globalContainer.toDoItems count];
+    }
+    else{
+        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
+    }
+}
+
 - (void)addData: (NSString *) text {
-    if(self.editField.text.length>0){
+    if(![self.editField.text isStringEmpty]){
     
         XYZToDoItem *toDoItem = [XYZToDoItem new];
         toDoItem.itemName = self.editField.text;
@@ -100,12 +118,8 @@ XYZTopEditTableViewController
 
     }
     
-    if([self firstUseItemsRemoved] && [self.globalContainer.toDoItems count] > 0){
-        [UIApplication sharedApplication].applicationIconBadgeNumber=[self.globalContainer.toDoItems count];
-    }
-    else{
-        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
-    }
+    [self updateBadge];
+  
 }
 
 
@@ -121,8 +135,8 @@ XYZTopEditTableViewController
 }
 
 
+
 - (IBAction)backButtonPressed:(id)sender {
-    
     [self addData: self.editField.text];
     [self.editField resignFirstResponder];
     [self dismissViewControllerAnimated:NO completion:^{}];
@@ -216,9 +230,9 @@ XYZTopEditTableViewController
         XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
         
         cell.textLabel.text = item.itemName;
-        
-        UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
-        cell.textLabel.font  = myFont;
+//        
+//        UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 14.0 ];
+//        cell.textLabel.font  = myFont;
     }
     else{
         XYZToDoItem *item = [self.historicalItemsToShow objectAtIndex:indexPath.row];

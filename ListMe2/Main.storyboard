@@ -135,6 +135,9 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="compose.png" id="1yt-fv-Y4d">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pencilButtonPressed:" destination="4wv-d4-d2U" id="faT-IE-r7V"/>
+                            </connections>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a new item here" minimumFontSize="17" id="IOq-Cf-X2v">
                             <rect key="frame" x="55" y="7" width="209" height="30"/>

@@ -32,7 +32,6 @@
 		B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B806B738189BD14600C19AC0 /* InfoPlist.strings */; };
 		B806B73C189BD14600C19AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B73B189BD14600C19AC0 /* main.m */; };
 		B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */; };
-		B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B745189BD14600C19AC0 /* XYZViewController.m */; };
 		B806B748189BD14600C19AC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B806B747189BD14600C19AC0 /* Images.xcassets */; };
 		B806B74F189BD14600C19AC0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B74E189BD14600C19AC0 /* XCTest.framework */; };
 		B806B750189BD14600C19AC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B806B72F189BD14600C19AC0 /* Foundation.framework */; };
@@ -42,6 +41,8 @@
 		B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806B765189BD1A600C19AC0 /* XYZMainViewController.m */; };
 		B8094179189DAE5700FE81EB /* crateM1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094177189DAE5700FE81EB /* crateM1.png */; };
 		B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094178189DAE5700FE81EB /* crateM1@2x.png */; };
+		B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */; };
+		B8361BF818A0004E00787AE5 /* NSString+GestureRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BF718A0004E00787AE5 /* NSString+GestureRecognizers.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
@@ -54,7 +55,7 @@
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
-		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m */; };
+		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,8 +101,6 @@
 		B806B73D189BD14600C19AC0 /* ListMe2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListMe2-Prefix.pch"; sourceTree = "<group>"; };
 		B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
 		B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
-		B806B744189BD14600C19AC0 /* XYZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZViewController.h; sourceTree = "<group>"; };
-		B806B745189BD14600C19AC0 /* XYZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZViewController.m; sourceTree = "<group>"; };
 		B806B747189BD14600C19AC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B806B74D189BD14600C19AC0 /* ListMe2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListMe2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806B74E189BD14600C19AC0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,6 +111,10 @@
 		B806B765189BD1A600C19AC0 /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
 		B8094177189DAE5700FE81EB /* crateM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM1.png; path = ListMe2/Icons/crateM1.png; sourceTree = "<group>"; };
 		B8094178189DAE5700FE81EB /* crateM1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM1@2x.png"; path = "ListMe2/Icons/crateM1@2x.png"; sourceTree = "<group>"; };
+		B8361BEF189FFA6400787AE5 /* NSString+IsEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IsEmpty.h"; sourceTree = "<group>"; };
+		B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IsEmpty.m"; sourceTree = "<group>"; };
+		B8361BF618A0004E00787AE5 /* NSString+GestureRecognizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GestureRecognizers.h"; sourceTree = "<group>"; };
+		B8361BF718A0004E00787AE5 /* NSString+GestureRecognizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GestureRecognizers.m"; sourceTree = "<group>"; };
 		B87FC119189D859400AF60FD /* bin222M.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bin222M.png; path = ListMe2/Icons/bin222M.png; sourceTree = "<group>"; };
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
@@ -128,8 +131,8 @@
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
-		B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZTopEditTableViewController+TapRecognizers.h"; sourceTree = "<group>"; };
-		B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYZTopEditTableViewController+TapRecognizers.m"; sourceTree = "<group>"; };
+		B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZTopEditTableViewController+TapRecognizer.h"; sourceTree = "<group>"; };
+		B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYZTopEditTableViewController+TapRecognizer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,26 +204,18 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B8361BF5189FFEEF00787AE5 /* Main Table View */,
+				B8361BF4189FFED500787AE5 /* TopMenu */,
+				B8361BF3189FFDA400787AE5 /* Top Edit */,
+				B8361BF2189FFD7A00787AE5 /* Class categories */,
 				B802CC7B189EF1A1006D607C /* Data Persist Files */,
 				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
 				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
-				B895D27A189E919D00BAF7FB /* XYZTopViewController.h */,
-				B895D27B189E919D00BAF7FB /* XYZTopViewController.m */,
-				B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */,
-				B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */,
 				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
-				B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */,
-				B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */,
-				B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.h */,
-				B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
 				B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */,
-				B806B764189BD1A600C19AC0 /* XYZMainViewController.h */,
-				B806B765189BD1A600C19AC0 /* XYZMainViewController.m */,
-				B806B744189BD14600C19AC0 /* XYZViewController.h */,
-				B806B745189BD14600C19AC0 /* XYZViewController.m */,
 				B806B747189BD14600C19AC0 /* Images.xcassets */,
 				B806B736189BD14600C19AC0 /* Supporting Files */,
 			);
@@ -286,6 +281,48 @@
 				B8006962189D8207001F03BD /* finishFlag22.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		B8361BF2189FFD7A00787AE5 /* Class categories */ = {
+			isa = PBXGroup;
+			children = (
+				B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */,
+				B8361BEF189FFA6400787AE5 /* NSString+IsEmpty.h */,
+			);
+			name = "Class categories";
+			sourceTree = "<group>";
+		};
+		B8361BF3189FFDA400787AE5 /* Top Edit */ = {
+			isa = PBXGroup;
+			children = (
+				B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */,
+				B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */,
+				B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */,
+				B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */,
+				B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.h */,
+				B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */,
+			);
+			name = "Top Edit";
+			sourceTree = "<group>";
+		};
+		B8361BF4189FFED500787AE5 /* TopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B895D27A189E919D00BAF7FB /* XYZTopViewController.h */,
+				B895D27B189E919D00BAF7FB /* XYZTopViewController.m */,
+			);
+			name = TopMenu;
+			sourceTree = "<group>";
+		};
+		B8361BF5189FFEEF00787AE5 /* Main Table View */ = {
+			isa = PBXGroup;
+			children = (
+				B806B764189BD1A600C19AC0 /* XYZMainViewController.h */,
+				B806B765189BD1A600C19AC0 /* XYZMainViewController.m */,
+				B8361BF618A0004E00787AE5 /* NSString+GestureRecognizers.h */,
+				B8361BF718A0004E00787AE5 /* NSString+GestureRecognizers.m */,
+			);
+			name = "Main Table View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
-				B806B746189BD14600C19AC0 /* XYZViewController.m in Sources */,
+				B8361BF818A0004E00787AE5 /* NSString+GestureRecognizers.m in Sources */,
 				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
@@ -420,9 +457,10 @@
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
 				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
 				B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */,
+				B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */,
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
 				B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */,
-				B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizers.m in Sources */,
+				B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
