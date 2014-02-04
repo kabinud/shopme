@@ -62,7 +62,21 @@
         [controller setMessageBody:messageBody isHTML:NO];
         
         if (controller){
-            [self presentViewController:controller animated:YES completion:NULL];
+            
+            [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+                             animations:^{
+                                 _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
+                             }
+                             completion:^(BOOL finished) {
+                                 if (finished) {
+                                     [_topViewController.view removeFromSuperview];
+                                     _topViewController = nil;
+                                     _showingTopPanel = NO;
+                                 }
+                                  [self presentViewController:controller animated:YES completion:NULL];
+                             }];
+            
+           
         }
     }
     else {
