@@ -20,6 +20,8 @@
 
 @implementation XYZMainViewController
 
+
+
 //call (void)stoppedScrolling when user lifts their finger
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -54,12 +56,15 @@
     if(scrollView.contentOffset.y<0){
         [self.delegate bringTopEditPanelToAnExtend:(-1)*scrollView.contentOffset.y];
     }
-
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
      NSLog(@"View will appear");
+    //remove delete buttons
+    for(XYZToDoItem* item in self.globalContainer.toDoItems){
+        item.toBeDeleted = NO;
+    }
     [self.tableView reloadData];
 }
 
@@ -180,7 +185,7 @@
     
     if (indexPath != nil)
     {
-        [self.globalContainer.toDoItems removeObject:[self.globalContainer.toDoItems objectAtIndex:indexPath.row]];
+        [self.globalContainer.toDoItems removeObjectAtIndex:indexPath.row];
         [self.globalContainer saveItemsToFile];
         [self.tableView reloadData];
     }
@@ -188,27 +193,12 @@
 
 
 
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (void)removeAllItemsFromCurrentShoppingList{
+    [self.globalContainer.toDoItems removeAllObjects];
+    [self.globalContainer saveItemsToFile];
+    [self.tableView reloadData];
 }
-
-
-//
-//// Override to support editing the table view.
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        // Delete the row from the data source
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    }   
-//    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//    }   
-//}
-
 
 
 
@@ -231,28 +221,6 @@
     return YES;
 }
 
-//////////
-//get rid of the red delete sign in editing mode
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return UITableViewCellEditingStyleNone;
-}
-
-- (BOOL)tableView:(UITableView *)tableview shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-    return NO;
-}
-////////
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 //////////////////////////////////////////////////////////////////
 // reordering methods for BVBReorderTableView delegate

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYZOberViewController.h"
 
 @interface XYZTopViewController : UITableViewController
-
+@property (nonatomic, assign) id<OberViewControllerDelegate> delegate;
 @end

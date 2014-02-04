@@ -209,8 +209,7 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
-				B8BA195018A03FED00EB49A1 /* BVReorderTableView.h */,
-				B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */,
+				B8BA195518A0F2BD00EB49A1 /* BVTableReorder */,
 				B8361BF5189FFEEF00787AE5 /* Main Table View */,
 				B8361BF4189FFED500787AE5 /* TopMenu */,
 				B8361BF3189FFDA400787AE5 /* Top Edit */,
@@ -330,6 +329,15 @@
 				B8361BFA18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m */,
 			);
 			name = "Main Table View";
+			sourceTree = "<group>";
+		};
+		B8BA195518A0F2BD00EB49A1 /* BVTableReorder */ = {
+			isa = PBXGroup;
+			children = (
+				B8BA195018A03FED00EB49A1 /* BVReorderTableView.h */,
+				B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */,
+			);
+			name = BVTableReorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

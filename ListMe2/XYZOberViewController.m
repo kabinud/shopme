@@ -27,6 +27,9 @@
 
 @implementation XYZOberViewController
 
+- (void)removeAllItemsFromMainTable{
+    [self.mainViewController removeAllItemsFromCurrentShoppingList];
+    }
 
 - (void)performEditSegue{
     [self performSegueWithIdentifier: @"EditSegue" sender: self];
@@ -47,6 +50,7 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     self.mainViewController = (XYZMainViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"mainViewId"];
     self.mainViewController.delegate = self;
+    
     
     self.mainViewController.view.frame = CGRectMake(0, 22, self.mainViewController.view.frame.size.width, self.mainViewController.view.frame.size.height);
     
@@ -75,6 +79,7 @@
     if(_topViewController == nil){
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
         self.topViewController = (XYZTopViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topViewId"];
+        self.topViewController.delegate = self;
         [self addChildViewController:_topViewController];
         [self.view addSubview:self.topViewController.view];
         [_topViewController didMoveToParentViewController:self];
@@ -183,9 +188,7 @@
     
 }
 
--(IBAction)returned1:(UIStoryboardSegue *)segue animated:(BOOL)animated{
-    [self closeTopEditPanel];
-}
+
 
 - (void)bringTopPanel{
     

@@ -14,9 +14,10 @@
 - (void)bringTopEditPanelToAnExtend: (int)topY;
 - (void)closeTopEditPanel;
 - (void)performEditSegue;
+- (void)removeAllItemsFromMainTable;
 
 @end
 
 @interface XYZOberViewController : UIViewController
--(IBAction)returned1:(UIStoryboardSegue *)segue animated:(BOOL)animated;
+
 @end

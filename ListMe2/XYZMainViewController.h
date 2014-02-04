@@ -19,5 +19,6 @@
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRightGestureRecognizer;
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeftGestureRecognizer;
 
+- (void)removeAllItemsFromCurrentShoppingList;
 
 @end
