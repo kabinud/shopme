@@ -35,6 +35,7 @@
 {
     if(self.showingTopPanel){
         [self bringTopPanel:nil];
+        self.mainViewController.tableView.scrollEnabled = YES;
     }
 }
 
@@ -64,7 +65,8 @@
         if (controller){
             //bring top panel up and when done proceed to present view controller which looks cool
             [self bringTopPanel:^{
-                 [self presentViewController:controller animated:YES completion:NULL];
+                self.mainViewController.tableView.scrollEnabled = YES;
+                [self presentViewController:controller animated:YES completion:NULL];
             }];
             
         

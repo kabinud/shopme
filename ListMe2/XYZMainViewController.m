@@ -86,6 +86,7 @@
 
 - (void)bringOrCloseToPanel{
     self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
+    NSLog(@"Scroll is %d", self.tableView.scrollEnabled);
     [self.delegate bringTopPanel:nil];
 }
 
