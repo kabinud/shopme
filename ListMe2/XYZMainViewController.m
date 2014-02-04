@@ -86,7 +86,7 @@
 
 - (void)bringOrCloseToPanel{
     self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
-    [self.delegate bringTopPanel];
+    [self.delegate bringTopPanel:nil];
 }
 
 #pragma mark - Table view data source
