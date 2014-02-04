@@ -63,7 +63,7 @@
         [controller setMessageBody:messageBody isHTML:NO];
         
         if (controller){
-            //bring top panel up and when done proceed to present view controller which looks cool
+            //bring top panel up and when done proceed to present view controller, which overall looks cool
             [self bringTopPanel:^{
                 self.mainViewController.tableView.scrollEnabled = YES;
                 [self presentViewController:controller animated:YES completion:NULL];
@@ -115,7 +115,7 @@
     }
     else if (buttonIndex == 1)
     {
-        [self.mainViewController bringOrCloseToPanel];
+        //[self.mainViewController bringOrCloseToPanel];
     }
     
 }

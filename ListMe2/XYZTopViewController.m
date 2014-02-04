@@ -9,7 +9,7 @@
 #import "XYZTopViewController.h"
 
 
-@interface XYZTopViewController () 
+@interface XYZTopViewController ()
 
 @end
 
