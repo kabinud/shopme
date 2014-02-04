@@ -57,6 +57,7 @@
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
 		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
 		B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */; };
+		B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,8 @@
 		B8BA195018A03FED00EB49A1 /* BVReorderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVReorderTableView.h; sourceTree = "<group>"; };
 		B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVReorderTableView.m; sourceTree = "<group>"; };
 		B8BA195318A041A200EB49A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B8BA195A18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZFinishShoppingTableViewController.h; sourceTree = "<group>"; };
+		B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZFinishShoppingTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,8 @@
 				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
 				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
 				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
+				B8BA195A18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.h */,
+				B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
@@ -467,6 +472,7 @@
 				B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */,
 				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
+				B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,

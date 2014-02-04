@@ -31,6 +31,10 @@
 
 @implementation XYZOberViewController
 
+- (void)finishShopping{
+    [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
+}
+
 - (IBAction)unwindOberViewController:(UIStoryboardSegue *)segue
 {
     if(self.showingTopPanel){
@@ -39,10 +43,15 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
     if(self.showingTopPanel){
         [self bringTopPanel:nil];
     }
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)sendListByEmail{

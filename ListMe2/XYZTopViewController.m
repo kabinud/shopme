@@ -16,6 +16,11 @@
 @implementation XYZTopViewController
 
 
+- (IBAction)FinishShoppingButtonPressed:(id)sender {
+    
+    [self.delegate finishShopping];
+    
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,8 +50,6 @@
 
 
 - (IBAction)removeAllItemsButtonPressed:(id)sender {
-    
-   
     
     [self.delegate removeAllItemsFromMainTable];
 

@@ -16,6 +16,7 @@
 - (void)performEditSegue;
 - (void)removeAllItemsFromMainTable;
 - (void)sendListByEmail;
+- (void)finishShopping;
 
 @end
 

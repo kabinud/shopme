@@ -106,6 +106,7 @@
                     <navigationItem key="navigationItem" id="pe2-4G-Khf"/>
                     <connections>
                         <segue destination="lQe-c2-knv" kind="modal" identifier="EditSegue" modalTransitionStyle="crossDissolve" animates="NO" id="bvf-dx-SpZ"/>
+                        <segue destination="gqh-go-9wB" kind="push" identifier="FinishShoppingSegue" id="MgJ-to-AEr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYl-pv-3bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,6 +294,9 @@
                                             <state key="highlighted">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="FinishShoppingButtonPressed:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="KNg-z2-A8Z"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -359,7 +363,7 @@
         <!--Navigation Controller-->
         <scene sceneID="FNS-yU-kBF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="CQ9-fe-eK3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CQ9-fe-eK3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Atl-vh-Ai4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -378,6 +382,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sky-jj-YUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-14" y="-381"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="5LP-Jd-bOT">
+            <objects>
+                <tableViewController id="gqh-go-9wB" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="E4g-nU-4Ln">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NHF-do-SPg">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHF-do-SPg" id="YhL-bf-qFR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gqh-go-9wB" id="Anb-4j-N78"/>
+                            <outlet property="delegate" destination="gqh-go-9wB" id="HyE-3u-Ljn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2RS-8l-vig">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="how much did ya pay" borderStyle="roundedRect" minimumFontSize="17" id="nBo-xc-0FC">
+                            <rect key="frame" x="67" y="7" width="186" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bte-9a-cnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-1130"/>
         </scene>
         <!--Top Edit Navigation Controller-->
         <scene sceneID="83p-jd-mQh">
