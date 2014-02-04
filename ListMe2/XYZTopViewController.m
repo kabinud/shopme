@@ -45,8 +45,13 @@
 
 
 - (IBAction)removeAllItemsButtonPressed:(id)sender {
+    
+   
+    
     [self.delegate removeAllItemsFromMainTable];
+
 }
+
 
 
 - (IBAction)sendListByEmailButtonPressed:(id)sender {

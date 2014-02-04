@@ -17,7 +17,7 @@
 
 #define SLIDE_TIMING .45
 
-@interface XYZOberViewController () <OberViewControllerDelegate, MFMailComposeViewControllerDelegate>
+@interface XYZOberViewController () <OberViewControllerDelegate, MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
 
 @property XYZMainViewController *mainViewController;
 @property XYZTopViewController *topViewController;
@@ -73,9 +73,32 @@
 }
 
 - (void)removeAllItemsFromMainTable{
-    [self.mainViewController removeAllItemsFromCurrentShoppingList];
-    [self closeTopEditPanel];
+    
+    UIActionSheet *popupQuery;
+    
+    popupQuery = [[UIActionSheet alloc] initWithTitle:@"Do you want to remove all the items from your shopping list?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Clear list"
+                                    otherButtonTitles: nil];
+    
+    
+    popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [popupQuery showInView:self.view];
+    
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+        [self.mainViewController removeAllItemsFromCurrentShoppingList];
+        [self bringTopPanel];
+        
     }
+    else if (buttonIndex == 1)
+    {
+        [self bringTopPanel];
+    }
+    
+}
 
 - (void)performEditSegue{
     [self performSegueWithIdentifier: @"EditSegue" sender: self];
