@@ -7,6 +7,7 @@
 //
 
 #import "XYZInfoViewController.h"
+#import "XYZOberViewController.h"
 
 @interface XYZInfoViewController ()
 
@@ -14,9 +15,11 @@
 
 @implementation XYZInfoViewController
 
-//- (IBAction)closeButton:(id)sender {
-//     [self dismissViewControllerAnimated:NO completion:^{}];
+//- (IBAction)backButtonPressed:(id)sender {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
 //}
+
 
 - (void)changeBackgroundColor{
     

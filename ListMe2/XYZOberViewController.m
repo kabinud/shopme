@@ -31,6 +31,19 @@
 
 @implementation XYZOberViewController
 
+- (IBAction)unwindOberViewController:(UIStoryboardSegue *)segue
+{
+    if(self.showingTopPanel){
+        [self bringTopPanel];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    if(self.showingTopPanel){
+        [self bringTopPanel];
+    }
+}
+
 - (void)sendListByEmail{
     
     if ([MFMailComposeViewController canSendMail]) {
@@ -69,7 +82,6 @@
     }
 
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.mainViewController bringOrCloseToPanel];
 }
 
 - (void)removeAllItemsFromMainTable{
@@ -95,7 +107,6 @@
     }
     else if (buttonIndex == 1)
     {
-        self.showingTopPanel = NO;
         [self.mainViewController bringOrCloseToPanel];
     }
     
@@ -126,7 +137,7 @@
     
     [self.view addSubview:self.mainViewController.view];
    
-    
+    self.showingTopPanel = NO;
     
     [self addChildViewController:_mainViewController];
     [_mainViewController didMoveToParentViewController:self];
@@ -137,7 +148,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.globalContainer = [XYZGlobalContainer globalContainer];
     [self.globalContainer readItemsFromFile];
     [self.globalContainer readHistoricalItemsFromFile];
@@ -147,6 +158,7 @@
      self.navigationController.toolbar.clipsToBounds = YES;
    
 }
+
 
 
 - (UITableView *)getTopView
@@ -161,7 +173,6 @@
         _topViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     }
     self.showingTopPanel = YES;
-    
     UITableView *view = (UITableView *)self.topViewController.view;
     return view;
 }
@@ -275,13 +286,12 @@
                          }
                          completion:^(BOOL finished) {
                              if (finished) {
-                                 
-                                 NSLog(@"Done");
-                                 [self.topViewController.view removeFromSuperview];
-                                 self.topViewController = nil;
-                                 self.showingTopPanel = NO;
+                                 [_topViewController.view removeFromSuperview];
+                                 _topViewController = nil;
+                                 _showingTopPanel = NO;
                              }
                          }];
+        
     
         
     }
@@ -300,11 +310,10 @@
                      }
                      completion:^(BOOL finished) {
                          if (finished) {
-                             
-
+                             self.showingTopPanel = YES;
                          }
                      }];
-        self.showingTopPanel = YES;
+        
     }
 }
 

@@ -59,7 +59,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-     NSLog(@"View will appear");
     //remove delete buttons
     for(XYZToDoItem* item in self.globalContainer.toDoItems){
         item.toBeDeleted = NO;

@@ -343,14 +343,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CQ9-fe-eK3" kind="modal" modalTransitionStyle="flipHorizontal" id="k8T-Ih-Gob"/>
+                                    <segue destination="aRQ-1h-ZUX" kind="unwind" unwindAction="unwindOberViewController:" id="yU1-14-mIY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3tF-Df-DNr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18J-p5-3X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aRQ-1h-ZUX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="512" y="335"/>
         </scene>
