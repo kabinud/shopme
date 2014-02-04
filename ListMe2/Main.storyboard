@@ -236,7 +236,7 @@
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="removeAllItemsButton:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="XM5-Bn-kHG"/>
+                                                <action selector="removeAllItemsButtonPressed:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="kub-4Z-fWd"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -264,6 +264,9 @@
                                             <state key="highlighted">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="sendListByEmailButtonPressed:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="tFC-Xs-xeF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>

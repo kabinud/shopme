@@ -58,7 +58,6 @@
     }
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
      NSLog(@"View will appear");
     //remove delete buttons
@@ -73,8 +72,7 @@
     [super viewDidLoad];
     
     self.globalContainer = [XYZGlobalContainer globalContainer];
-    [self.globalContainer readItemsFromFile];
-    [self.globalContainer readHistoricalItemsFromFile];
+  
 }
 
 - (void)didReceiveMemoryWarning

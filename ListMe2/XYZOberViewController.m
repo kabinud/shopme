@@ -11,24 +11,70 @@
 #import "XYZTopViewController.h"
 #import "XYZTopEditNavigationController.h"
 #import "XYZTopEditTableViewController.h"
+#import <MessageUI/MFMailComposeViewController.h>
+#import "XYZToDoItem.h"
+#import "XYZGlobalContainer.h"
 
 #define SLIDE_TIMING .45
 
-@interface XYZOberViewController () <OberViewControllerDelegate>
+@interface XYZOberViewController () <OberViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property XYZMainViewController *mainViewController;
 @property XYZTopViewController *topViewController;
 @property XYZTopEditNavigationController *topEditNavigationController;
 @property BOOL showingTopPanel;
 @property BOOL movingTopEditPanel;
+@property XYZGlobalContainer *globalContainer;
 
 
 @end
 
 @implementation XYZOberViewController
 
+- (void)sendListByEmail{
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+        controller.mailComposeDelegate = self;
+        [controller setSubject:@"My shopping list"];
+        
+        NSMutableString *messageBody = [NSMutableString new];
+        [messageBody appendString:@"My shopping list:\n\n "];
+        for(XYZToDoItem *item in self.globalContainer.toDoItems) {
+            [messageBody appendString:@"- "];
+            [messageBody appendString:item.itemName];
+            [messageBody appendString:@"\n"];
+        }
+        
+        [controller setMessageBody:messageBody isHTML:NO];
+        
+        if (controller){
+            [self presentViewController:controller animated:YES completion:NULL];
+        }
+    }
+    else {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to send e-mail." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error;
+{
+    if (result == MFMailComposeResultSent) {
+        NSLog(@"It's away!");
+    }
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self closeTopEditPanel];
+}
+
 - (void)removeAllItemsFromMainTable{
     [self.mainViewController removeAllItemsFromCurrentShoppingList];
+    [self closeTopEditPanel];
     }
 
 - (void)performEditSegue{
@@ -67,6 +113,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    [self.globalContainer readItemsFromFile];
+    [self.globalContainer readHistoricalItemsFromFile];
+    
     [self loadMainView];
     //removes toolbar border
      self.navigationController.toolbar.clipsToBounds = YES;

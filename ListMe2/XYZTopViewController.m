@@ -44,8 +44,13 @@
 }
 
 
-- (IBAction)removeAllItemsButton:(id)sender {
+- (IBAction)removeAllItemsButtonPressed:(id)sender {
     [self.delegate removeAllItemsFromMainTable];
+}
+
+
+- (IBAction)sendListByEmailButtonPressed:(id)sender {
+    [self.delegate sendListByEmail];
 }
 
 

@@ -15,6 +15,7 @@
 - (void)closeTopEditPanel;
 - (void)performEditSegue;
 - (void)removeAllItemsFromMainTable;
+- (void)sendListByEmail;
 
 @end
 
