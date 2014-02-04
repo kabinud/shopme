@@ -20,5 +20,6 @@
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeftGestureRecognizer;
 
 - (void)removeAllItemsFromCurrentShoppingList;
+- (void)bringOrCloseToPanel;
 
 @end

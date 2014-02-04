@@ -69,7 +69,7 @@
     }
 
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self closeTopEditPanel];
+    [self.mainViewController bringOrCloseToPanel];
 }
 
 - (void)removeAllItemsFromMainTable{
@@ -90,12 +90,13 @@
     if (buttonIndex == 0)
     {
         [self.mainViewController removeAllItemsFromCurrentShoppingList];
-        [self bringTopPanel];
+        [self.mainViewController bringOrCloseToPanel];
         
     }
     else if (buttonIndex == 1)
     {
-        [self bringTopPanel];
+        self.showingTopPanel = NO;
+        [self.mainViewController bringOrCloseToPanel];
     }
     
 }

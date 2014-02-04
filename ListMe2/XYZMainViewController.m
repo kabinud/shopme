@@ -82,11 +82,13 @@
 }
 
 - (IBAction)menuButtonAction:(id)sender {
-    
+    [self bringOrCloseToPanel];
+}
+
+- (void)bringOrCloseToPanel{
     self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
     [self.delegate bringTopPanel];
 }
-
 
 #pragma mark - Table view data source
 
