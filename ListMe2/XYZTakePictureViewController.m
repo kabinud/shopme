@@ -36,12 +36,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"FullScreenSegue"]) {
-        
         XYZImageFullScreenViewController *destinationController = (XYZImageFullScreenViewController *)segue.destinationViewController;
         
         destinationController.imageToShow= self.imageView.image;
-
     }
+    
+    else if ([[segue identifier] isEqualToString:@"FinalizeShoppingSegue"]) {
+        
+        [self.globalContainer.toDoItems removeAllObjects];
+        [self.globalContainer.lists insertObject:self.globalContainer.listToBeArchived atIndex:0];
+        
+    }
+    
 }
 
 //touched on image view

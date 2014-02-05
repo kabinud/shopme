@@ -235,6 +235,8 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B8A72DE118A2FD8A0078CAA7 /* InfoView */,
+				B8A72DE018A2FD730078CAA7 /* HistoryLists */,
 				B8C7CD6118A2552500EEA70D /* FinishShoppingControllers */,
 				B8BA195518A0F2BD00EB49A1 /* BVTableReorder */,
 				B8361BF5189FFEEF00787AE5 /* Main Table View */,
@@ -242,11 +244,7 @@
 				B8361BF3189FFDA400787AE5 /* Top Edit */,
 				B8361BF2189FFD7A00787AE5 /* Class categories */,
 				B802CC7B189EF1A1006D607C /* Data Persist Files */,
-				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
 				B8C7CD8718A2766A00EEA70D /* Main.storyboard */,
-				B8A72DDD18A2FBF70078CAA7 /* XYZListHistoryViewController.h */,
-				B8A72DDE18A2FBF70078CAA7 /* XYZListHistoryViewController.m */,
-				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
@@ -369,6 +367,24 @@
 				B8A72DC818A299480078CAA7 /* placeholder.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B8A72DE018A2FD730078CAA7 /* HistoryLists */ = {
+			isa = PBXGroup;
+			children = (
+				B8A72DDD18A2FBF70078CAA7 /* XYZListHistoryViewController.h */,
+				B8A72DDE18A2FBF70078CAA7 /* XYZListHistoryViewController.m */,
+			);
+			name = HistoryLists;
+			sourceTree = "<group>";
+		};
+		B8A72DE118A2FD8A0078CAA7 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
+				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
+			);
+			name = InfoView;
 			sourceTree = "<group>";
 		};
 		B8BA195518A0F2BD00EB49A1 /* BVTableReorder */ = {

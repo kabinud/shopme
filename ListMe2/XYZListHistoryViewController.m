@@ -8,8 +8,13 @@
 
 #import "XYZListHistoryViewController.h"
 #import "XYZOberViewController.h"
+#import "XYZGlobalContainer.h"
+#import "XYZArchivedList.h"
+
 
 @interface XYZListHistoryViewController ()
+
+@property XYZGlobalContainer *globalContainer;
 
 @end
 
@@ -33,6 +38,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.globalContainer = [XYZGlobalContainer globalContainer];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,16 +58,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.globalContainer.lists count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,7 +73,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    XYZArchivedList *list = [self.globalContainer.lists objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = list.name;
+    cell.detailTextLabel.text = list.totalPaidString;
     
     return cell;
 }
