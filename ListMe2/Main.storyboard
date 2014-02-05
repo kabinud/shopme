@@ -177,7 +177,7 @@
                             </connections>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a new item here" minimumFontSize="17" id="IOq-Cf-X2v">
-                            <rect key="frame" x="55" y="7" width="209" height="30"/>
+                            <rect key="frame" x="55" y="7" width="188" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -186,7 +186,8 @@
                                 <action selector="editingDidBegin:" destination="4wv-d4-d2U" eventType="editingDidBegin" id="ANd-i7-hiv"/>
                             </connections>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="coW-sU-NJC">
+                        <barButtonItem key="rightBarButtonItem" image="next.png" id="coW-sU-NJC">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="4wv-d4-d2U" id="tqK-if-S5u"/>
                             </connections>
@@ -360,10 +361,10 @@
             </objects>
             <point key="canvasLocation" x="512" y="335"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="FNS-yU-kBF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CQ9-fe-eK3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CQ9-fe-eK3" customClass="XYZMainNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Atl-vh-Ai4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -382,7 +383,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sky-jj-YUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14" y="-381"/>
+            <point key="canvasLocation" x="-7" y="-381"/>
         </scene>
         <!--Finish Shopping Table View Controller-->
         <scene sceneID="5LP-Jd-bOT">
@@ -415,7 +416,8 @@
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="OYZ-0b-dar">
+                        <barButtonItem key="rightBarButtonItem" image="next.png" style="done" id="OYZ-0b-dar">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="rCp-g9-Uep" kind="push" id="LkK-pc-dqY"/>
                             </connections>
@@ -495,7 +497,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7ZA-Rq-taa"/>
+                    <navigationItem key="navigationItem" id="7ZA-Rq-taa">
+                        <barButtonItem key="rightBarButtonItem" image="finishFlag22.png" id="SJp-EY-ohk">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="ohD-ig-egH" id="hpX-J4-e9B"/>
                         <segue destination="Uau-4O-QgO" kind="modal" identifier="FullScreenSegue" modalTransitionStyle="crossDissolve" id="Xbp-da-YV7"/>
@@ -533,6 +539,7 @@
         <image name="email.png" width="24" height="18"/>
         <image name="finishFlag22.png" width="22" height="22"/>
         <image name="info2.png" width="44" height="22"/>
+        <image name="next.png" width="44" height="44"/>
         <image name="placeholder.png" width="250" height="250"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

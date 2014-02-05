@@ -29,6 +29,28 @@
     return self;
 }
 
+- (void)createCustomBackButton{
+    UIImage *temp=nil;
+    
+    if([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)
+    {
+        temp = [UIImage imageNamed:@"backButton.png"];
+    }
+    else
+    {
+        temp = [[UIImage imageNamed:@"backButton.png"] imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal];
+    }
+    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithImage:temp style:UIBarButtonItemStyleBordered target:self action:@selector(popBack)];
+    
+    
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+    //    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+}
+
+-(void) popBack {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad
 {
@@ -36,9 +58,12 @@
     
     self.globalContainer = [XYZGlobalContainer globalContainer];
     [self.totalPaidField becomeFirstResponder];
-
-
+    [self createCustomBackButton];
+    
+   
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

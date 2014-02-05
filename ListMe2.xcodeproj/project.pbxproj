@@ -54,6 +54,9 @@
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
 		B8A72DC918A299480078CAA7 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DC818A299480078CAA7 /* placeholder.png */; };
 		B8A72DCB18A29D5F0078CAA7 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */; };
+		B8A72DCE18A2A61F0078CAA7 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCC18A2A61F0078CAA7 /* next.png */; };
+		B8A72DCF18A2A61F0078CAA7 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCD18A2A61F0078CAA7 /* next@2x.png */; };
+		B8A72DD218A2B0280078CAA7 /* XYZMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A72DD118A2B0280078CAA7 /* XYZMainNavigationController.m */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
 		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
@@ -135,6 +138,10 @@
 		B895D27B189E919D00BAF7FB /* XYZTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopViewController.m; sourceTree = "<group>"; };
 		B8A72DC818A299480078CAA7 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = ListMe2/Images/placeholder.png; sourceTree = "<group>"; };
 		B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder@2x.png"; path = "ListMe2/Images/placeholder@2x.png"; sourceTree = "<group>"; };
+		B8A72DCC18A2A61F0078CAA7 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = ListMe2/Icons/next.png; sourceTree = "<group>"; };
+		B8A72DCD18A2A61F0078CAA7 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "next@2x.png"; path = "ListMe2/Icons/next@2x.png"; sourceTree = "<group>"; };
+		B8A72DD018A2B0280078CAA7 /* XYZMainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainNavigationController.h; sourceTree = "<group>"; };
+		B8A72DD118A2B0280078CAA7 /* XYZMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainNavigationController.m; sourceTree = "<group>"; };
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
@@ -232,6 +239,8 @@
 				B802CC7B189EF1A1006D607C /* Data Persist Files */,
 				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
 				B8C7CD8718A2766A00EEA70D /* Main.storyboard */,
+				B8A72DD018A2B0280078CAA7 /* XYZMainNavigationController.h */,
+				B8A72DD118A2B0280078CAA7 /* XYZMainNavigationController.m */,
 				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
@@ -275,6 +284,8 @@
 		B806B767189BDF6400C19AC0 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B8A72DCC18A2A61F0078CAA7 /* next.png */,
+				B8A72DCD18A2A61F0078CAA7 /* next@2x.png */,
 				B8B95851189FD8E6007928BB /* clear-button-114.png */,
 				B802CC71189EEC91006D607C /* compose.png */,
 				B802CC72189EEC91006D607C /* compose@2x.png */,
@@ -462,6 +473,7 @@
 				B802CC64189ED285006D607C /* backButton@2x.png in Resources */,
 				B802CC54189EB131006D607C /* info.png in Resources */,
 				B802CC63189ED285006D607C /* backButton.png in Resources */,
+				B8A72DCF18A2A61F0078CAA7 /* next@2x.png in Resources */,
 				B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */,
 				B802CC73189EEC91006D607C /* compose.png in Resources */,
 				B802CC5B189EC47D006D607C /* xbutton.png in Resources */,
@@ -471,6 +483,7 @@
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
 				B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */,
 				B802CC5C189EC47D006D607C /* xbutton@2x.png in Resources */,
+				B8A72DCE18A2A61F0078CAA7 /* next.png in Resources */,
 				B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */,
 				B802CC6C189EE19A006D607C /* folder22-wide@2x.png in Resources */,
 				B802CC5F189ECEFA006D607C /* info2.png in Resources */,
@@ -513,6 +526,7 @@
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
 				B8C7CD9018A28E0B00EEA70D /* XYZImageFullScreenViewController.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
+				B8A72DD218A2B0280078CAA7 /* XYZMainNavigationController.m in Sources */,
 				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
 				B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */,
 				B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */,

@@ -13,6 +13,7 @@
 @interface XYZTakePictureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property BOOL photoTaken;
 
 
 
@@ -44,7 +45,7 @@
     
     UITouch *touch = [touches anyObject];
     
-    if ([touch view] == self.imageView && self.imageView.image != nil)
+    if ([touch view] == self.imageView && self.imageView.image != nil && self.photoTaken)
     {
          [self performSegueWithIdentifier: @"FullScreenSegue" sender: self];
     }
@@ -81,14 +82,8 @@
     
     //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
       UIImage * chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-  
-    
-    
-    
-    
-    
-    
     self.imageView.image = chosenImage;
+    self.photoTaken = YES;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
@@ -112,11 +107,34 @@
     return self;
 }
 
+- (void)createCustomBackButton{
+    UIImage *temp=nil;
+    
+    if([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)
+    {
+        temp = [UIImage imageNamed:@"backButton.png"];
+    }
+    else
+    {
+        temp = [[UIImage imageNamed:@"backButton.png"] imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal];
+    }
+    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithImage:temp style:UIBarButtonItemStyleBordered target:self action:@selector(popBack)];
+    
+    
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+    //    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+}
+
+-(void) popBack {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
-	// Do any additional setup after loading the view.
+    self.photoTaken = NO;
+    [self createCustomBackButton];
 }
 
 - (void)didReceiveMemoryWarning

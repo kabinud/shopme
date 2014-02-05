@@ -162,7 +162,7 @@ XYZTopEditTableViewController
     
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
         self.pencilAddButton.tintColor = [UIColor magentaColor];
-        self.doneButton.tintColor = [UIColor blackColor];
+        self.doneButton.tintColor = [UIColor magentaColor];
     }
     else {
         self.pencilAddButton.tintColor = [UIColor whiteColor];
