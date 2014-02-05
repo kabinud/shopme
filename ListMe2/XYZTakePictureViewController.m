@@ -23,10 +23,15 @@
 
 @implementation XYZTakePictureViewController
 
+
 - (IBAction)unwindToTakePictureController:(UIStoryboardSegue *)segue
 {
-
+    
 }
+
+
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
@@ -35,9 +40,7 @@
         XYZImageFullScreenViewController *destinationController = (XYZImageFullScreenViewController *)segue.destinationViewController;
         
         destinationController.imageToShow= self.imageView.image;
-        
-        NSLog(@"prepareforsegue");
-        
+
     }
 }
 
@@ -135,13 +138,6 @@
     self.photoTaken = NO;
     [self createCustomBackButton];
     self.globalContainer = [XYZGlobalContainer globalContainer];
-    
-//    NSLog(@"%@", self.globalContainer.listToBeArchived.totalPaidString);
-//    NSLog(@"%@", self.globalContainer.listToBeArchived.name);
-//    
-//    for(XYZToDoItem *item in self.globalContainer.listToBeArchived.archivedList){
-//        NSLog(@"%@",item.itemName);
-//    }
     
 }
 

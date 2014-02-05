@@ -17,6 +17,7 @@
 - (void)removeAllItemsFromMainTable;
 - (void)sendListByEmail;
 - (void)finishShopping;
+- (void)returnToRoot;
 
 @end
 

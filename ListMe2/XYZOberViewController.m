@@ -32,6 +32,11 @@
 
 @implementation XYZOberViewController
 
+- (void)returnToRoot {
+    [self dismissViewControllerAnimated:NO completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (void)finishShopping{
     [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
 }
