@@ -172,6 +172,7 @@
                     <navigationItem key="navigationItem" id="UJe-Hf-yOT">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="compose.png" id="1yt-fv-Y4d">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="pencilButtonPressed:" destination="4wv-d4-d2U" id="faT-IE-r7V"/>
                             </connections>
@@ -389,7 +390,7 @@
         <scene sceneID="5LP-Jd-bOT">
             <objects>
                 <tableViewController id="gqh-go-9wB" customClass="XYZFinishShoppingTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="E4g-nU-4Ln">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="E4g-nU-4Ln">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -413,8 +414,8 @@
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Total paid: " minimumFontSize="17" id="nBo-xc-0FC">
                             <rect key="frame" x="108" y="7" width="104" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" image="next.png" style="done" id="OYZ-0b-dar">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>

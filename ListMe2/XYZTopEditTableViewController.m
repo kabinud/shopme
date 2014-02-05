@@ -160,13 +160,13 @@ XYZTopEditTableViewController
     self.editField.delegate = self;
 
     
-    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
-        self.pencilAddButton.tintColor = [UIColor magentaColor];
-        self.doneButton.tintColor = [UIColor magentaColor];
-    }
-    else {
-        self.pencilAddButton.tintColor = [UIColor whiteColor];
-    }
+//    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+//        self.pencilAddButton.tintColor = [UIColor magentaColor];
+//        self.doneButton.tintColor = [UIColor magentaColor];
+//    }
+//    else {
+//        self.pencilAddButton.tintColor = [UIColor whiteColor];
+//    }
 }
 
 - (void)didReceiveMemoryWarning

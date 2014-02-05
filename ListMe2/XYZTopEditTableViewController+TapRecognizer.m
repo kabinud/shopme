@@ -21,9 +21,9 @@
         [self dismissViewControllerAnimated:NO completion:^{}];
     }
     else if([swippedIndexPath section]==1){
-        XYZToDoItem *item;
-        item = [self.historicalItemsToShow objectAtIndex:swippedIndexPath.row];
-            
+        XYZToDoItem *item = [XYZToDoItem new];
+        item.itemName = ((XYZToDoItem *)([self.historicalItemsToShow objectAtIndex:swippedIndexPath.row])).itemName;
+
         [self.globalContainer.toDoItems insertObject:item atIndex:0];
         [self.globalContainer saveItemsToFile];
         self.itemAdded = YES;

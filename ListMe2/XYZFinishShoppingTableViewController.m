@@ -7,9 +7,10 @@
 //
 
 #import "XYZFinishShoppingTableViewController.h"
+#import "XYZToDoItem.h"
 
 
-@interface XYZFinishShoppingTableViewController ()
+@interface XYZFinishShoppingTableViewController () <UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *totalPaidField;
@@ -56,13 +57,37 @@
 {
     [super viewDidLoad];
     
-    self.globalContainer = [XYZGlobalContainer globalContainer];
-    [self.totalPaidField becomeFirstResponder];
-    [self createCustomBackButton];
+    self.totalPaidField.delegate = self;
     
-   
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    [self createCustomBackButton];
+    //swipe gesture for custom back button
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [self.totalPaidField becomeFirstResponder];
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    NSString *decimalSymbol = [formatter decimalSeparator];
+    
+    NSArray  *arrayOfString = [newString componentsSeparatedByString:decimalSymbol];
+    
+    if([arrayOfString count]>1){
+        if ([[arrayOfString objectAtIndex:1] length] < 3 ){
+                return YES;
+        }
+        else{
+            return NO;
+        }
+    }
+
+    return YES;
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -76,13 +101,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [self.globalContainer.toDoItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,7 +115,25 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    XYZToDoItem *item = [self.globalContainer.toDoItems objectAtIndex:indexPath.row];
+    
+    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 15.0 ];
+    cell.textLabel.font  = myFont;
+    
+    if(item.completed)
+    {
+        NSDictionary* attributes = @{
+                                     NSStrikethroughStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle]
+                                     };
+        NSAttributedString* attrText = [[NSAttributedString alloc] initWithString:item.itemName attributes:attributes];
+        cell.textLabel.attributedText = attrText;
+        
+    }
+    else
+    {
+        cell.textLabel.text = item.itemName;
+    }
+
     
     return cell;
 }

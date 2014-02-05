@@ -123,7 +123,8 @@
     
     
     self.navigationItem.leftBarButtonItem = backButtonItem;
-    //    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    //swipe gesture for custom back button
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
 
 -(void) popBack {

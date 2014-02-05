@@ -31,7 +31,9 @@
                 NSIndexPath *indexPathOfLastItem =
                 [NSIndexPath indexPathForRow:([self.globalContainer.toDoItems count] - 1) inSection:0];
                 
-                [self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfLastItem];
+               [self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfLastItem];
+       
+                
                 [self tableView:self.tableView moveRowAtIndexPath:swippedIndexPath toIndexPath:indexPathOfLastItem];
             }
             

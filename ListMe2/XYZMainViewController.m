@@ -154,7 +154,7 @@
         cell.accessoryView = nil;
     }
     
-    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 17.0 ];
+    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 15.0 ];
     cell.textLabel.font  = myFont;
     cell.textLabel.textColor = [UIColor blackColor];
     
