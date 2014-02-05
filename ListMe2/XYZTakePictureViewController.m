@@ -8,13 +8,14 @@
 
 #import "XYZTakePictureViewController.h"
 #import "XYZImageFullScreenViewController.h"
+#import "XYZGlobalContainer.h"
 
 
 @interface XYZTakePictureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property BOOL photoTaken;
-
+@property XYZGlobalContainer *globalContainer;
 
 
 @end
@@ -51,10 +52,6 @@
     }
     
 }
-
-
-
-
 
 - (IBAction)takePictureButtonPressed:(id)sender {
     
@@ -136,6 +133,11 @@
     [super viewDidLoad];
     self.photoTaken = NO;
     [self createCustomBackButton];
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    
+    NSLog(@"%@", self.globalContainer.listToBeArchived.totalPaidString);
+    NSLog(@"%@", self.globalContainer.listToBeArchived.name);
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 //Singleton for global data sharing
 #import <Foundation/Foundation.h>
+#import "XYZArchivedList.h"
 
 @interface XYZGlobalContainer : NSObject {
     NSMutableArray *lists;
@@ -17,6 +18,7 @@
 @property (nonatomic, retain) NSMutableArray *lists;
 @property NSMutableArray *toDoItems;
 @property NSMutableArray *historicalItems;
+@property XYZArchivedList *listToBeArchived;
 
 + (id)globalContainer;
 - (void)saveListsToFile;

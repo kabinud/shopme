@@ -57,6 +57,7 @@
 		B8A72DCE18A2A61F0078CAA7 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCC18A2A61F0078CAA7 /* next.png */; };
 		B8A72DCF18A2A61F0078CAA7 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCD18A2A61F0078CAA7 /* next@2x.png */; };
 		B8A72DD218A2B0280078CAA7 /* XYZMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A72DD118A2B0280078CAA7 /* XYZMainNavigationController.m */; };
+		B8A72DD818A2E0EC0078CAA7 /* XYZArchivedList.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A72DD718A2E0EC0078CAA7 /* XYZArchivedList.m */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
 		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
@@ -142,6 +143,8 @@
 		B8A72DCD18A2A61F0078CAA7 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "next@2x.png"; path = "ListMe2/Icons/next@2x.png"; sourceTree = "<group>"; };
 		B8A72DD018A2B0280078CAA7 /* XYZMainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainNavigationController.h; sourceTree = "<group>"; };
 		B8A72DD118A2B0280078CAA7 /* XYZMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainNavigationController.m; sourceTree = "<group>"; };
+		B8A72DD618A2E0EC0078CAA7 /* XYZArchivedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZArchivedList.h; sourceTree = "<group>"; };
+		B8A72DD718A2E0EC0078CAA7 /* XYZArchivedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZArchivedList.m; sourceTree = "<group>"; };
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
@@ -186,9 +189,11 @@
 		B802CC7B189EF1A1006D607C /* Data Persist Files */ = {
 			isa = PBXGroup;
 			children = (
-				B802CC75189EF146006D607C /* XYZGlobalContainer.h */,
+				B8A72DD618A2E0EC0078CAA7 /* XYZArchivedList.h */,
+				B8A72DD718A2E0EC0078CAA7 /* XYZArchivedList.m */,
 				B802CC78189EF180006D607C /* XYZToDoItem.h */,
 				B802CC79189EF180006D607C /* XYZToDoItem.m */,
+				B802CC75189EF146006D607C /* XYZGlobalContainer.h */,
 				B802CC76189EF146006D607C /* XYZGlobalContainer.m */,
 			);
 			name = "Data Persist Files";
@@ -521,6 +526,7 @@
 				B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */,
 				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
+				B8A72DD818A2E0EC0078CAA7 /* XYZArchivedList.m in Sources */,
 				B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,

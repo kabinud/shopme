@@ -177,16 +177,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"TakePictureSegue"]) {
+        
+        NSNumberFormatter * formatter = [NSNumberFormatter new];
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        
+        NSNumber * totalPaid = [formatter numberFromString:self.totalPaidField.text];
+        
+        [self.globalContainer.listToBeArchived setTotalPaidAmount:totalPaid];
+        
+    }
+    
 }
 
- */
+
 
 @end

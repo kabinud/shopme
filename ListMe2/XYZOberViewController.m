@@ -14,6 +14,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "XYZToDoItem.h"
 #import "XYZGlobalContainer.h"
+#import "XYZArchivedList.h"
 
 #define SLIDE_TIMING .45
 
@@ -285,11 +286,14 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if([segue.identifier isEqualToString:@"EditSegue"])
-    {
+    if([segue.identifier isEqualToString:@"EditSegue"]) {
         XYZTopEditNavigationController *navController = (XYZTopEditNavigationController *)segue.destinationViewController;
         XYZTopEditTableViewController *controller = (XYZTopEditTableViewController *)navController.viewControllers[0];
         controller.editFieldAutoResponderAllowed = YES;
+    }
+    else if([segue.identifier isEqualToString:@"FinishShoppingSegue"]){
+        XYZArchivedList *list = [[XYZArchivedList alloc] initWithListAndSetTheRestAutomatically:self.globalContainer.toDoItems];
+        self.globalContainer.listToBeArchived = list;
     }
     
 }

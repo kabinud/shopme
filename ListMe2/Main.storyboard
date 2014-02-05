@@ -420,7 +420,7 @@
                         <barButtonItem key="rightBarButtonItem" image="next.png" style="done" id="OYZ-0b-dar">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="rCp-g9-Uep" kind="push" id="LkK-pc-dqY"/>
+                                <segue destination="rCp-g9-Uep" kind="push" identifier="TakePictureSegue" id="LkK-pc-dqY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -464,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYl-Rg-XDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="-1819"/>
+            <point key="canvasLocation" x="1444" y="-1835"/>
         </scene>
         <!--Take Picture View Controller-->
         <scene sceneID="mQ1-7B-c2O">
