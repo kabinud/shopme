@@ -85,7 +85,6 @@ XYZTopEditTableViewController
         [self.globalContainer.historicalItems insertObject:itemToAdd atIndex:0];
         [self.globalContainer saveHistoricalItemsToFile];
     }
-    NSLog(@"His added");
 }
 
 
@@ -100,7 +99,11 @@ XYZTopEditTableViewController
         [self.globalContainer.toDoItems insertObject:toDoItem atIndex:0];
         [self.globalContainer saveItemsToFile];
         
-        [self addHistoricalItem:toDoItem];
+        XYZToDoItem *historicalItem = [XYZToDoItem new];
+        historicalItem.itemName = self.editField.text;
+        historicalItem.completed = NO;
+        
+        [self addHistoricalItem:historicalItem];
         
         if(self.itemAdded == NO){
             self.itemAdded = YES;

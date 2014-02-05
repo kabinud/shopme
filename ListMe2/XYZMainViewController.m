@@ -86,7 +86,6 @@
 
 - (void)bringOrCloseToPanel{
     self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
-    NSLog(@"Scroll is %d", self.tableView.scrollEnabled);
     [self.delegate bringTopPanel:nil];
 }
 
@@ -197,6 +196,7 @@
 - (void)removeAllItemsFromCurrentShoppingList{
     [self.globalContainer.toDoItems removeAllObjects];
     [self.globalContainer saveItemsToFile];
+    [self.globalContainer updateBadge];
     [self.tableView reloadData];
 }
 

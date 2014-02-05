@@ -49,15 +49,19 @@
 		B87FC120189D859400AF60FD /* folder22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11C189D859400AF60FD /* folder22@2x.png */; };
 		B87FC123189D8ACF00AF60FD /* crateM.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC121189D8ACF00AF60FD /* crateM.png */; };
 		B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC122189D8ACF00AF60FD /* crateM@2x.png */; };
-		B895D270189E7EC400BAF7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B895D26F189E7EC400BAF7FB /* Main.storyboard */; };
 		B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */; };
 		B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */; };
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
+		B8A72DC918A299480078CAA7 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DC818A299480078CAA7 /* placeholder.png */; };
+		B8A72DCB18A29D5F0078CAA7 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */; };
 		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
 		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
 		B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */; };
 		B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */; };
+		B8C7CD6018A254F000EEA70D /* XYZTakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7CD5F18A254F000EEA70D /* XYZTakePictureViewController.m */; };
+		B8C7CD8818A2766A00EEA70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C7CD8718A2766A00EEA70D /* Main.storyboard */; };
+		B8C7CD9018A28E0B00EEA70D /* XYZImageFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7CD8F18A28E0B00EEA70D /* XYZImageFullScreenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,13 +127,14 @@
 		B87FC11C189D859400AF60FD /* folder22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22@2x.png"; path = "ListMe2/Icons/folder22@2x.png"; sourceTree = "<group>"; };
 		B87FC121189D8ACF00AF60FD /* crateM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM.png; path = ListMe2/Icons/crateM.png; sourceTree = "<group>"; };
 		B87FC122189D8ACF00AF60FD /* crateM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM@2x.png"; path = "ListMe2/Icons/crateM@2x.png"; sourceTree = "<group>"; };
-		B895D26F189E7EC400BAF7FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditNavigationController.h; sourceTree = "<group>"; };
 		B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditNavigationController.m; sourceTree = "<group>"; };
 		B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditTableViewController.h; sourceTree = "<group>"; };
 		B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditTableViewController.m; sourceTree = "<group>"; };
 		B895D27A189E919D00BAF7FB /* XYZTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopViewController.h; sourceTree = "<group>"; };
 		B895D27B189E919D00BAF7FB /* XYZTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopViewController.m; sourceTree = "<group>"; };
+		B8A72DC818A299480078CAA7 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = ListMe2/Images/placeholder.png; sourceTree = "<group>"; };
+		B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder@2x.png"; path = "ListMe2/Images/placeholder@2x.png"; sourceTree = "<group>"; };
 		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
 		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
@@ -138,8 +143,13 @@
 		B8BA195018A03FED00EB49A1 /* BVReorderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVReorderTableView.h; sourceTree = "<group>"; };
 		B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVReorderTableView.m; sourceTree = "<group>"; };
 		B8BA195318A041A200EB49A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B8BA195A18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZFinishShoppingTableViewController.h; sourceTree = "<group>"; };
-		B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZFinishShoppingTableViewController.m; sourceTree = "<group>"; };
+		B8BA195A18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZFinishShoppingTableViewController.h; path = ListMe2/XYZFinishShoppingTableViewController.h; sourceTree = "<group>"; };
+		B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZFinishShoppingTableViewController.m; path = ListMe2/XYZFinishShoppingTableViewController.m; sourceTree = "<group>"; };
+		B8C7CD5E18A254F000EEA70D /* XYZTakePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZTakePictureViewController.h; path = ListMe2/XYZTakePictureViewController.h; sourceTree = "<group>"; };
+		B8C7CD5F18A254F000EEA70D /* XYZTakePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZTakePictureViewController.m; path = ListMe2/XYZTakePictureViewController.m; sourceTree = "<group>"; };
+		B8C7CD8718A2766A00EEA70D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B8C7CD8E18A28E0B00EEA70D /* XYZImageFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZImageFullScreenViewController.h; path = ListMe2/XYZImageFullScreenViewController.h; sourceTree = "<group>"; };
+		B8C7CD8F18A28E0B00EEA70D /* XYZImageFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZImageFullScreenViewController.m; path = ListMe2/XYZImageFullScreenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +190,7 @@
 		B806B723189BD14600C19AC0 = {
 			isa = PBXGroup;
 			children = (
+				B8A72DC718A2993E0078CAA7 /* Images */,
 				B806B767189BDF6400C19AC0 /* Icons */,
 				B806B735189BD14600C19AC0 /* ListMe2 */,
 				B806B754189BD14600C19AC0 /* ListMe2Tests */,
@@ -212,6 +223,7 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B8C7CD6118A2552500EEA70D /* FinishShoppingControllers */,
 				B8BA195518A0F2BD00EB49A1 /* BVTableReorder */,
 				B8361BF5189FFEEF00787AE5 /* Main Table View */,
 				B8361BF4189FFED500787AE5 /* TopMenu */,
@@ -219,10 +231,8 @@
 				B8361BF2189FFD7A00787AE5 /* Class categories */,
 				B802CC7B189EF1A1006D607C /* Data Persist Files */,
 				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
+				B8C7CD8718A2766A00EEA70D /* Main.storyboard */,
 				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
-				B895D26F189E7EC400BAF7FB /* Main.storyboard */,
-				B8BA195A18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.h */,
-				B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
@@ -336,6 +346,15 @@
 			name = "Main Table View";
 			sourceTree = "<group>";
 		};
+		B8A72DC718A2993E0078CAA7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */,
+				B8A72DC818A299480078CAA7 /* placeholder.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		B8BA195518A0F2BD00EB49A1 /* BVTableReorder */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +362,20 @@
 				B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */,
 			);
 			name = BVTableReorder;
+			sourceTree = "<group>";
+		};
+		B8C7CD6118A2552500EEA70D /* FinishShoppingControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8C7CD8E18A28E0B00EEA70D /* XYZImageFullScreenViewController.h */,
+				B8C7CD8F18A28E0B00EEA70D /* XYZImageFullScreenViewController.m */,
+				B8C7CD5E18A254F000EEA70D /* XYZTakePictureViewController.h */,
+				B8C7CD5F18A254F000EEA70D /* XYZTakePictureViewController.m */,
+				B8BA195A18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.h */,
+				B8BA195B18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m */,
+			);
+			name = FinishShoppingControllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B802CC67189ED8E8006D607C /* email.png in Resources */,
+				B8A72DC918A299480078CAA7 /* placeholder.png in Resources */,
 				B87FC11D189D859400AF60FD /* bin222M.png in Resources */,
 				B802CC6B189EE19A006D607C /* folder22-wide.png in Resources */,
 				B802CC64189ED285006D607C /* backButton@2x.png in Resources */,
@@ -441,9 +475,10 @@
 				B802CC6C189EE19A006D607C /* folder22-wide@2x.png in Resources */,
 				B802CC5F189ECEFA006D607C /* info2.png in Resources */,
 				B806B73A189BD14600C19AC0 /* InfoPlist.strings in Resources */,
+				B8A72DCB18A29D5F0078CAA7 /* placeholder@2x.png in Resources */,
 				B87FC120189D859400AF60FD /* folder22@2x.png in Resources */,
-				B895D270189E7EC400BAF7FB /* Main.storyboard in Resources */,
 				B8094179189DAE5700FE81EB /* crateM1.png in Resources */,
+				B8C7CD8818A2766A00EEA70D /* Main.storyboard in Resources */,
 				B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */,
 				B802CC74189EEC91006D607C /* compose@2x.png in Resources */,
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
@@ -468,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C7CD6018A254F000EEA70D /* XYZTakePictureViewController.m in Sources */,
 				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
 				B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */,
 				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
@@ -475,6 +511,7 @@
 				B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
+				B8C7CD9018A28E0B00EEA70D /* XYZImageFullScreenViewController.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
 				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
 				B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */,

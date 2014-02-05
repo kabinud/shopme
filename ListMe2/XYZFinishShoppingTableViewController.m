@@ -8,7 +8,13 @@
 
 #import "XYZFinishShoppingTableViewController.h"
 
+
 @interface XYZFinishShoppingTableViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UITextField *totalPaidField;
+
+@property XYZGlobalContainer *globalContainer;
 
 @end
 
@@ -27,12 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    [self.totalPaidField becomeFirstResponder];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning
