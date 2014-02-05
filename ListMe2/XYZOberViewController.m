@@ -293,6 +293,7 @@
     }
     else if([segue.identifier isEqualToString:@"FinishShoppingSegue"]){
         XYZArchivedList *list = [[XYZArchivedList alloc] initWithListAndSetTheRestAutomatically:self.globalContainer.toDoItems];
+        
         self.globalContainer.listToBeArchived = list;
     }
     

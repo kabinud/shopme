@@ -19,9 +19,9 @@
         
         _archivedList = [NSMutableArray new];
         for(int i = 0; i<incomingList.count; i++){
-            if(((XYZToDoItem *)[incomingList objectAtIndex:i]).completed){
+         //   if(((XYZToDoItem *)[incomingList objectAtIndex:i]).completed){
             [_archivedList addObject:[incomingList objectAtIndex:i]];
-            }
+           // }
         }
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

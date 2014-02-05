@@ -9,6 +9,7 @@
 #import "XYZTakePictureViewController.h"
 #import "XYZImageFullScreenViewController.h"
 #import "XYZGlobalContainer.h"
+#import "XYZToDoItem.h"
 
 
 @interface XYZTakePictureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -135,8 +136,12 @@
     [self createCustomBackButton];
     self.globalContainer = [XYZGlobalContainer globalContainer];
     
-    NSLog(@"%@", self.globalContainer.listToBeArchived.totalPaidString);
-    NSLog(@"%@", self.globalContainer.listToBeArchived.name);
+//    NSLog(@"%@", self.globalContainer.listToBeArchived.totalPaidString);
+//    NSLog(@"%@", self.globalContainer.listToBeArchived.name);
+//    
+//    for(XYZToDoItem *item in self.globalContainer.listToBeArchived.archivedList){
+//        NSLog(@"%@",item.itemName);
+//    }
     
 }
 
