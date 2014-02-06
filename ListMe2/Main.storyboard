@@ -107,7 +107,7 @@
                     <connections>
                         <segue destination="lQe-c2-knv" kind="modal" identifier="EditSegue" modalTransitionStyle="crossDissolve" animates="NO" id="bvf-dx-SpZ"/>
                         <segue destination="gqh-go-9wB" kind="push" identifier="FinishShoppingSegue" id="MgJ-to-AEr"/>
-                        <segue destination="SJg-dT-oL6" kind="modal" identifier="HistoryFromOberSegue" id="dor-NB-Evo"/>
+                        <segue destination="SJg-dT-oL6" kind="modal" identifier="HistoryFromOberSegue" modalTransitionStyle="crossDissolve" id="dor-NB-Evo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYl-pv-3bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -494,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYl-Rg-XDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071" y="-1926"/>
+            <point key="canvasLocation" x="1999" y="-1918"/>
         </scene>
         <!--Take Picture View Controller-->
         <scene sceneID="mQ1-7B-c2O">
@@ -600,7 +600,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IQ-gS-5MY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2569" y="-1130"/>
+            <point key="canvasLocation" x="2465" y="-1122"/>
         </scene>
         <!--History List Details View Controller-->
         <scene sceneID="Vgp-4e-Fz0">
@@ -668,7 +668,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yht-lf-zy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3036" y="-1130"/>
+            <point key="canvasLocation" x="2932" y="-1122"/>
         </scene>
         <!--Top Edit Navigation Controller-->
         <scene sceneID="83p-jd-mQh">
@@ -718,7 +718,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scW-1T-3Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="-1138"/>
+            <point key="canvasLocation" x="1999" y="-1130"/>
         </scene>
     </scenes>
     <resources>

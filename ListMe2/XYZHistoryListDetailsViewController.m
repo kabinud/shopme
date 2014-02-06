@@ -248,6 +248,9 @@
     if(self.list.imageName == nil){
         return 1;
     }
+    else if(self.list.imageName != nil && [self.list.archivedList count]>0){
+        return 2;
+    }
     else{
         return 2;
     }
@@ -258,12 +261,20 @@
     if(self.list.imageName == nil){
         return [self.list.archivedList count];
     }
-    else{
+    else if(self.list.imageName != nil && [self.list.archivedList count]>0){
         if(section == 0){
             return 1;
         }
         else{
             return [self.list.archivedList count];
+        }
+    }
+    else{
+        if(section == 0){
+            return 1;
+        }
+        else{
+            return 1;
         }
     }
 }
@@ -289,10 +300,19 @@
             
         }
         else{
-            static NSString *CellIdentifier = @"Cell";
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            
-            cell.textLabel.text = ((XYZToDoItem* )([self.list.archivedList objectAtIndex:indexPath.row])).itemName;
+            if([self.list.archivedList count]>0){
+                
+                static NSString *CellIdentifier = @"Cell";
+                cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+                
+                cell.textLabel.text = ((XYZToDoItem* )([self.list.archivedList objectAtIndex:indexPath.row])).itemName;
+            }
+            else{
+                static NSString *CellIdentifier = @"Cell";
+                cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+                
+                cell.textLabel.text = @" ";
+            }
         }
     }
     
