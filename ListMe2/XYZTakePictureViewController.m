@@ -50,7 +50,10 @@
         
         [self.globalContainer saveListsToFile];
         
-        
+        if(self.photoTaken == YES){
+            [self.globalContainer writeImage:self.imageView.image];
+        }
+
     }
     
 }
@@ -97,7 +100,6 @@
     self.imageView.image = chosenImage;
     self.photoTaken = YES;
     
-    self.globalContainer.listToBeArchived.image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

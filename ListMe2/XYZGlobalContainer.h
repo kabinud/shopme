@@ -28,6 +28,7 @@
 - (void)saveHistoricalItemsToFile;
 - (void)readHistoricalItemsFromFile;
 - (void)updateBadge;
+- (void)writeImage: (UIImage *)image;
 
 @end
 

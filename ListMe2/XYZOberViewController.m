@@ -52,6 +52,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.mainViewController.tableView.scrollEnabled = YES;
+    
+    //(1)
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(appEnteredBackground:)
+                                                 name: UIApplicationDidEnterBackgroundNotification
+                                               object: nil];
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -59,6 +66,17 @@
         [self bringTopPanel:nil];
     }
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+    //(2)
+     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+//if app loses focus, in this view only, this is triggered in order to close the top menu,
+// (1) and (2) register and unregister this selector so that it is only triggered in this very view
+-(void)appEnteredBackground:(NSNotification *)appEnteredBackgroundNotification {
+    if(self.showingTopPanel){
+        [self bringTopPanel:nil];
+    }
 }
 
 - (void)sendListByEmail{
@@ -102,7 +120,7 @@
                         error:(NSError*)error;
 {
     if (result == MFMailComposeResultSent) {
-        NSLog(@"It's away!");
+       // NSLog(@"It's away!");
     }
 
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -172,6 +190,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
     self.globalContainer = [XYZGlobalContainer globalContainer];
     [self.globalContainer readItemsFromFile];
@@ -183,13 +202,13 @@
      self.navigationController.toolbar.clipsToBounds = YES;
     
     
+    
    
 }
 
-
-
 - (UITableView *)getTopView
 {
+  
     if(_topViewController == nil){
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
         self.topViewController = (XYZTopViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topViewId"];
@@ -204,10 +223,17 @@
     return view;
 }
 
-
+- (NSString *)uuid
+{
+    CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+    CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
+    CFRelease(uuidRef);
+    return (__bridge NSString *)uuidStringRef;
+}
 
 
 - (void)closeTopEditPanel{
+    
    
     [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{

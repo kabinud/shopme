@@ -11,6 +11,20 @@
 
 @implementation XYZArchivedList
 
+- (NSString *)shortUniqueString
+{
+    CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+    CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
+    CFRelease(uuidRef);
+    
+    NSString *str = (__bridge NSString *)uuidStringRef;
+    NSString *lastFiveCharacters=[str substringFromIndex:MAX((int)[str length]-5, 0)];
+    NSString *firstFiveCharacters=[str substringToIndex:5];
+    
+    NSString *shortUniqueString = [firstFiveCharacters stringByAppendingString:lastFiveCharacters];
+    
+    return shortUniqueString;
+}
 
 - (id)initWithListAndSetTheRestAutomatically: (NSMutableArray *)incomingList{
     self = [super init];
@@ -32,8 +46,8 @@
         
         _name = [stringFromDate mutableCopy];
         _finishedShoppingDate = date;
-    
-        
+        _imageName = [self shortUniqueString];
+  
     }
     
     return self;
@@ -60,7 +74,7 @@
     [encoder encodeObject:_name forKey:@"Name"];
     [encoder encodeObject:_totalPaid forKey:@"TotalPaid"];
     [encoder encodeObject:_totalPaidString forKey:@"TotalPaidString"];
-    [encoder encodeObject:_image forKey:@"Image"];
+    [encoder encodeObject:_imageName forKey:@"ImageName"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -73,7 +87,7 @@
         _name = [[decoder decodeObjectForKey: @"Name"] copy];
         _totalPaid = [[decoder decodeObjectForKey: @"TotalPaid"] copy];
         _totalPaidString = [[decoder decodeObjectForKey: @"TotalPaidString"] copy];
-        _image = [[decoder decodeObjectForKey: @"Image"] copy];
+        _imageName = [[decoder decodeObjectForKey: @"ImageName"] copy];
 
     }
     return self;

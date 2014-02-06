@@ -99,6 +99,44 @@
     }
 }
 
+- (void)writeImage: (UIImage *)image{
+
+    NSString *uniqueFileName = self.listToBeArchived.imageName;
+    
+    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    jpgPath = [jpgPath stringByAppendingFormat:@"/%@",uniqueFileName];
+    jpgPath = [jpgPath stringByAppendingString:@".jpg"];
+    
+    NSLog(@"%@", jpgPath);
+
+    [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
+    
+//    // Let's check to see if files were successfully written...
+//    
+//    // Create file manager
+//    NSError *error;
+//    NSFileManager *fileMgr = [NSFileManager defaultManager];
+//    
+//    // Point to Document directory
+//    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+//    
+//    // Write out the contents of home directory to console
+//    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
+}
+
+
+- (UIImage *)readImageFromFile: (NSString *)uniqueFileName{
+    
+    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    jpgPath = [jpgPath stringByAppendingFormat:@"/%@",uniqueFileName];
+    jpgPath = [jpgPath stringByAppendingString:@".jpg"];
+    
+    NSData *imgData = [NSData dataWithContentsOfFile:jpgPath];
+    UIImage *image= [UIImage imageWithData:imgData];
+    
+    return image;
+    
+}
 
 - (BOOL)isNotFirstExampleItem: (NSString *)string{
     if([string isEqualToString:@"Swipe right to mark as completed"] || [string isEqualToString:@"Swipe left to undo"]){
@@ -122,6 +160,7 @@
     [UIApplication sharedApplication].applicationIconBadgeNumber = [self howManyPendingItems];
     
 }
+
 
 
 @end
