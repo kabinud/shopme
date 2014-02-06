@@ -44,12 +44,11 @@
     else if ([[segue identifier] isEqualToString:@"FinalizeShoppingSegue"]) {
         
         [self.globalContainer.toDoItems removeAllObjects];
+        [self.globalContainer saveItemsToFile];
         [self.globalContainer.lists insertObject:self.globalContainer.listToBeArchived atIndex:0];
         [self.globalContainer updateBadge];
-        [self.globalContainer saveHistoricalItemsToFile];
-        
-       
-        
+   
+  
         if(self.photoTaken == YES){
             [self.globalContainer writeImage:self.imageView.image];
         }

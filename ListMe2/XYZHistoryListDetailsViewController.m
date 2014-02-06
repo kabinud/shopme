@@ -130,6 +130,7 @@
                 item.completed = NO;
                 item.toBeDeleted = NO;
                 [self.globalContainer.toDoItems addObject:item];
+                [self.globalContainer saveItemsToFile];
             }
             
             UINavigationController *nav = (UINavigationController*) self.view.window.rootViewController;
