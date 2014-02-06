@@ -15,6 +15,9 @@
 #import "XYZToDoItem.h"
 #import "XYZGlobalContainer.h"
 #import "XYZArchivedList.h"
+#import "XYZHistoryNavigationViewController.h"
+
+
 
 #define SLIDE_TIMING .45
 
@@ -36,6 +39,11 @@
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+- (void)shoppingHistory{
+    [self performSegueWithIdentifier: @"HistoryFromOberSegue" sender: self];
+}
+
 
 - (void)finishShopping{
     [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
@@ -69,6 +77,7 @@
     
     //(2)
      [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 
 //if app loses focus, in this view only, this is triggered in order to close the top menu,
@@ -328,6 +337,7 @@
         
         self.globalContainer.listToBeArchived = list;
     }
+
     
 }
 
@@ -365,7 +375,7 @@
     
     [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         _mainViewController.view.frame = CGRectMake(0, 3.5*childView.rowHeight, self.view.frame.size.width, self.view.frame.size.height);
+                         _mainViewController.view.frame = CGRectMake(0, 4.5*childView.rowHeight, self.view.frame.size.width, self.view.frame.size.height);
                      }
                      completion:^(BOOL finished) {
                          if (finished) {

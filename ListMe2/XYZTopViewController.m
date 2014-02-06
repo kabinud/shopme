@@ -14,6 +14,9 @@
 @end
 
 @implementation XYZTopViewController
+- (IBAction)ShoppingHistoryButtonPressed:(id)sender {
+    [self.delegate shoppingHistory];
+}
 
 
 - (IBAction)FinishShoppingButtonPressed:(id)sender {
@@ -72,7 +75,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -107,6 +110,9 @@
         CellIdentifier = @"EmailButton";
     }
     else if(indexPath.row == 2){
+        CellIdentifier = @"ShoppingHistoryButton";
+    }
+    else if(indexPath.row == 3){
         CellIdentifier = @"FinishShoppingButton";
     }
     

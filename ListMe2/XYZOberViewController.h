@@ -18,6 +18,7 @@
 - (void)sendListByEmail;
 - (void)finishShopping;
 - (void)returnToRoot;
+- (void)shoppingHistory;
 
 @end
 

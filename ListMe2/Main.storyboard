@@ -102,16 +102,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="vZF-At-1yi"/>
-                        <barButtonItem title="History" id="QEX-vG-hcY">
-                            <connections>
-                                <segue destination="SJg-dT-oL6" kind="modal" id="oSL-fN-AEI"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="pe2-4G-Khf"/>
                     <connections>
                         <segue destination="lQe-c2-knv" kind="modal" identifier="EditSegue" modalTransitionStyle="crossDissolve" animates="NO" id="bvf-dx-SpZ"/>
                         <segue destination="gqh-go-9wB" kind="push" identifier="FinishShoppingSegue" id="MgJ-to-AEr"/>
+                        <segue destination="SJg-dT-oL6" kind="modal" identifier="HistoryFromOberSegue" id="dor-NB-Evo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYl-pv-3bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,7 +287,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-e7-tKO">
-                                            <rect key="frame" x="-36" y="16" width="336" height="23"/>
+                                            <rect key="frame" x="-35" y="16" width="336" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <state key="normal" title="    SHOPPING HISTORY" image="history 22-48-42-360.png">
@@ -302,7 +298,7 @@
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="sendListByEmailButtonPressed:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="HN8-fP-cnt"/>
+                                                <action selector="ShoppingHistoryButtonPressed:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="HLT-wI-8QG"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -693,10 +689,10 @@
             </objects>
             <point key="canvasLocation" x="1045" y="-381"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--History Navigation View Controller-->
         <scene sceneID="J8n-6S-GYN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="SJg-dT-oL6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="SJg-dT-oL6" customClass="XYZHistoryNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cRg-Tq-MnW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eTF-IF-Cgs">
@@ -744,7 +740,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oSL-fN-AEI"/>
+        <segue reference="dor-NB-Evo"/>
         <segue reference="ItN-Rw-w50"/>
     </inferredMetricsTieBreakers>
 </document>
