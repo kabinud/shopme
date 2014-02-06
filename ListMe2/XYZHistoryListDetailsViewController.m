@@ -1,44 +1,66 @@
 //
-//  XYZListHistoryViewController.m
+//  XYZHistoryListDetailsViewController.m
 //  ListMe2
 //
 //  Created by Marcin Kmieć on 06.02.2014.
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
-#import "XYZListHistoryViewController.h"
-#import "XYZOberViewController.h"
-#import "XYZGlobalContainer.h"
-#import "XYZArchivedList.h"
 #import "XYZHistoryListDetailsViewController.h"
+#import "XYZImageFullScreenViewController.h"
+#import "XYZToDoItem.h"
+#import "XYZGlobalContainer.h"
 
-
-@interface XYZListHistoryViewController ()
+@interface XYZHistoryListDetailsViewController ()
 
 @property XYZGlobalContainer *globalContainer;
+@property UIImage *receiptImage;
+@property XYZArchivedList *list;
 
 @end
 
-@implementation XYZListHistoryViewController
-
+@implementation XYZHistoryListDetailsViewController
+- (IBAction)showImageLargeButtonPressed:(id)sender {
+    
+    [self performSegueWithIdentifier: @"ImageLargeSegue" sender: self];
+  
+        
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"ShowListDetailsSegue"]) {
-        XYZHistoryListDetailsViewController *destinationController = (XYZHistoryListDetailsViewController *)segue.destinationViewController;
+    if ([[segue identifier] isEqualToString:@"ImageLargeSegue"]) {
+        XYZImageFullScreenViewController *destinationController = (XYZImageFullScreenViewController *)segue.destinationViewController;
         
-        destinationController.listIndex = [self.tableView indexPathForSelectedRow].row;
-      
+        destinationController.imageToShow= self.receiptImage;
     }
 }
 
-
-- (IBAction)goBackButtonPressed:(id)sender {
-    UINavigationController *nav = (UINavigationController*) self.view.window.rootViewController;
-    UIViewController *root = [nav.viewControllers objectAtIndex:0];
-    [root performSelector:@selector(returnToRoot)];
+- (void)createCustomBackButton{
+    UIImage *temp=nil;
     
+    if([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)
+    {
+        temp = [UIImage imageNamed:@"backButton.png"];
+    }
+    else
+    {
+        temp = [[UIImage imageNamed:@"backButton.png"] imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal];
+    }
+    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithImage:temp style:UIBarButtonItemStyleBordered target:self action:@selector(popBack)];
+    
+    
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+    //    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
+
+-(void) popBack {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -54,12 +76,15 @@
     [super viewDidLoad];
     
     self.globalContainer = [XYZGlobalContainer globalContainer];
+    self.list = [self.globalContainer.lists objectAtIndex:self.listIndex];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self createCustomBackButton];
+    //swipe gesture for custom back button
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    
+    
+    self.receiptImage = [self.globalContainer readImageFromFile:self.list.imageName];
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +104,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.globalContainer.lists count];
+    return [self.list.archivedList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,10 +112,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    XYZArchivedList *list = [self.globalContainer.lists objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = list.name;
-    cell.detailTextLabel.text = list.totalPaidString;
+    cell.textLabel.text = ((XYZToDoItem* )([self.list.archivedList objectAtIndex:indexPath.row])).itemName;
     
     return cell;
 }

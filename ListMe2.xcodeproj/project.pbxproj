@@ -43,6 +43,7 @@
 		B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8094178189DAE5700FE81EB /* crateM1@2x.png */; };
 		B82299BE18A30B700058AE4E /* next22.png in Resources */ = {isa = PBXBuildFile; fileRef = B82299BC18A30B700058AE4E /* next22.png */; };
 		B82299BF18A30B700058AE4E /* next22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B82299BD18A30B700058AE4E /* next22@2x.png */; };
+		B82299C218A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82299C118A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m */; };
 		B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */; };
 		B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BFA18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
@@ -125,6 +126,8 @@
 		B8094178189DAE5700FE81EB /* crateM1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM1@2x.png"; path = "ListMe2/Icons/crateM1@2x.png"; sourceTree = "<group>"; };
 		B82299BC18A30B700058AE4E /* next22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next22.png; path = ListMe2/Icons/next22.png; sourceTree = "<group>"; };
 		B82299BD18A30B700058AE4E /* next22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "next22@2x.png"; path = "ListMe2/Icons/next22@2x.png"; sourceTree = "<group>"; };
+		B82299C018A3C13F0058AE4E /* XYZHistoryListDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZHistoryListDetailsViewController.h; sourceTree = "<group>"; };
+		B82299C118A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZHistoryListDetailsViewController.m; sourceTree = "<group>"; };
 		B8361BEF189FFA6400787AE5 /* NSString+IsEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IsEmpty.h"; sourceTree = "<group>"; };
 		B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IsEmpty.m"; sourceTree = "<group>"; };
 		B8361BF918A0020200787AE5 /* XYZMainViewController+GestureRecognizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZMainViewController+GestureRecognizers.h"; sourceTree = "<group>"; };
@@ -380,6 +383,8 @@
 			children = (
 				B8A72DDD18A2FBF70078CAA7 /* XYZListHistoryViewController.h */,
 				B8A72DDE18A2FBF70078CAA7 /* XYZListHistoryViewController.m */,
+				B82299C018A3C13F0058AE4E /* XYZHistoryListDetailsViewController.h */,
+				B82299C118A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m */,
 			);
 			name = HistoryLists;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
 				B806B766189BD1A600C19AC0 /* XYZMainViewController.m in Sources */,
 				B8A72DD818A2E0EC0078CAA7 /* XYZArchivedList.m in Sources */,
+				B82299C218A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m in Sources */,
 				B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
