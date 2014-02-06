@@ -283,7 +283,7 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmailButton" id="33c-Qq-Wy8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShoppingHistoryButton" id="33c-Qq-Wy8">
                                 <rect key="frame" x="0.0" y="136" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="33c-Qq-Wy8" id="pI5-Zd-1c9">
