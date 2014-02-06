@@ -96,7 +96,7 @@
     
 
     
-    //save it in a thread
+    //save it on a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        //saving image
         BOOL result = [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
@@ -110,21 +110,13 @@
         });
     });
     
-   
+// Print documents directory to see if file has saved
     
-    
-        
-    
-    // Let's check to see if files were successfully written
-    
-//    // Create file manager
 //    NSError *error;
 //    NSFileManager *fileMgr = [NSFileManager defaultManager];
-//    
-//    // Point to Document directory
+//
 //    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-//    
-//    // Write out the contents of home directory to console
+//
 //    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
 }
 

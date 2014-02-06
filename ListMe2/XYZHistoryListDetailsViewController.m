@@ -32,7 +32,7 @@
     if ([[segue identifier] isEqualToString:@"ImageLargeSegue"]) {
         XYZImageFullScreenViewController *destinationController = (XYZImageFullScreenViewController *)segue.destinationViewController;
         
-        destinationController.imageToShow= self.receiptImage;
+        destinationController.imageToShow = self.receiptImage;
     }
 }
 
@@ -71,6 +71,15 @@
     return self;
 }
 
+- (void)setNavigationBarTitleIcon{
+    UIImage *temp = [UIImage imageNamed:@"cartSmall.png"];
+    
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, temp.size.width, temp.size.height)];
+    [view setBackgroundColor:[UIColor colorWithPatternImage:temp]];
+    
+    self.navigationItem.titleView = view;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -82,8 +91,14 @@
     //swipe gesture for custom back button
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     
+    if(self.list.imageName != nil){
+        self.receiptImage = [self.globalContainer readImageFromFile:self.list.imageName];
+    }
     
-    self.receiptImage = [self.globalContainer readImageFromFile:self.list.imageName];
+    [self setNavigationBarTitleIcon];
+    
+    //removes toolbar border
+    self.navigationController.toolbar.clipsToBounds = YES;
    
 }
 
@@ -98,23 +113,84 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    if(self.list.imageName == nil){
+        return 1;
+    }
+    else{
+        return 2;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.list.archivedList count];
+    if(self.list.imageName == nil){
+        return [self.list.archivedList count];
+    }
+    else{
+        if(section == 0){
+            return 1;
+        }
+        else{
+            return [self.list.archivedList count];
+        }
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell;
     
-    cell.textLabel.text = ((XYZToDoItem* )([self.list.archivedList objectAtIndex:indexPath.row])).itemName;
+    if(self.list.imageName == nil){
+        static NSString *CellIdentifier = @"Cell";
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
+        cell.textLabel.text = ((XYZToDoItem* )([self.list.archivedList objectAtIndex:indexPath.row])).itemName;
+    }
+    else{
+        if(indexPath.section == 0){
+          
+            static NSString *CellIdentifier = @"CellImage";
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
+            UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+            imageView.image = self.receiptImage;
+            
+        }
+        else{
+            static NSString *CellIdentifier = @"Cell";
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
+            cell.textLabel.text = ((XYZToDoItem* )([self.list.archivedList objectAtIndex:indexPath.row])).itemName;
+        }
+    }
     
-    return cell;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+     return cell;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.list.imageName == nil){
+        return [self.tableView rowHeight];
+    }
+    else{
+        if(indexPath.section == 0){
+            return 200;
+        }
+        else{
+            return [self.tableView rowHeight];
+        }
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(self.list.imageName != nil){
+        if(indexPath.section == 0 && indexPath.row == 0){
+             [self performSegueWithIdentifier: @"ImageLargeSegue" sender: self];
+        }
+    }
 }
 
 /*

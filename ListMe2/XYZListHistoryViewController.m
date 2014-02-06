@@ -49,17 +49,26 @@
     return self;
 }
 
+- (void)setNavigationBarTitleIcon{
+    UIImage *temp = [UIImage imageNamed:@"cartSmall.png"];
+    
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, temp.size.width, temp.size.height)];
+    [view setBackgroundColor:[UIColor colorWithPatternImage:temp]];
+    
+    self.navigationItem.titleView = view;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.globalContainer = [XYZGlobalContainer globalContainer];
+    
+    [self setNavigationBarTitleIcon];
+    
+    //removes toolbar border
+    self.navigationController.toolbar.clipsToBounds = YES;
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

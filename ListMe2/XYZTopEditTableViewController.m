@@ -257,7 +257,7 @@ XYZTopEditTableViewController
         cell.accessoryView = button;
     }
 
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

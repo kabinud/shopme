@@ -154,12 +154,23 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)setNavigationBarTitleIcon{
+    UIImage *temp = [UIImage imageNamed:@"cartSmall.png"];
+    
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, temp.size.width, temp.size.height)];
+    [view setBackgroundColor:[UIColor colorWithPatternImage:temp]];
+    
+    self.navigationItem.titleView = view;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.photoTaken = NO;
     [self createCustomBackButton];
     self.globalContainer = [XYZGlobalContainer globalContainer];
+    
+    [self setNavigationBarTitleIcon];
     
 }
 
