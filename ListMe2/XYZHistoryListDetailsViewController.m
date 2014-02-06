@@ -11,8 +11,9 @@
 #import "XYZToDoItem.h"
 #import "XYZGlobalContainer.h"
 #import "XYZOberViewController.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface XYZHistoryListDetailsViewController () <UIActionSheetDelegate>
+@interface XYZHistoryListDetailsViewController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property XYZGlobalContainer *globalContainer;
 @property UIImage *receiptImage;
@@ -22,6 +23,73 @@
 
 @implementation XYZHistoryListDetailsViewController
 
+- (IBAction)sendEmailButtonPressed:(id)sender {
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+        controller.mailComposeDelegate = self;
+        [controller setSubject:@"My shopping list"];
+        
+        NSMutableString *messageBody = [NSMutableString new];
+        [messageBody appendString:@"My shopping list:\n\n "];
+        for(XYZToDoItem *item in self.list.archivedList) {
+            [messageBody appendString:@"- "];
+            [messageBody appendString:item.itemName];
+            [messageBody appendString:@"\n"];
+        }
+        
+        [controller setMessageBody:messageBody isHTML:NO];
+        
+        if(self.list.imageName != nil){
+            NSString *filename = self.list.imageName;
+            
+            NSString  *filePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            filePath = [filePath stringByAppendingFormat:@"/%@",filename];
+            filePath = [filePath stringByAppendingString:@".jpg"];
+            
+            NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+            
+            NSString *mimeType = @"image/jpeg";
+            
+            filename = [self.list.name stringByAppendingString:@" "];
+            filename = [filename stringByAppendingString:self.list.totalPaidString];
+            filename = [filename stringByAppendingString:@".jpg"];
+            
+            
+            
+            // Add attachment
+            [controller addAttachmentData:fileData mimeType:mimeType fileName:filename];
+        }
+        
+        if (controller){
+            //bring top panel up and when done proceed to present view controller, which overall looks cool
+       
+            [self presentViewController:controller animated:YES completion:NULL];
+           
+            
+            
+            
+        }
+    }
+    else {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to send e-mail" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+
+    
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error;
+{
+    if (result == MFMailComposeResultSent) {
+        // NSLog(@"It's away!");
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)removeThisListButtonPressed:(id)sender {
     

@@ -621,6 +621,13 @@
                                 <action selector="removeThisListButtonPressed:" destination="FMe-56-qY0" id="idA-eN-g8o"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="03d-00-Slx"/>
+                        <barButtonItem image="email.png" id="tc6-Lz-2Vf">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendEmailButtonPressed:" destination="FMe-56-qY0" id="iVs-vD-dF5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="wyY-mw-hEl"/>
                         <barButtonItem image="plus.png" style="plain" id="D9T-CF-cq3">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
