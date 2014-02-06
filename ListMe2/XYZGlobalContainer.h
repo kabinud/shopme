@@ -27,6 +27,7 @@
 - (void)updateBadge;
 - (void)writeImage: (UIImage *)image;
 - (UIImage *)readImageFromFile: (NSString *)uniqueFileName;
+- (BOOL) deleteImage: (NSString *)uniqueFileName;
 
 @end
 

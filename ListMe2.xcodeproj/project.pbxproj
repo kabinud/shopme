@@ -46,6 +46,8 @@
 		B82299C218A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82299C118A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m */; };
 		B82299C718A3F3F60058AE4E /* cartSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = B82299C518A3F3F60058AE4E /* cartSmall.png */; };
 		B82299C818A3F3F60058AE4E /* cartSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B82299C618A3F3F60058AE4E /* cartSmall@2x.png */; };
+		B82299CB18A401FF0058AE4E /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B82299C918A401FF0058AE4E /* plus.png */; };
+		B82299CC18A401FF0058AE4E /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B82299CA18A401FF0058AE4E /* plus@2x.png */; };
 		B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */; };
 		B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BFA18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
@@ -132,6 +134,8 @@
 		B82299C118A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZHistoryListDetailsViewController.m; sourceTree = "<group>"; };
 		B82299C518A3F3F60058AE4E /* cartSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cartSmall.png; path = ListMe2/Icons/cartSmall.png; sourceTree = "<group>"; };
 		B82299C618A3F3F60058AE4E /* cartSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cartSmall@2x.png"; path = "ListMe2/Icons/cartSmall@2x.png"; sourceTree = "<group>"; };
+		B82299C918A401FF0058AE4E /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = ListMe2/Icons/plus.png; sourceTree = "<group>"; };
+		B82299CA18A401FF0058AE4E /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus@2x.png"; path = "ListMe2/Icons/plus@2x.png"; sourceTree = "<group>"; };
 		B8361BEF189FFA6400787AE5 /* NSString+IsEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IsEmpty.h"; sourceTree = "<group>"; };
 		B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IsEmpty.m"; sourceTree = "<group>"; };
 		B8361BF918A0020200787AE5 /* XYZMainViewController+GestureRecognizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZMainViewController+GestureRecognizers.h"; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 		B806B767189BDF6400C19AC0 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B82299C918A401FF0058AE4E /* plus.png */,
+				B82299CA18A401FF0058AE4E /* plus@2x.png */,
 				B82299C518A3F3F60058AE4E /* cartSmall.png */,
 				B82299C618A3F3F60058AE4E /* cartSmall@2x.png */,
 				B82299BC18A30B700058AE4E /* next22.png */,
@@ -516,6 +522,7 @@
 				B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */,
 				B802CC73189EEC91006D607C /* compose.png in Resources */,
 				B802CC5B189EC47D006D607C /* xbutton.png in Resources */,
+				B82299CC18A401FF0058AE4E /* plus@2x.png in Resources */,
 				B802CC68189ED8E8006D607C /* email@2x.png in Resources */,
 				B82299BE18A30B700058AE4E /* next22.png in Resources */,
 				B802CC60189ECEFA006D607C /* info2@2x.png in Resources */,
@@ -539,6 +546,7 @@
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
 				B802CC55189EB131006D607C /* info@2x.png in Resources */,
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,
+				B82299CB18A401FF0058AE4E /* plus.png in Resources */,
 				B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

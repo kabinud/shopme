@@ -575,7 +575,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IQ-gS-5MY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2541" y="-1130"/>
+            <point key="canvasLocation" x="2569" y="-1130"/>
         </scene>
         <!--History List Details View Controller-->
         <scene sceneID="Vgp-4e-Fz0">
@@ -615,18 +615,28 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="Bu4-CN-W1z">
+                        <barButtonItem image="bin222M.png" id="Bu4-CN-W1z">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="showImageLargeButtonPressed:" destination="FMe-56-qY0" id="0M8-3g-hAf"/>
-                                <segue destination="Uau-4O-QgO" kind="modal" identifier="ImageLargeSegue" id="qJi-FO-WIh"/>
+                                <action selector="removeThisListButtonPressed:" destination="FMe-56-qY0" id="idA-eN-g8o"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wyY-mw-hEl"/>
+                        <barButtonItem image="plus.png" style="plain" id="D9T-CF-cq3">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addAllItemsToMainListButtonPressed:" destination="FMe-56-qY0" id="cvb-5o-RUV"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="JbM-1f-zBM"/>
+                    <connections>
+                        <segue destination="Uau-4O-QgO" kind="modal" identifier="ImageLargeSegue" id="ItN-Rw-w50"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yht-lf-zy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3100" y="-1130"/>
+            <point key="canvasLocation" x="3036" y="-1130"/>
         </scene>
         <!--Top Edit Navigation Controller-->
         <scene sceneID="83p-jd-mQh">
@@ -689,6 +699,7 @@
         <image name="info2.png" width="44" height="22"/>
         <image name="next22.png" width="22" height="22"/>
         <image name="placeholder.png" width="250" height="250"/>
+        <image name="plus.png" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -697,6 +708,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="oSL-fN-AEI"/>
-        <segue reference="Xbp-da-YV7"/>
+        <segue reference="ItN-Rw-w50"/>
     </inferredMetricsTieBreakers>
 </document>

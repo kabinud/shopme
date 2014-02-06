@@ -11,7 +11,7 @@
 #import "XYZToDoItem.h"
 #import "XYZGlobalContainer.h"
 
-@interface XYZHistoryListDetailsViewController ()
+@interface XYZHistoryListDetailsViewController () <UIActionSheetDelegate>
 
 @property XYZGlobalContainer *globalContainer;
 @property UIImage *receiptImage;
@@ -20,11 +20,41 @@
 @end
 
 @implementation XYZHistoryListDetailsViewController
-- (IBAction)showImageLargeButtonPressed:(id)sender {
+
+
+- (IBAction)removeThisListButtonPressed:(id)sender {
     
-    [self performSegueWithIdentifier: @"ImageLargeSegue" sender: self];
-  
+    UIActionSheet *popupQuery;
+    
+    popupQuery = [[UIActionSheet alloc] initWithTitle:@"Do you want to delete this list?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete list"
+                                    otherButtonTitles: nil];
+    
+    popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [popupQuery showInView:self.view];
+    
+}
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+         XYZArchivedList * listTemp = [self.globalContainer.lists objectAtIndex:self.listIndex];
+        [self.globalContainer deleteImage:listTemp.imageName];
+        [self.globalContainer.lists removeObjectAtIndex:self.listIndex];
+        [self.globalContainer saveListsToFile];
         
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }
+    else if (buttonIndex == 1)
+    {
+     
+    }
+    
+}
+
+
+- (IBAction)addAllItemsToMainListButtonPressed:(id)sender {
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -165,6 +195,10 @@
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    UIFont *myFont = [ UIFont fontWithName: @"Helvetica" size: 15.0 ];
+    cell.textLabel.font  = myFont;
+    cell.textLabel.textColor = [UIColor blackColor];
     
      return cell;
     

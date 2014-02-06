@@ -99,7 +99,7 @@
     //save it on a thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        //saving image
-        BOOL result = [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
+        BOOL result = [UIImageJPEGRepresentation(image, 0.5) writeToFile:jpgPath atomically:YES];
        //on thread exit
         dispatch_async(dispatch_get_main_queue(), ^{
            
@@ -131,6 +131,19 @@
     UIImage *image= [UIImage imageWithData:imgData];
     
     return image;
+    
+}
+
+- (BOOL) deleteImage: (NSString *)uniqueFileName{
+    
+    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    jpgPath = [jpgPath stringByAppendingFormat:@"/%@",uniqueFileName];
+    jpgPath = [jpgPath stringByAppendingString:@".jpg"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL result = [fileManager removeItemAtPath:jpgPath error:NULL];
+    
+    return result;
     
 }
 
