@@ -283,8 +283,37 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FinishShoppingButton" id="ZCR-5S-WQ5">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmailButton" id="33c-Qq-Wy8">
                                 <rect key="frame" x="0.0" y="136" width="320" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="33c-Qq-Wy8" id="pI5-Zd-1c9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-e7-tKO">
+                                            <rect key="frame" x="-36" y="16" width="336" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <state key="normal" title="    SHOPPING HISTORY" image="history 22-48-42-360.png">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="sendListByEmailButtonPressed:" destination="8nO-YO-YeZ" eventType="touchUpInside" id="HN8-fP-cnt"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FinishShoppingButton" id="ZCR-5S-WQ5">
+                                <rect key="frame" x="0.0" y="193" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZCR-5S-WQ5" id="q5E-Db-ODx">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -313,7 +342,7 @@
                                 </accessibility>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" id="XbY-al-DT8">
-                                <rect key="frame" x="0.0" y="193" width="320" height="57"/>
+                                <rect key="frame" x="0.0" y="250" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XbY-al-DT8" id="sI3-N0-uPX">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -703,6 +732,7 @@
         <image name="crateM1.png" width="44" height="44"/>
         <image name="email.png" width="24" height="18"/>
         <image name="finishFlag22.png" width="22" height="22"/>
+        <image name="history 22-48-42-360.png" width="19" height="22"/>
         <image name="info2.png" width="44" height="22"/>
         <image name="next22.png" width="22" height="22"/>
         <image name="placeholder.png" width="250" height="250"/>
