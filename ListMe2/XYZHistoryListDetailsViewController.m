@@ -10,6 +10,7 @@
 #import "XYZImageFullScreenViewController.h"
 #import "XYZToDoItem.h"
 #import "XYZGlobalContainer.h"
+#import "XYZOberViewController.h"
 
 @interface XYZHistoryListDetailsViewController () <UIActionSheetDelegate>
 
@@ -30,31 +31,63 @@
                                     otherButtonTitles: nil];
     
     popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    popupQuery.tag = 0;
     [popupQuery showInView:self.view];
     
 }
 
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0)
-    {
-         XYZArchivedList * listTemp = [self.globalContainer.lists objectAtIndex:self.listIndex];
-        [self.globalContainer deleteImage:listTemp.imageName];
-        [self.globalContainer.lists removeObjectAtIndex:self.listIndex];
-        [self.globalContainer saveListsToFile];
-        
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        
+    
+    if(actionSheet.tag == 0){
+        if (buttonIndex == 0)
+        {
+            
+            [self.globalContainer deleteImage:self.list.imageName];
+            [self.globalContainer.lists removeObjectAtIndex:self.listIndex];
+            [self.globalContainer saveListsToFile];
+            
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+        }
+        else if (buttonIndex == 1)
+        {
+         
+        }
     }
-    else if (buttonIndex == 1)
-    {
-     
+    else if (actionSheet.tag == 1){
+        if (buttonIndex == 0)
+        {
+            for(XYZToDoItem *item in self.list.archivedList){
+                item.completed = NO;
+                item.toBeDeleted = NO;
+                [self.globalContainer.toDoItems addObject:item];
+            }
+            
+            UINavigationController *nav = (UINavigationController*) self.view.window.rootViewController;
+            UIViewController *root = [nav.viewControllers objectAtIndex:0];
+            [root performSelector:@selector(returnToRoot)];
+            
+        }
+        else if (buttonIndex == 1)
+        {
+            
+        }
     }
     
 }
 
 
 - (IBAction)addAllItemsToMainListButtonPressed:(id)sender {
+    UIActionSheet *popupQuery;
+    
+    popupQuery = [[UIActionSheet alloc] initWithTitle:@"Do you want to add all these items to your current shopping list?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Add"
+                                    otherButtonTitles: nil];
+    
+    popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    popupQuery.tag = 1;
+    [popupQuery showInView:self.view];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
