@@ -107,7 +107,7 @@
                     <connections>
                         <segue destination="lQe-c2-knv" kind="modal" identifier="EditSegue" modalTransitionStyle="crossDissolve" animates="NO" id="bvf-dx-SpZ"/>
                         <segue destination="gqh-go-9wB" kind="push" identifier="FinishShoppingSegue" id="MgJ-to-AEr"/>
-                        <segue destination="SJg-dT-oL6" kind="modal" identifier="HistoryFromOberSegue" modalTransitionStyle="crossDissolve" id="dor-NB-Evo"/>
+                        <segue destination="SJg-dT-oL6" kind="modal" identifier="HistoryFromOberSegue" modalTransitionStyle="crossDissolve" animates="NO" id="dor-NB-Evo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYl-pv-3bj" userLabel="First Responder" sceneMemberID="firstResponder"/>

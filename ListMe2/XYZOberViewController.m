@@ -37,16 +37,27 @@
 
 - (void)returnToRoot {
     [self dismissViewControllerAnimated:NO completion:nil];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 - (void)shoppingHistory{
-    [self performSegueWithIdentifier: @"HistoryFromOberSegue" sender: self];
+    [self bringTopPanel:
+     ^{
+         [self performSegueWithIdentifier: @"HistoryFromOberSegue" sender: self];
+    }
+     ];
+    
+    
 }
 
 
 - (void)finishShopping{
-    [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
+    [self bringTopPanel:
+     ^{
+         [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
+     }
+     ];
+    
 }
 
 - (IBAction)unwindOberViewController:(UIStoryboardSegue *)segue
@@ -90,37 +101,44 @@
 
 - (void)sendListByEmail{
     
-    if ([MFMailComposeViewController canSendMail]) {
-        MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
-        controller.mailComposeDelegate = self;
-        [controller setSubject:@"My shopping list"];
-        
-        NSMutableString *messageBody = [NSMutableString new];
-        [messageBody appendString:@"My shopping list:\n\n "];
-        for(XYZToDoItem *item in self.globalContainer.toDoItems) {
-            [messageBody appendString:@"- "];
-            [messageBody appendString:item.itemName];
-            [messageBody appendString:@"\n"];
-        }
-        
-        [controller setMessageBody:messageBody isHTML:NO];
-        
-        if (controller){
-            //bring top panel up and when done proceed to present view controller, which overall looks cool
-            [self bringTopPanel:^{
-                self.mainViewController.tableView.scrollEnabled = YES;
-                [self presentViewController:controller animated:YES completion:NULL];
-            }];
-            
-        
-           
-        }
-    }
-    else {
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to send e-mail" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        return;
-    }
+    
+    [self bringTopPanel:
+     ^{
+         if ([MFMailComposeViewController canSendMail]) {
+             MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+             controller.mailComposeDelegate = self;
+             [controller setSubject:@"My shopping list"];
+             
+             NSMutableString *messageBody = [NSMutableString new];
+             [messageBody appendString:@"My shopping list:\n\n "];
+             for(XYZToDoItem *item in self.globalContainer.toDoItems) {
+                 [messageBody appendString:@"- "];
+                 [messageBody appendString:item.itemName];
+                 [messageBody appendString:@"\n"];
+             }
+             
+             [controller setMessageBody:messageBody isHTML:NO];
+             
+             if (controller){
+                 //bring top panel up and when done proceed to present view controller, which overall looks cool
+               //  [self bringTopPanel:^{
+                     self.mainViewController.tableView.scrollEnabled = YES;
+                     [self presentViewController:controller animated:NO completion:NULL];
+               //  }];
+                 
+                 
+                 
+             }
+         }
+         else {
+             UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to send e-mail" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [alert show];
+             return;
+         }
+     }
+     ];
+    
+    
 
 }
 
@@ -337,6 +355,13 @@
         
         self.globalContainer.listToBeArchived = list;
     }
+    else if([segue.identifier isEqualToString:@"HistoryFromOberSegue"]){
+
+        
+     
+    }
+    
+    
 
     
 }
