@@ -71,11 +71,20 @@
 - (void)saveListsToFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"globalData.plist"];
-    BOOL result = [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
-    if(result==NO){
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save the list" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //call to execute at the thread exit
+        });
+    });
+    
+    //BOOL result = [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
+    
+//    if(result==NO){
+//        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save the list" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alert show];
+//    }
 }
 
 - (void)readListsFromFile{

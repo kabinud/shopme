@@ -23,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWJ-Jv-wiE">
-                                            <rect key="frame" x="253" y="0.0" width="90" height="44"/>
+                                            <rect key="frame" x="249" y="0.0" width="90" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" image="crateM1.png">
@@ -178,7 +178,7 @@
                             </connections>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a new item here" minimumFontSize="17" id="IOq-Cf-X2v">
-                            <rect key="frame" x="55" y="7" width="188" height="30"/>
+                            <rect key="frame" x="66" y="7" width="188" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -187,7 +187,7 @@
                                 <action selector="editingDidBegin:" destination="4wv-d4-d2U" eventType="editingDidBegin" id="ANd-i7-hiv"/>
                             </connections>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" image="next.png" id="coW-sU-NJC">
+                        <barButtonItem key="rightBarButtonItem" image="next22.png" id="coW-sU-NJC">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="4wv-d4-d2U" id="tqK-if-S5u"/>
@@ -417,7 +417,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" image="next.png" style="done" id="OYZ-0b-dar">
+                        <barButtonItem key="rightBarButtonItem" image="next22.png" style="done" id="OYZ-0b-dar">
                             <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="rCp-g9-Uep" kind="push" identifier="TakePictureSegue" id="LkK-pc-dqY"/>
@@ -557,8 +557,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="QfO-4R-yeq">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="Sov-J7-fwn">
-                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="next22.png" style="done" id="Sov-J7-fwn">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="goBackButtonPressed:" destination="axS-a8-eGQ" id="0sd-VA-8Hb"/>
                             </connections>
@@ -627,7 +627,7 @@
         <image name="email.png" width="24" height="18"/>
         <image name="finishFlag22.png" width="22" height="22"/>
         <image name="info2.png" width="44" height="22"/>
-        <image name="next.png" width="44" height="44"/>
+        <image name="next22.png" width="22" height="22"/>
         <image name="placeholder.png" width="250" height="250"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
