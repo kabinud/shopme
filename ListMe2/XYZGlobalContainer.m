@@ -71,20 +71,7 @@
 - (void)saveListsToFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"historicalLists.plist"];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //call to execute at the thread exit
-        });
-    });
-    
-    //BOOL result = [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
-    
-//    if(result==NO){
-//        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save the list" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        [alert show];
-//    }
+    [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
 }
 
 - (void)readListsFromFile{
@@ -107,21 +94,38 @@
     jpgPath = [jpgPath stringByAppendingFormat:@"/%@",uniqueFileName];
     jpgPath = [jpgPath stringByAppendingString:@".jpg"];
     
-    NSLog(@"%@", jpgPath);
 
-    [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
+    
+    //save it in a thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+       //saving image
+        BOOL result = [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
+       //on thread exit
+        dispatch_async(dispatch_get_main_queue(), ^{
+           
+            if(result == NO){
+                UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save the photo" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        });
+    });
+    
+   
+    
+    
+        
     
     // Let's check to see if files were successfully written
     
-    // Create file manager
-    NSError *error;
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    
-    // Point to Document directory
-    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    
-    // Write out the contents of home directory to console
-    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
+//    // Create file manager
+//    NSError *error;
+//    NSFileManager *fileMgr = [NSFileManager defaultManager];
+//    
+//    // Point to Document directory
+//    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+//    
+//    // Write out the contents of home directory to console
+//    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
 }
 
 
