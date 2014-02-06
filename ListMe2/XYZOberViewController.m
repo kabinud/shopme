@@ -176,6 +176,7 @@
     self.globalContainer = [XYZGlobalContainer globalContainer];
     [self.globalContainer readItemsFromFile];
     [self.globalContainer readHistoricalItemsFromFile];
+    [self.globalContainer readListsFromFile];
     
     [self loadMainView];
     //removes toolbar border

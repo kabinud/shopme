@@ -45,6 +45,11 @@
         
         [self.globalContainer.toDoItems removeAllObjects];
         [self.globalContainer.lists insertObject:self.globalContainer.listToBeArchived atIndex:0];
+        [self.globalContainer updateBadge];
+        [self.globalContainer saveHistoricalItemsToFile];
+        
+        [self.globalContainer saveListsToFile];
+        
         
     }
     
@@ -91,6 +96,8 @@
       UIImage * chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     self.imageView.image = chosenImage;
     self.photoTaken = YES;
+    
+    self.globalContainer.listToBeArchived.image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

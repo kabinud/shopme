@@ -15,6 +15,7 @@
 @property NSMutableString *name;
 @property NSNumber *totalPaid;
 @property NSString *totalPaidString;
+@property UIImage *image;
 - (id)initWithListAndSetTheRestAutomatically: (NSMutableArray *)incomingList;
 - (void)setTotalPaidAmount:(NSNumber *)totalPaidAmount;
 @end

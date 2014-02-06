@@ -59,6 +59,8 @@
     [encoder encodeObject:_finishedShoppingDate forKey:@"FinishedShoppingDate"];
     [encoder encodeObject:_name forKey:@"Name"];
     [encoder encodeObject:_totalPaid forKey:@"TotalPaid"];
+    [encoder encodeObject:_totalPaidString forKey:@"TotalPaidString"];
+    [encoder encodeObject:_image forKey:@"Image"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -70,6 +72,8 @@
         _finishedShoppingDate  = [[decoder decodeObjectForKey: @"FinishedShoppingDate"] copy];
         _name = [[decoder decodeObjectForKey: @"Name"] copy];
         _totalPaid = [[decoder decodeObjectForKey: @"TotalPaid"] copy];
+        _totalPaidString = [[decoder decodeObjectForKey: @"TotalPaidString"] copy];
+        _image = [[decoder decodeObjectForKey: @"Image"] copy];
 
     }
     return self;
