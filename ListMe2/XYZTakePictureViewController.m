@@ -48,11 +48,18 @@
         [self.globalContainer updateBadge];
         [self.globalContainer saveHistoricalItemsToFile];
         
-        [self.globalContainer saveListsToFile];
+       
         
         if(self.photoTaken == YES){
             [self.globalContainer writeImage:self.imageView.image];
         }
+        //If no photo is to be saved, change it's unique name in the list to be added to nul. Unique name was generated at the instance of listToBeArchived initialization.
+        else{
+            self.globalContainer.listToBeArchived.imageName = nil;
+        }
+        
+        
+        [self.globalContainer saveListsToFile];
 
     }
     

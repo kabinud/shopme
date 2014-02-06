@@ -10,10 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "XYZArchivedList.h"
 
-@interface XYZGlobalContainer : NSObject {
-    NSMutableArray *lists;
-}
-
+@interface XYZGlobalContainer : NSObject
 
 @property (nonatomic, retain) NSMutableArray *lists;
 @property NSMutableArray *toDoItems;
@@ -29,6 +26,7 @@
 - (void)readHistoricalItemsFromFile;
 - (void)updateBadge;
 - (void)writeImage: (UIImage *)image;
+- (UIImage *)readImageFromFile: (NSString *)uniqueFileName;
 
 @end
 

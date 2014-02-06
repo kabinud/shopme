@@ -70,7 +70,7 @@
 
 - (void)saveListsToFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"globalData.plist"];
+    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"historicalLists.plist"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [NSKeyedArchiver archiveRootObject:lists toFile:finalPath ];
@@ -89,7 +89,7 @@
 
 - (void)readListsFromFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"globalData.plist"];
+    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"historicalLists.plist"];
     NSMutableArray* arr = [NSKeyedUnarchiver unarchiveObjectWithFile:finalPath];
     if(arr!=nil){
         self.lists = arr;
@@ -111,17 +111,17 @@
 
     [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
     
-//    // Let's check to see if files were successfully written...
-//    
-//    // Create file manager
-//    NSError *error;
-//    NSFileManager *fileMgr = [NSFileManager defaultManager];
-//    
-//    // Point to Document directory
-//    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-//    
-//    // Write out the contents of home directory to console
-//    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
+    // Let's check to see if files were successfully written
+    
+    // Create file manager
+    NSError *error;
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    
+    // Point to Document directory
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    
+    // Write out the contents of home directory to console
+    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
 }
 
 
