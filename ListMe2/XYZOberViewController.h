@@ -10,7 +10,7 @@
 
 @protocol OberViewControllerDelegate <NSObject>
 
-- (void)bringTopPanel: (void (^)(void))block;
+- (void)bringTopPanel: (void (^)(void))block WithAnimationDuration: (double )duration;
 - (void)bringTopEditPanelToAnExtend: (int)topY;
 - (void)closeTopEditPanel;
 - (void)performEditSegue;

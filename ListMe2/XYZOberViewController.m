@@ -19,7 +19,8 @@
 
 
 
-#define SLIDE_TIMING .45
+#define SLIDE_TIMING_SLOW .45
+#define SLIDE_TIMING_FAST .25
 
 @interface XYZOberViewController () <OberViewControllerDelegate, MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
 
@@ -45,6 +46,7 @@
      ^{
          [self performSegueWithIdentifier: @"HistoryFromOberSegue" sender: self];
     }
+     WithAnimationDuration:SLIDE_TIMING_FAST
      ];
     
     
@@ -56,6 +58,7 @@
      ^{
          [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
      }
+     WithAnimationDuration:SLIDE_TIMING_FAST
      ];
     
 }
@@ -63,7 +66,7 @@
 - (IBAction)unwindOberViewController:(UIStoryboardSegue *)segue
 {
     if(self.showingTopPanel){
-        [self bringTopPanel:nil];
+        [self bringTopPanel:nil WithAnimationDuration:SLIDE_TIMING_SLOW];
         self.mainViewController.tableView.scrollEnabled = YES;
     }
 }
@@ -82,7 +85,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     if(self.showingTopPanel){
-        [self bringTopPanel:nil];
+        [self bringTopPanel:nil WithAnimationDuration:SLIDE_TIMING_SLOW];
     }
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     
@@ -95,7 +98,7 @@
 // (1) and (2) register and unregister this selector so that it is only triggered in this very view
 -(void)appEnteredBackground:(NSNotification *)appEnteredBackgroundNotification {
     if(self.showingTopPanel){
-        [self bringTopPanel:nil];
+        [self bringTopPanel:nil WithAnimationDuration:SLIDE_TIMING_SLOW];
     }
 }
 
@@ -136,6 +139,8 @@
              return;
          }
      }
+     
+     WithAnimationDuration:SLIDE_TIMING_FAST
      ];
     
     
@@ -250,19 +255,13 @@
     return view;
 }
 
-- (NSString *)uuid
-{
-    CFUUIDRef uuidRef = CFUUIDCreate(NULL);
-    CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
-    CFRelease(uuidRef);
-    return (__bridge NSString *)uuidStringRef;
-}
+
 
 
 - (void)closeTopEditPanel{
     
    
-    [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+    [UIView animateWithDuration:SLIDE_TIMING_SLOW delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                       
                          _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
@@ -367,11 +366,11 @@
 }
 
 
-- (void)bringTopPanel: (void (^)(void))block{
+- (void)bringTopPanel: (void (^)(void))block WithAnimationDuration: (double )duration{
     
     if(self.showingTopPanel){
         
-        [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
                              _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
                          }
@@ -395,10 +394,9 @@
     UITableView *childView = [self getTopView];
     [self.view sendSubviewToBack:childView];
      
-       
+ 
     
-    
-    [UIView animateWithDuration:SLIDE_TIMING delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          _mainViewController.view.frame = CGRectMake(0, 4.5*childView.rowHeight, self.view.frame.size.width, self.view.frame.size.height);
                      }

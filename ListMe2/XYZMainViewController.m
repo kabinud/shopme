@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 BQDev. All rights reserved.
 //
 
-#define SLIDE_TIMING .95
+#define SLIDE_TIMING_SLOW .45
 
 #import "XYZMainViewController.h"
 #import "XYZGlobalContainer.h"
@@ -86,7 +86,7 @@
 
 - (void)bringOrCloseToPanel{
     self.tableView.scrollEnabled = !self.tableView.scrollEnabled;
-    [self.delegate bringTopPanel:nil];
+    [self.delegate bringTopPanel:nil WithAnimationDuration:SLIDE_TIMING_SLOW];
 }
 
 #pragma mark - Table view data source
