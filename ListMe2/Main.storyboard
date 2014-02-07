@@ -427,12 +427,94 @@
                                 <action selector="backButtonPressed:" destination="jl1-JA-eUm" id="xpm-Zy-7hZ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="98X-NM-tSt"/>
+                        <barButtonItem title="NEXT" id="vf9-vc-ZvF">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="CXk-Ev-3f2" kind="push" id="EQl-qb-zUb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="ylb-p8-cXW"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="ntV-4e-rBQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmZ-ta-AAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1515" y="335"/>
+        </scene>
+        <!--Info3 View Controller-->
+        <scene sceneID="BXd-Hr-WxC">
+            <objects>
+                <viewController id="CXk-Ev-3f2" customClass="XYZInfo3ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wyA-tG-osL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xly-Ym-aMq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sQG-Mj-4dq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tip3.png" translatesAutoresizingMaskIntoConstraints="NO" id="0DT-a9-AG8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="backButton.png" id="sxY-pX-5By">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="CXk-Ev-3f2" id="5NV-GC-GAv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="QJY-d7-Gdp"/>
+                        <barButtonItem title="NEXT" id="Muc-zG-cpZ">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="9Qc-IP-0va" kind="push" id="yVb-Tl-VsQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="SnO-lW-H8o"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Z3p-7w-Q6F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdL-PX-VQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1999" y="335"/>
+        </scene>
+        <!--Info4 View Controller-->
+        <scene sceneID="05S-sC-682">
+            <objects>
+                <viewController id="9Qc-IP-0va" customClass="XYZInfo4ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iQo-eX-iQu"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXX-lX-CYA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hko-dY-aju">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tips4.png" translatesAutoresizingMaskIntoConstraints="NO" id="rQK-3n-fbH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="backButton.png" id="KtA-S4-55x">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="9Qc-IP-0va" id="ozm-W4-S27"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="PTS-Ai-Txc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7U-r8-ZEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FNS-yU-kBF">
@@ -799,7 +881,9 @@
         <image name="placeholder.png" width="250" height="250"/>
         <image name="plus.png" width="22" height="22"/>
         <image name="pulldown.png" width="320" height="480"/>
+        <image name="tip3.png" width="320" height="480"/>
         <image name="tips.png" width="320" height="480"/>
+        <image name="tips4.png" width="320" height="480"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -807,7 +891,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dor-NB-Evo"/>
-        <segue reference="ItN-Rw-w50"/>
+        <segue reference="f6O-z8-A3X"/>
+        <segue reference="Xbp-da-YV7"/>
     </inferredMetricsTieBreakers>
 </document>

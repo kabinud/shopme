@@ -64,11 +64,17 @@
 		B87FC120189D859400AF60FD /* folder22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11C189D859400AF60FD /* folder22@2x.png */; };
 		B87FC123189D8ACF00AF60FD /* crateM.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC121189D8ACF00AF60FD /* crateM.png */; };
 		B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC122189D8ACF00AF60FD /* crateM@2x.png */; };
+		B881668318A510CD001D90E5 /* XYZInfo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B881668218A510CD001D90E5 /* XYZInfo3ViewController.m */; };
+		B881668818A516F3001D90E5 /* tips4.png in Resources */ = {isa = PBXBuildFile; fileRef = B881668618A516F3001D90E5 /* tips4.png */; };
+		B881668918A516F3001D90E5 /* tips4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881668718A516F3001D90E5 /* tips4@2x.png */; };
+		B881668C18A5172E001D90E5 /* XYZInfo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */; };
 		B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */; };
 		B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */; };
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
 		B898535018A46CA8004A2ED9 /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B898534E18A46CA8004A2ED9 /* nextButton.png */; };
 		B898535118A46CA8004A2ED9 /* nextButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B898534F18A46CA8004A2ED9 /* nextButton@2x.png */; };
+		B8A52B5A18A5069600B2D63D /* tip3.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A52B5818A5069600B2D63D /* tip3.png */; };
+		B8A52B5B18A5069600B2D63D /* tip3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A52B5918A5069600B2D63D /* tip3@2x.png */; };
 		B8A72DC918A299480078CAA7 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DC818A299480078CAA7 /* placeholder.png */; };
 		B8A72DCB18A29D5F0078CAA7 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */; };
 		B8A72DCE18A2A61F0078CAA7 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCC18A2A61F0078CAA7 /* next.png */; };
@@ -166,6 +172,12 @@
 		B87FC11C189D859400AF60FD /* folder22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder22@2x.png"; path = "ListMe2/Icons/folder22@2x.png"; sourceTree = "<group>"; };
 		B87FC121189D8ACF00AF60FD /* crateM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crateM.png; path = ListMe2/Icons/crateM.png; sourceTree = "<group>"; };
 		B87FC122189D8ACF00AF60FD /* crateM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crateM@2x.png"; path = "ListMe2/Icons/crateM@2x.png"; sourceTree = "<group>"; };
+		B881668118A510CD001D90E5 /* XYZInfo3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZInfo3ViewController.h; sourceTree = "<group>"; };
+		B881668218A510CD001D90E5 /* XYZInfo3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfo3ViewController.m; sourceTree = "<group>"; };
+		B881668618A516F3001D90E5 /* tips4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tips4.png; path = ListMe2/Images/tips4.png; sourceTree = "<group>"; };
+		B881668718A516F3001D90E5 /* tips4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tips4@2x.png"; path = "ListMe2/Images/tips4@2x.png"; sourceTree = "<group>"; };
+		B881668A18A5172E001D90E5 /* XYZInfo4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZInfo4ViewController.h; path = ../XYZInfo4ViewController.h; sourceTree = "<group>"; };
+		B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZInfo4ViewController.m; path = ../XYZInfo4ViewController.m; sourceTree = "<group>"; };
 		B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditNavigationController.h; sourceTree = "<group>"; };
 		B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditNavigationController.m; sourceTree = "<group>"; };
 		B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditTableViewController.h; sourceTree = "<group>"; };
@@ -174,6 +186,8 @@
 		B895D27B189E919D00BAF7FB /* XYZTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopViewController.m; sourceTree = "<group>"; };
 		B898534E18A46CA8004A2ED9 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextButton.png; path = ListMe2/Icons/nextButton.png; sourceTree = "<group>"; };
 		B898534F18A46CA8004A2ED9 /* nextButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nextButton@2x.png"; path = "ListMe2/Icons/nextButton@2x.png"; sourceTree = "<group>"; };
+		B8A52B5818A5069600B2D63D /* tip3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tip3.png; path = ListMe2/Images/tip3.png; sourceTree = "<group>"; };
+		B8A52B5918A5069600B2D63D /* tip3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tip3@2x.png"; path = "ListMe2/Images/tip3@2x.png"; sourceTree = "<group>"; };
 		B8A72DC818A299480078CAA7 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = ListMe2/Images/placeholder.png; sourceTree = "<group>"; };
 		B8A72DCA18A29D5F0078CAA7 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder@2x.png"; path = "ListMe2/Images/placeholder@2x.png"; sourceTree = "<group>"; };
 		B8A72DCC18A2A61F0078CAA7 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = ListMe2/Icons/next.png; sourceTree = "<group>"; };
@@ -410,6 +424,10 @@
 		B8A72DC718A2993E0078CAA7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B881668618A516F3001D90E5 /* tips4.png */,
+				B881668718A516F3001D90E5 /* tips4@2x.png */,
+				B8A52B5818A5069600B2D63D /* tip3.png */,
+				B8A52B5918A5069600B2D63D /* tip3@2x.png */,
 				B800316418A46AF800138CCE /* tips.png */,
 				B800316518A46AF800138CCE /* tips@2x.png */,
 				B800316218A45A2C00138CCE /* pulldown@2x.png */,
@@ -440,6 +458,10 @@
 				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
 				B849F50A18A46FF700C8D2C2 /* XYZInfo2ViewController.h */,
 				B849F50B18A46FF700C8D2C2 /* XYZInfo2ViewController.m */,
+				B881668118A510CD001D90E5 /* XYZInfo3ViewController.h */,
+				B881668218A510CD001D90E5 /* XYZInfo3ViewController.m */,
+				B881668A18A5172E001D90E5 /* XYZInfo4ViewController.h */,
+				B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */,
 			);
 			name = InfoView;
 			sourceTree = "<group>";
@@ -561,12 +583,15 @@
 				B802CC68189ED8E8006D607C /* email@2x.png in Resources */,
 				B82299BE18A30B700058AE4E /* next22.png in Resources */,
 				B82299D718A43AD10058AE4E /* history 22-48-42-360.png in Resources */,
+				B881668818A516F3001D90E5 /* tips4.png in Resources */,
 				B802CC60189ECEFA006D607C /* info2@2x.png in Resources */,
+				B8A52B5A18A5069600B2D63D /* tip3.png in Resources */,
 				B800316318A45A2C00138CCE /* pulldown@2x.png in Resources */,
 				B87FC123189D8ACF00AF60FD /* crateM.png in Resources */,
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
 				B898535018A46CA8004A2ED9 /* nextButton.png in Resources */,
 				B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */,
+				B8A52B5B18A5069600B2D63D /* tip3@2x.png in Resources */,
 				B802CC5C189EC47D006D607C /* xbutton@2x.png in Resources */,
 				B8A72DCE18A2A61F0078CAA7 /* next.png in Resources */,
 				B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */,
@@ -586,6 +611,7 @@
 				B8006964189D8207001F03BD /* finishFlag22.png in Resources */,
 				B802CC55189EB131006D607C /* info@2x.png in Resources */,
 				B82299D818A43AD10058AE4E /* history@2x 22-48-42-355.png in Resources */,
+				B881668918A516F3001D90E5 /* tips4@2x.png in Resources */,
 				B800316718A46AF800138CCE /* tips@2x.png in Resources */,
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,
 				B82299CB18A401FF0058AE4E /* plus.png in Resources */,
@@ -627,7 +653,9 @@
 				B8A72DDF18A2FBF70078CAA7 /* XYZListHistoryViewController.m in Sources */,
 				B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */,
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
+				B881668318A510CD001D90E5 /* XYZInfo3ViewController.m in Sources */,
 				B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */,
+				B881668C18A5172E001D90E5 /* XYZInfo4ViewController.m in Sources */,
 				B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */,
 				B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */,
 			);
