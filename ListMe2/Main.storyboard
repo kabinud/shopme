@@ -385,6 +385,14 @@
                                 <segue destination="aRQ-1h-ZUX" kind="unwind" unwindAction="unwindOberViewController:" id="jYi-Mn-9TO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="90Z-GO-4I4"/>
+                        <barButtonItem title="NEXT" id="wCo-0j-oae">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="jl1-JA-eUm" kind="push" id="OLO-ob-aTo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="0S3-rs-V1E"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="3tF-Df-DNr"/>
                 </viewController>
@@ -392,6 +400,39 @@
                 <exit id="aRQ-1h-ZUX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1028" y="335"/>
+        </scene>
+        <!--Info2 View Controller-->
+        <scene sceneID="uHF-bC-gVw">
+            <objects>
+                <viewController id="jl1-JA-eUm" customClass="XYZInfo2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHW-dE-Kuc"/>
+                        <viewControllerLayoutGuide type="bottom" id="kop-Hc-rxR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ptD-ph-nCY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tips.png" translatesAutoresizingMaskIntoConstraints="NO" id="MhO-oT-ss5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="backButton.png" id="Me0-Yx-IML">
+                            <color key="tintColor" red="0.87912087910000003" green="0.05980173741" blue="0.73336088889999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="jl1-JA-eUm" id="xpm-Zy-7hZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="ntV-4e-rBQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmZ-ta-AAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FNS-yU-kBF">
@@ -758,6 +799,7 @@
         <image name="placeholder.png" width="250" height="250"/>
         <image name="plus.png" width="22" height="22"/>
         <image name="pulldown.png" width="320" height="480"/>
+        <image name="tips.png" width="320" height="480"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

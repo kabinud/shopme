@@ -42,8 +42,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self changeBackgroundColor];
-	//[self performSelector:@selector(changeBackgroundColor) withObject:nil afterDelay:0.1f];
+    
+    //removes toolbar border
+    self.navigationController.toolbar.clipsToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning
