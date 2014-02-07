@@ -80,6 +80,7 @@
         if(self.invitationView!=nil){
             [self.invitationView removeFromSuperview];
             self.invitationView = nil;
+            //show pull to add tip on main table view after user took the tour for the first time. remove it when he pulls to add an item. in method "bringTopPanelToAnExtend" this is marked as //(1) - ...
               [self presentPullToAddView];
         }
     }
@@ -366,6 +367,7 @@
                          }];
     }
     else{
+        //(1) - if the pull to add view is visible remove it after pulling to add
         if(self.pullToAddView != nil){
             
             [self.pullToAddView removeFromSuperview];
