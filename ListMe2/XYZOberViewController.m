@@ -281,6 +281,7 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"view did load");
 
     self.globalContainer = [XYZGlobalContainer globalContainer];
     [self.globalContainer readItemsFromFile];

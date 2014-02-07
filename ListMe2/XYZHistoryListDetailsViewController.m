@@ -25,7 +25,9 @@
 
 - (IBAction)sendEmailButtonPressed:(id)sender {
     
+    
     if ([MFMailComposeViewController canSendMail]) {
+    
         MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
         controller.mailComposeDelegate = self;
         [controller setSubject:@"My shopping list"];
@@ -41,6 +43,7 @@
         [controller setMessageBody:messageBody isHTML:NO];
         
         if(self.list.imageName != nil){
+          
             NSString *filename = self.list.imageName;
             
             NSString  *filePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
@@ -51,8 +54,11 @@
             
             NSString *mimeType = @"image/jpeg";
             
-            filename = [self.list.name stringByAppendingString:@" "];
-            filename = [filename stringByAppendingString:self.list.totalPaidString];
+            
+            if(self.list.totalPaidString != nil){
+                filename = [self.list.name stringByAppendingString:@" "];
+                filename = [filename stringByAppendingString:self.list.totalPaidString];
+            }
             filename = [filename stringByAppendingString:@".jpg"];
             
             
@@ -61,7 +67,10 @@
             [controller addAttachmentData:fileData mimeType:mimeType fileName:filename];
         }
         
+       
+        
         if (controller){
+          
             //bring top panel up and when done proceed to present view controller, which overall looks cool
        
             [self presentViewController:controller animated:YES completion:NULL];
