@@ -43,6 +43,34 @@
     return self;
 }
 
+- (void)loadTipImageView{
+    
+    UIImageView *presentationView;
+                
+    UIImage *image = [UIImage imageNamed:@"pulldown.png"];
+
+    presentationView = [[UIImageView alloc] initWithFrame:CGRectMake(
+                                                                        25
+                                                                          ,  25
+                                                                        , image.size.width , image.size.height)];
+    presentationView.image = image;
+        
+    UIView *backGroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height)];
+
+    [backGroundView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
+        
+    UIView *whiteGroundView = [[UIImageView alloc] initWithFrame:CGRectMake(25,25, self.view.frame.size.width-50, self.view.frame.size.height-44-50)];
+
+    [whiteGroundView setBackgroundColor:[UIColor whiteColor]];
+
+    [self.view addSubview:backGroundView];
+    [self.view addSubview:whiteGroundView];
+    [self.view addSubview:presentationView];
+    
+    
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,6 +84,8 @@
     
     //removes toolbar border
     self.navigationController.toolbar.clipsToBounds = YES;
+    
+    [self loadTipImageView];
 }
 
 - (void)didReceiveMemoryWarning
