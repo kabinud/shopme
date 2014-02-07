@@ -186,6 +186,7 @@
     {
         [self.globalContainer.toDoItems removeObjectAtIndex:indexPath.row];
         [self.globalContainer saveItemsToFile];
+        [self.globalContainer updateBadge];
         [self.tableView reloadData];
     }
 }

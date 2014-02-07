@@ -72,6 +72,11 @@
 		B88166A018A53581001D90E5 /* tour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669E18A53581001D90E5 /* tour@2x.png */; };
 		B88166A318A561E1001D90E5 /* pullmainview.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166A118A561E1001D90E5 /* pullmainview.png */; };
 		B88166A418A561E1001D90E5 /* pullmainview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166A218A561E1001D90E5 /* pullmainview@2x.png */; };
+		B88166CA18A57569001D90E5 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166C718A57569001D90E5 /* Icon-40@2x.png */; };
+		B88166CB18A57569001D90E5 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166C818A57569001D90E5 /* Icon-60@2x.png */; };
+		B88166CE18A575A1001D90E5 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166CD18A575A1001D90E5 /* Icon-Small@2x.png */; };
+		B88166D218A577D9001D90E5 /* launchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166D018A577D9001D90E5 /* launchimage@2x.png */; };
+		B88166D318A577D9001D90E5 /* launchimageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166D118A577D9001D90E5 /* launchimageR4.png */; };
 		B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */; };
 		B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */; };
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
@@ -132,20 +137,20 @@
 		B802CC76189EF146006D607C /* XYZGlobalContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZGlobalContainer.m; sourceTree = "<group>"; };
 		B802CC78189EF180006D607C /* XYZToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoItem.h; sourceTree = "<group>"; };
 		B802CC79189EF180006D607C /* XYZToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoItem.m; sourceTree = "<group>"; };
-		B806B72C189BD14600C19AC0 /* ListMe2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListMe2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B806B72C189BD14600C19AC0 /* Shop.Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806B72F189BD14600C19AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B806B731189BD14600C19AC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B806B733189BD14600C19AC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B806B737189BD14600C19AC0 /* ListMe2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListMe2-Info.plist"; sourceTree = "<group>"; };
+		B806B737189BD14600C19AC0 /* Shop.Me-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shop.Me-Info.plist"; sourceTree = "<group>"; };
 		B806B739189BD14600C19AC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B806B73B189BD14600C19AC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B806B73D189BD14600C19AC0 /* ListMe2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListMe2-Prefix.pch"; sourceTree = "<group>"; };
+		B806B73D189BD14600C19AC0 /* Shop.Me-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shop.Me-Prefix.pch"; sourceTree = "<group>"; };
 		B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
 		B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
 		B806B747189BD14600C19AC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B806B74D189BD14600C19AC0 /* ListMe2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListMe2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B806B74D189BD14600C19AC0 /* Shop.MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Shop.MeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806B74E189BD14600C19AC0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B806B756189BD14600C19AC0 /* ListMe2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListMe2Tests-Info.plist"; sourceTree = "<group>"; };
+		B806B756189BD14600C19AC0 /* Shop.MeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shop.MeTests-Info.plist"; sourceTree = "<group>"; };
 		B806B758189BD14600C19AC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B806B75A189BD14600C19AC0 /* ListMe2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListMe2Tests.m; sourceTree = "<group>"; };
 		B806B764189BD1A600C19AC0 /* XYZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
@@ -186,6 +191,11 @@
 		B881669E18A53581001D90E5 /* tour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tour@2x.png"; path = "ListMe2/Images/tour@2x.png"; sourceTree = "<group>"; };
 		B88166A118A561E1001D90E5 /* pullmainview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pullmainview.png; path = ListMe2/Images/pullmainview.png; sourceTree = "<group>"; };
 		B88166A218A561E1001D90E5 /* pullmainview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pullmainview@2x.png"; path = "ListMe2/Images/pullmainview@2x.png"; sourceTree = "<group>"; };
+		B88166C718A57569001D90E5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		B88166C818A57569001D90E5 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		B88166CD18A575A1001D90E5 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		B88166D018A577D9001D90E5 /* launchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchimage@2x.png"; sourceTree = "<group>"; };
+		B88166D118A577D9001D90E5 /* launchimageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimageR4.png; sourceTree = "<group>"; };
 		B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditNavigationController.h; sourceTree = "<group>"; };
 		B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditNavigationController.m; sourceTree = "<group>"; };
 		B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditTableViewController.h; sourceTree = "<group>"; };
@@ -261,6 +271,8 @@
 		B806B723189BD14600C19AC0 = {
 			isa = PBXGroup;
 			children = (
+				B88166CF18A577D9001D90E5 /* Launch-images */,
+				B88166C618A57569001D90E5 /* Launch-icons */,
 				B8A72DC718A2993E0078CAA7 /* Images */,
 				B806B767189BDF6400C19AC0 /* Icons */,
 				B806B735189BD14600C19AC0 /* ListMe2 */,
@@ -273,8 +285,8 @@
 		B806B72D189BD14600C19AC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B806B72C189BD14600C19AC0 /* ListMe2.app */,
-				B806B74D189BD14600C19AC0 /* ListMe2Tests.xctest */,
+				B806B72C189BD14600C19AC0 /* Shop.Me.app */,
+				B806B74D189BD14600C19AC0 /* Shop.MeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,10 +329,10 @@
 		B806B736189BD14600C19AC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B806B737189BD14600C19AC0 /* ListMe2-Info.plist */,
+				B806B737189BD14600C19AC0 /* Shop.Me-Info.plist */,
 				B806B738189BD14600C19AC0 /* InfoPlist.strings */,
 				B806B73B189BD14600C19AC0 /* main.m */,
-				B806B73D189BD14600C19AC0 /* ListMe2-Prefix.pch */,
+				B806B73D189BD14600C19AC0 /* Shop.Me-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -337,7 +349,7 @@
 		B806B755189BD14600C19AC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B806B756189BD14600C19AC0 /* ListMe2Tests-Info.plist */,
+				B806B756189BD14600C19AC0 /* Shop.MeTests-Info.plist */,
 				B806B757189BD14600C19AC0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -429,6 +441,27 @@
 			name = "Main Table View";
 			sourceTree = "<group>";
 		};
+		B88166C618A57569001D90E5 /* Launch-icons */ = {
+			isa = PBXGroup;
+			children = (
+				B88166CD18A575A1001D90E5 /* Icon-Small@2x.png */,
+				B88166C718A57569001D90E5 /* Icon-40@2x.png */,
+				B88166C818A57569001D90E5 /* Icon-60@2x.png */,
+			);
+			name = "Launch-icons";
+			path = "ListMe2/Launch-icons";
+			sourceTree = "<group>";
+		};
+		B88166CF18A577D9001D90E5 /* Launch-images */ = {
+			isa = PBXGroup;
+			children = (
+				B88166D018A577D9001D90E5 /* launchimage@2x.png */,
+				B88166D118A577D9001D90E5 /* launchimageR4.png */,
+			);
+			name = "Launch-images";
+			path = "ListMe2/Launch-images";
+			sourceTree = "<group>";
+		};
 		B8A72DC718A2993E0078CAA7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,9 +537,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B806B72B189BD14600C19AC0 /* ListMe2 */ = {
+		B806B72B189BD14600C19AC0 /* Shop.Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B806B75E189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "ListMe2" */;
+			buildConfigurationList = B806B75E189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "Shop.Me" */;
 			buildPhases = (
 				B806B728189BD14600C19AC0 /* Sources */,
 				B806B729189BD14600C19AC0 /* Frameworks */,
@@ -516,14 +549,14 @@
 			);
 			dependencies = (
 			);
-			name = ListMe2;
+			name = Shop.Me;
 			productName = ListMe2;
-			productReference = B806B72C189BD14600C19AC0 /* ListMe2.app */;
+			productReference = B806B72C189BD14600C19AC0 /* Shop.Me.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B806B74C189BD14600C19AC0 /* ListMe2Tests */ = {
+		B806B74C189BD14600C19AC0 /* Shop.MeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B806B761189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "ListMe2Tests" */;
+			buildConfigurationList = B806B761189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "Shop.MeTests" */;
 			buildPhases = (
 				B806B749189BD14600C19AC0 /* Sources */,
 				B806B74A189BD14600C19AC0 /* Frameworks */,
@@ -534,9 +567,9 @@
 			dependencies = (
 				B806B753189BD14600C19AC0 /* PBXTargetDependency */,
 			);
-			name = ListMe2Tests;
+			name = Shop.MeTests;
 			productName = ListMe2Tests;
-			productReference = B806B74D189BD14600C19AC0 /* ListMe2Tests.xctest */;
+			productReference = B806B74D189BD14600C19AC0 /* Shop.MeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -554,7 +587,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B806B727189BD14600C19AC0 /* Build configuration list for PBXProject "ListMe2" */;
+			buildConfigurationList = B806B727189BD14600C19AC0 /* Build configuration list for PBXProject "Shop.Me" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -567,8 +600,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B806B72B189BD14600C19AC0 /* ListMe2 */,
-				B806B74C189BD14600C19AC0 /* ListMe2Tests */,
+				B806B72B189BD14600C19AC0 /* Shop.Me */,
+				B806B74C189BD14600C19AC0 /* Shop.MeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -582,6 +615,7 @@
 				B8A72DC918A299480078CAA7 /* placeholder.png in Resources */,
 				B88166A018A53581001D90E5 /* tour@2x.png in Resources */,
 				B87FC11D189D859400AF60FD /* bin222M.png in Resources */,
+				B88166CA18A57569001D90E5 /* Icon-40@2x.png in Resources */,
 				B800316618A46AF800138CCE /* tips.png in Resources */,
 				B802CC6B189EE19A006D607C /* folder22-wide.png in Resources */,
 				B802CC64189ED285006D607C /* backButton@2x.png in Resources */,
@@ -598,6 +632,7 @@
 				B82299BE18A30B700058AE4E /* next22.png in Resources */,
 				B82299D718A43AD10058AE4E /* history 22-48-42-360.png in Resources */,
 				B881668818A516F3001D90E5 /* tips4.png in Resources */,
+				B88166CE18A575A1001D90E5 /* Icon-Small@2x.png in Resources */,
 				B802CC60189ECEFA006D607C /* info2@2x.png in Resources */,
 				B8A52B5A18A5069600B2D63D /* tip3.png in Resources */,
 				B800316318A45A2C00138CCE /* pulldown@2x.png in Resources */,
@@ -608,6 +643,8 @@
 				B809417A189DAE5700FE81EB /* crateM1@2x.png in Resources */,
 				B8A52B5B18A5069600B2D63D /* tip3@2x.png in Resources */,
 				B802CC5C189EC47D006D607C /* xbutton@2x.png in Resources */,
+				B88166CB18A57569001D90E5 /* Icon-60@2x.png in Resources */,
+				B88166D218A577D9001D90E5 /* launchimage@2x.png in Resources */,
 				B8A72DCE18A2A61F0078CAA7 /* next.png in Resources */,
 				B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */,
 				B802CC6C189EE19A006D607C /* folder22-wide@2x.png in Resources */,
@@ -632,6 +669,7 @@
 				B82299CB18A401FF0058AE4E /* plus.png in Resources */,
 				B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */,
 				B881669F18A53581001D90E5 /* tour.png in Resources */,
+				B88166D318A577D9001D90E5 /* launchimageR4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +728,7 @@
 /* Begin PBXTargetDependency section */
 		B806B753189BD14600C19AC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B806B72B189BD14600C19AC0 /* ListMe2 */;
+			target = B806B72B189BD14600C19AC0 /* Shop.Me */;
 			targetProxy = B806B752189BD14600C19AC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -795,10 +833,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListMe2/ListMe2-Prefix.pch";
-				INFOPLIST_FILE = "ListMe2/ListMe2-Info.plist";
+				GCC_PREFIX_HEADER = "ListMe2/Shop.Me-Prefix.pch";
+				INFOPLIST_FILE = "ListMe2/Shop.Me-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Shop.Me;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -809,10 +847,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListMe2/ListMe2-Prefix.pch";
-				INFOPLIST_FILE = "ListMe2/ListMe2-Info.plist";
+				GCC_PREFIX_HEADER = "ListMe2/Shop.Me-Prefix.pch";
+				INFOPLIST_FILE = "ListMe2/Shop.Me-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Shop.Me;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -833,8 +871,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ListMe2Tests/ListMe2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ListMe2Tests/Shop.MeTests-Info.plist";
+				PRODUCT_NAME = Shop.MeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -852,8 +890,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListMe2/ListMe2-Prefix.pch";
-				INFOPLIST_FILE = "ListMe2Tests/ListMe2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ListMe2Tests/Shop.MeTests-Info.plist";
+				PRODUCT_NAME = Shop.MeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -862,7 +900,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B806B727189BD14600C19AC0 /* Build configuration list for PBXProject "ListMe2" */ = {
+		B806B727189BD14600C19AC0 /* Build configuration list for PBXProject "Shop.Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B806B75C189BD14600C19AC0 /* Debug */,
@@ -871,7 +909,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B806B75E189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "ListMe2" */ = {
+		B806B75E189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "Shop.Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B806B75F189BD14600C19AC0 /* Debug */,
@@ -880,7 +918,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B806B761189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "ListMe2Tests" */ = {
+		B806B761189BD14600C19AC0 /* Build configuration list for PBXNativeTarget "Shop.MeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B806B762189BD14600C19AC0 /* Debug */,

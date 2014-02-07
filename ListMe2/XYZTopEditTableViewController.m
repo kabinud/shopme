@@ -68,7 +68,6 @@ XYZTopEditTableViewController
     
     [self.globalContainer.historicalItems sortUsingDescriptors:[NSArray arrayWithObjects:descriptorAlphabet, nil]];
     
-    NSLog(@"Sorting");
 }
 
 - (void)addHistoricalItem:(XYZToDoItem *)itemToAdd{
