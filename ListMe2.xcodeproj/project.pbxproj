@@ -70,6 +70,8 @@
 		B881668C18A5172E001D90E5 /* XYZInfo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */; };
 		B881669F18A53581001D90E5 /* tour.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669D18A53581001D90E5 /* tour.png */; };
 		B88166A018A53581001D90E5 /* tour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669E18A53581001D90E5 /* tour@2x.png */; };
+		B88166A318A561E1001D90E5 /* pullmainview.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166A118A561E1001D90E5 /* pullmainview.png */; };
+		B88166A418A561E1001D90E5 /* pullmainview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166A218A561E1001D90E5 /* pullmainview@2x.png */; };
 		B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */; };
 		B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */; };
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
@@ -182,6 +184,8 @@
 		B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZInfo4ViewController.m; path = ../XYZInfo4ViewController.m; sourceTree = "<group>"; };
 		B881669D18A53581001D90E5 /* tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tour.png; path = ListMe2/Images/tour.png; sourceTree = "<group>"; };
 		B881669E18A53581001D90E5 /* tour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tour@2x.png"; path = "ListMe2/Images/tour@2x.png"; sourceTree = "<group>"; };
+		B88166A118A561E1001D90E5 /* pullmainview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pullmainview.png; path = ListMe2/Images/pullmainview.png; sourceTree = "<group>"; };
+		B88166A218A561E1001D90E5 /* pullmainview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pullmainview@2x.png"; path = "ListMe2/Images/pullmainview@2x.png"; sourceTree = "<group>"; };
 		B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditNavigationController.h; sourceTree = "<group>"; };
 		B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditNavigationController.m; sourceTree = "<group>"; };
 		B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditTableViewController.h; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 		B8A72DC718A2993E0078CAA7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B88166A118A561E1001D90E5 /* pullmainview.png */,
+				B88166A218A561E1001D90E5 /* pullmainview@2x.png */,
 				B881669D18A53581001D90E5 /* tour.png */,
 				B881669E18A53581001D90E5 /* tour@2x.png */,
 				B881668618A516F3001D90E5 /* tips4.png */,
@@ -587,6 +593,7 @@
 				B802CC73189EEC91006D607C /* compose.png in Resources */,
 				B802CC5B189EC47D006D607C /* xbutton.png in Resources */,
 				B82299CC18A401FF0058AE4E /* plus@2x.png in Resources */,
+				B88166A318A561E1001D90E5 /* pullmainview.png in Resources */,
 				B802CC68189ED8E8006D607C /* email@2x.png in Resources */,
 				B82299BE18A30B700058AE4E /* next22.png in Resources */,
 				B82299D718A43AD10058AE4E /* history 22-48-42-360.png in Resources */,
@@ -594,6 +601,7 @@
 				B802CC60189ECEFA006D607C /* info2@2x.png in Resources */,
 				B8A52B5A18A5069600B2D63D /* tip3.png in Resources */,
 				B800316318A45A2C00138CCE /* pulldown@2x.png in Resources */,
+				B88166A418A561E1001D90E5 /* pullmainview@2x.png in Resources */,
 				B87FC123189D8ACF00AF60FD /* crateM.png in Resources */,
 				B806B748189BD14600C19AC0 /* Images.xcassets in Resources */,
 				B898535018A46CA8004A2ED9 /* nextButton.png in Resources */,

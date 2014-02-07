@@ -31,6 +31,7 @@
 @property BOOL movingTopEditPanel;
 @property XYZGlobalContainer *globalContainer;
 @property UIImageView *invitationView;
+@property UIImageView *pullToAddView;
 
 
 @end
@@ -79,6 +80,7 @@
         if(self.invitationView!=nil){
             [self.invitationView removeFromSuperview];
             self.invitationView = nil;
+              [self presentPullToAddView];
         }
     }
     else{
@@ -99,6 +101,28 @@
         }
     }
 
+}
+
+- (void)presentPullToAddView{
+    
+
+        
+    if(self.pullToAddView == nil){
+        
+        UIImage *image = [UIImage imageNamed:@"pullmainview.png"];
+        
+        self.pullToAddView = [[UIImageView alloc] initWithFrame:CGRectMake(
+                                                                            25,  100
+                                                                            , image.size.width , image.size.height)];
+        
+        self.pullToAddView.image = image;
+        [self.pullToAddView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
+        
+        [self.view addSubview:self.pullToAddView];
+    }
+    
+     
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -342,6 +366,13 @@
                          }];
     }
     else{
+        if(self.pullToAddView != nil){
+            
+            [self.pullToAddView removeFromSuperview];
+            self.pullToAddView = nil;
+            
+        }
+        
         if(self.movingTopEditPanel==NO){
             self.movingTopEditPanel = YES;
             UITableView *childView = [self getTopEditView];
