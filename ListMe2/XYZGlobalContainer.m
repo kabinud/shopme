@@ -15,6 +15,7 @@
 @synthesize lists;
 @synthesize toDoItems;
 @synthesize historicalItems;
+@synthesize hasAppTourBeenTaken;
 
 + (id)globalContainer {
     static XYZGlobalContainer *sharedGlobalContainer = nil;
@@ -50,11 +51,32 @@
     }
 }
 
+- (void)readAppTourTaken{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"appTourPresented.plist"];
+    NSNumber* number = [NSKeyedUnarchiver unarchiveObjectWithFile:finalPath];
+    if(number!=nil){
+        self.hasAppTourBeenTaken = number;
+    }
+    else{
+        self.hasAppTourBeenTaken = @0;
+    }
+}
+
+- (void)saveAppTourTaken{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"appTourPresented.plist"];
+    [NSKeyedArchiver archiveRootObject:hasAppTourBeenTaken toFile:finalPath];
+}
+
+
 - (void)saveHistoricalItemsToFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:@"historicalItemsGlobal.plist"];
     [NSKeyedArchiver archiveRootObject:historicalItems toFile:finalPath];
 }
+
+
 
 - (void)readHistoricalItemsFromFile{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];

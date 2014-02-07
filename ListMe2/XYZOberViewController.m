@@ -30,6 +30,7 @@
 @property BOOL showingTopPanel;
 @property BOOL movingTopEditPanel;
 @property XYZGlobalContainer *globalContainer;
+@property UIImageView *invitationView;
 
 
 @end
@@ -71,7 +72,36 @@
     }
 }
 
--(void)viewWillAppear:(BOOL)animated{
+- (void)presentTourInvitationView{
+    
+    //App Tour Invitation
+    if([self.globalContainer.hasAppTourBeenTaken isEqualToNumber:@1]){
+        if(self.invitationView!=nil){
+            [self.invitationView removeFromSuperview];
+            self.invitationView = nil;
+        }
+    }
+    else{
+        
+        if(self.invitationView == nil){
+            
+            UIImage *image = [UIImage imageNamed:@"tour.png"];
+            
+            self.invitationView = [[UIImageView alloc] initWithFrame:CGRectMake(
+                                                                                25,  self.view.frame.size.height - image.size.height - 50
+                                                                                , image.size.width , image.size.height)];
+            
+            self.invitationView.image = image;
+            [self.invitationView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
+            
+            [self.view addSubview:self.invitationView];
+            
+        }
+    }
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.mainViewController.tableView.scrollEnabled = YES;
     
@@ -80,6 +110,9 @@
                                              selector: @selector(appEnteredBackground:)
                                                  name: UIApplicationDidEnterBackgroundNotification
                                                object: nil];
+    
+    [self presentTourInvitationView];
+  
     
 }
 
@@ -228,26 +261,12 @@
     [self.globalContainer readItemsFromFile];
     [self.globalContainer readHistoricalItemsFromFile];
     [self.globalContainer readListsFromFile];
+    [self.globalContainer readAppTourTaken];
     
     [self loadMainView];
     //removes toolbar border
      self.navigationController.toolbar.clipsToBounds = YES;
     
-    UIImage *image = [UIImage imageNamed:@"tour.png"];
-    
-    UIImageView *imageView= [[UIImageView alloc] initWithFrame:CGRectMake(
-                                                                          25,  self.view.frame.size.height - image.size.height - 50
-      , image.size.width , image.size.height)];
-    
-    
-    
-    imageView.image = image;
-    
-    [imageView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
-    
-    [self.view addSubview:imageView];
-    
-
 }
 
 - (UITableView *)getTopView

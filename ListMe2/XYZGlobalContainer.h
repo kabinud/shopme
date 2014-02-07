@@ -16,6 +16,7 @@
 @property NSMutableArray *toDoItems;
 @property NSMutableArray *historicalItems;
 @property XYZArchivedList *listToBeArchived;
+@property NSNumber* hasAppTourBeenTaken;
 
 + (id)globalContainer;
 - (void)saveListsToFile;
@@ -28,6 +29,8 @@
 - (void)writeImage: (UIImage *)image;
 - (UIImage *)readImageFromFile: (NSString *)uniqueFileName;
 - (BOOL) deleteImage: (NSString *)uniqueFileName;
+- (void)saveAppTourTaken;
+- (void)readAppTourTaken;
 
 @end
 

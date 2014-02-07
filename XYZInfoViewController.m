@@ -8,8 +8,12 @@
 
 #import "XYZInfoViewController.h"
 #import "XYZOberViewController.h"
+#import "XYZGlobalContainer.h"
+
 
 @interface XYZInfoViewController ()
+
+@property XYZGlobalContainer *globalContainer;
 
 @end
 
@@ -42,6 +46,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    
+    if([self.globalContainer.hasAppTourBeenTaken isEqual:@0]){
+        self.globalContainer.hasAppTourBeenTaken = @1;
+        [self.globalContainer saveAppTourTaken];
+    }
     
     //removes toolbar border
     self.navigationController.toolbar.clipsToBounds = YES;
