@@ -233,9 +233,21 @@
     //removes toolbar border
      self.navigationController.toolbar.clipsToBounds = YES;
     
+    UIImage *image = [UIImage imageNamed:@"tour.png"];
+    
+    UIImageView *imageView= [[UIImageView alloc] initWithFrame:CGRectMake(
+                                                                          25,  self.view.frame.size.height - image.size.height - 50
+      , image.size.width , image.size.height)];
     
     
-   
+    
+    imageView.image = image;
+    
+    [imageView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
+    
+    [self.view addSubview:imageView];
+    
+
 }
 
 - (UITableView *)getTopView

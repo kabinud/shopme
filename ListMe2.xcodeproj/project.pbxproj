@@ -68,6 +68,8 @@
 		B881668818A516F3001D90E5 /* tips4.png in Resources */ = {isa = PBXBuildFile; fileRef = B881668618A516F3001D90E5 /* tips4.png */; };
 		B881668918A516F3001D90E5 /* tips4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881668718A516F3001D90E5 /* tips4@2x.png */; };
 		B881668C18A5172E001D90E5 /* XYZInfo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */; };
+		B881669F18A53581001D90E5 /* tour.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669D18A53581001D90E5 /* tour.png */; };
+		B88166A018A53581001D90E5 /* tour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669E18A53581001D90E5 /* tour@2x.png */; };
 		B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */; };
 		B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D278189E877800BAF7FB /* XYZTopEditTableViewController.m */; };
 		B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B895D27B189E919D00BAF7FB /* XYZTopViewController.m */; };
@@ -178,6 +180,8 @@
 		B881668718A516F3001D90E5 /* tips4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tips4@2x.png"; path = "ListMe2/Images/tips4@2x.png"; sourceTree = "<group>"; };
 		B881668A18A5172E001D90E5 /* XYZInfo4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZInfo4ViewController.h; path = ../XYZInfo4ViewController.h; sourceTree = "<group>"; };
 		B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZInfo4ViewController.m; path = ../XYZInfo4ViewController.m; sourceTree = "<group>"; };
+		B881669D18A53581001D90E5 /* tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tour.png; path = ListMe2/Images/tour.png; sourceTree = "<group>"; };
+		B881669E18A53581001D90E5 /* tour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tour@2x.png"; path = "ListMe2/Images/tour@2x.png"; sourceTree = "<group>"; };
 		B895D274189E863200BAF7FB /* XYZTopEditNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditNavigationController.h; sourceTree = "<group>"; };
 		B895D275189E863200BAF7FB /* XYZTopEditNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTopEditNavigationController.m; sourceTree = "<group>"; };
 		B895D277189E877800BAF7FB /* XYZTopEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTopEditTableViewController.h; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 		B8A72DC718A2993E0078CAA7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B881669D18A53581001D90E5 /* tour.png */,
+				B881669E18A53581001D90E5 /* tour@2x.png */,
 				B881668618A516F3001D90E5 /* tips4.png */,
 				B881668718A516F3001D90E5 /* tips4@2x.png */,
 				B8A52B5818A5069600B2D63D /* tip3.png */,
@@ -568,6 +574,7 @@
 			files = (
 				B802CC67189ED8E8006D607C /* email.png in Resources */,
 				B8A72DC918A299480078CAA7 /* placeholder.png in Resources */,
+				B88166A018A53581001D90E5 /* tour@2x.png in Resources */,
 				B87FC11D189D859400AF60FD /* bin222M.png in Resources */,
 				B800316618A46AF800138CCE /* tips.png in Resources */,
 				B802CC6B189EE19A006D607C /* folder22-wide.png in Resources */,
@@ -616,6 +623,7 @@
 				B87FC11F189D859400AF60FD /* folder22.png in Resources */,
 				B82299CB18A401FF0058AE4E /* plus.png in Resources */,
 				B87FC124189D8ACF00AF60FD /* crateM@2x.png in Resources */,
+				B881669F18A53581001D90E5 /* tour.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
