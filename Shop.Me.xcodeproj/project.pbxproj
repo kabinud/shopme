@@ -306,8 +306,6 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
-				B86CF98E18C4A4FA00218587 /* XYZOberViewController.h */,
-				B86CF98F18C4A4FA00218587 /* XYZOberViewController.m */,
 				B8A72DE118A2FD8A0078CAA7 /* InfoView */,
 				B8A72DE018A2FD730078CAA7 /* HistoryLists */,
 				B8C7CD6118A2552500EEA70D /* FinishShoppingControllers */,
@@ -318,6 +316,8 @@
 				B8361BF2189FFD7A00787AE5 /* Class categories */,
 				B802CC7B189EF1A1006D607C /* Data Persist Files */,
 				B8C7CD8718A2766A00EEA70D /* Main.storyboard */,
+				B86CF98E18C4A4FA00218587 /* XYZOberViewController.h */,
+				B86CF98F18C4A4FA00218587 /* XYZOberViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B806B747189BD14600C19AC0 /* Images.xcassets */,
