@@ -59,7 +59,6 @@
 		B849F50C18A46FF700C8D2C2 /* XYZInfo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F50B18A46FF700C8D2C2 /* XYZInfo2ViewController.m */; };
 		B86CF99518C4A55B00218587 /* XYZInfo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CF99218C4A55B00218587 /* XYZInfo4ViewController.m */; };
 		B86CF99618C4A55B00218587 /* XYZInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CF99418C4A55B00218587 /* XYZInfoViewController.m */; };
-		B86CF99918C4A69500218587 /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CF99818C4A69500218587 /* XYZOberViewController.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
@@ -98,6 +97,7 @@
 		B8C7CD6018A254F000EEA70D /* XYZTakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7CD5F18A254F000EEA70D /* XYZTakePictureViewController.m */; };
 		B8C7CD8818A2766A00EEA70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C7CD8718A2766A00EEA70D /* Main.storyboard */; };
 		B8C7CD9018A28E0B00EEA70D /* XYZImageFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7CD8F18A28E0B00EEA70D /* XYZImageFullScreenViewController.m */; };
+		B8D6F80318C4B09C0048B51C /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F80218C4B09C0048B51C /* XYZOberViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,8 +177,6 @@
 		B86CF99218C4A55B00218587 /* XYZInfo4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfo4ViewController.m; sourceTree = "<group>"; };
 		B86CF99318C4A55B00218587 /* XYZInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZInfoViewController.h; sourceTree = "<group>"; };
 		B86CF99418C4A55B00218587 /* XYZInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfoViewController.m; sourceTree = "<group>"; };
-		B86CF99718C4A69500218587 /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
-		B86CF99818C4A69500218587 /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B87FC119189D859400AF60FD /* bin222M.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bin222M.png; path = ListMe2/Icons/bin222M.png; sourceTree = "<group>"; };
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
@@ -229,6 +227,8 @@
 		B8C7CD8718A2766A00EEA70D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B8C7CD8E18A28E0B00EEA70D /* XYZImageFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZImageFullScreenViewController.h; path = ListMe2/XYZImageFullScreenViewController.h; sourceTree = "<group>"; };
 		B8C7CD8F18A28E0B00EEA70D /* XYZImageFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZImageFullScreenViewController.m; path = ListMe2/XYZImageFullScreenViewController.m; sourceTree = "<group>"; };
+		B8D6F80118C4B09C0048B51C /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
+		B8D6F80218C4B09C0048B51C /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +271,8 @@
 		B806B723189BD14600C19AC0 = {
 			isa = PBXGroup;
 			children = (
+				B8D6F80118C4B09C0048B51C /* XYZOberViewController.h */,
+				B8D6F80218C4B09C0048B51C /* XYZOberViewController.m */,
 				B88166CF18A577D9001D90E5 /* Launch-images */,
 				B88166C618A57569001D90E5 /* Launch-icons */,
 				B8A72DC718A2993E0078CAA7 /* Images */,
@@ -316,8 +318,6 @@
 				B8361BF2189FFD7A00787AE5 /* Class categories */,
 				B802CC7B189EF1A1006D607C /* Data Persist Files */,
 				B8C7CD8718A2766A00EEA70D /* Main.storyboard */,
-				B86CF99718C4A69500218587 /* XYZOberViewController.h */,
-				B86CF99818C4A69500218587 /* XYZOberViewController.m */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
 				B806B747189BD14600C19AC0 /* Images.xcassets */,
@@ -703,7 +703,7 @@
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
 				B8C7CD9018A28E0B00EEA70D /* XYZImageFullScreenViewController.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
-				B86CF99918C4A69500218587 /* XYZOberViewController.m in Sources */,
+				B8D6F80318C4B09C0048B51C /* XYZOberViewController.m in Sources */,
 				B849F50C18A46FF700C8D2C2 /* XYZInfo2ViewController.m in Sources */,
 				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
 				B8A72DDF18A2FBF70078CAA7 /* XYZListHistoryViewController.m in Sources */,
