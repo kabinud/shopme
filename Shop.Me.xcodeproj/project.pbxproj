@@ -15,7 +15,6 @@
 		B8006965189D8207001F03BD /* finishFlag22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8006963189D8207001F03BD /* finishFlag22@2x.png */; };
 		B802CC54189EB131006D607C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC52189EB131006D607C /* info.png */; };
 		B802CC55189EB131006D607C /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC53189EB131006D607C /* info@2x.png */; };
-		B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802CC57189EBCC1006D607C /* XYZInfoViewController.m */; };
 		B802CC5B189EC47D006D607C /* xbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC59189EC47D006D607C /* xbutton.png */; };
 		B802CC5C189EC47D006D607C /* xbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC5A189EC47D006D607C /* xbutton@2x.png */; };
 		B802CC5F189ECEFA006D607C /* info2.png in Resources */ = {isa = PBXBuildFile; fileRef = B802CC5D189ECEFA006D607C /* info2.png */; };
@@ -58,6 +57,9 @@
 		B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BF0189FFA6400787AE5 /* NSString+IsEmpty.m */; };
 		B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = B8361BFA18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m */; };
 		B849F50C18A46FF700C8D2C2 /* XYZInfo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F50B18A46FF700C8D2C2 /* XYZInfo2ViewController.m */; };
+		B86CF99018C4A4FA00218587 /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CF98F18C4A4FA00218587 /* XYZOberViewController.m */; };
+		B86CF99518C4A55B00218587 /* XYZInfo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CF99218C4A55B00218587 /* XYZInfo4ViewController.m */; };
+		B86CF99618C4A55B00218587 /* XYZInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CF99418C4A55B00218587 /* XYZInfoViewController.m */; };
 		B87FC11D189D859400AF60FD /* bin222M.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC119189D859400AF60FD /* bin222M.png */; };
 		B87FC11E189D859400AF60FD /* bin222M@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11A189D859400AF60FD /* bin222M@2x.png */; };
 		B87FC11F189D859400AF60FD /* folder22.png in Resources */ = {isa = PBXBuildFile; fileRef = B87FC11B189D859400AF60FD /* folder22.png */; };
@@ -67,7 +69,6 @@
 		B881668318A510CD001D90E5 /* XYZInfo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B881668218A510CD001D90E5 /* XYZInfo3ViewController.m */; };
 		B881668818A516F3001D90E5 /* tips4.png in Resources */ = {isa = PBXBuildFile; fileRef = B881668618A516F3001D90E5 /* tips4.png */; };
 		B881668918A516F3001D90E5 /* tips4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881668718A516F3001D90E5 /* tips4@2x.png */; };
-		B881668C18A5172E001D90E5 /* XYZInfo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */; };
 		B881669F18A53581001D90E5 /* tour.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669D18A53581001D90E5 /* tour.png */; };
 		B88166A018A53581001D90E5 /* tour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B881669E18A53581001D90E5 /* tour@2x.png */; };
 		B88166A318A561E1001D90E5 /* pullmainview.png in Resources */ = {isa = PBXBuildFile; fileRef = B88166A118A561E1001D90E5 /* pullmainview.png */; };
@@ -90,7 +91,6 @@
 		B8A72DCF18A2A61F0078CAA7 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A72DCD18A2A61F0078CAA7 /* next@2x.png */; };
 		B8A72DD818A2E0EC0078CAA7 /* XYZArchivedList.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A72DD718A2E0EC0078CAA7 /* XYZArchivedList.m */; };
 		B8A72DDF18A2FBF70078CAA7 /* XYZListHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A72DDE18A2FBF70078CAA7 /* XYZListHistoryViewController.m */; };
-		B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */; };
 		B8B95852189FD8E6007928BB /* clear-button-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B95851189FD8E6007928BB /* clear-button-114.png */; };
 		B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */; };
 		B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA195118A03FED00EB49A1 /* BVReorderTableView.m */; };
@@ -119,8 +119,6 @@
 		B8006963189D8207001F03BD /* finishFlag22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "finishFlag22@2x.png"; path = "ListMe2/Icons/finishFlag22@2x.png"; sourceTree = "<group>"; };
 		B802CC52189EB131006D607C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ListMe2/Icons/info.png; sourceTree = "<group>"; };
 		B802CC53189EB131006D607C /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "ListMe2/Icons/info@2x.png"; sourceTree = "<group>"; };
-		B802CC56189EBCC1006D607C /* XYZInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZInfoViewController.h; path = ../XYZInfoViewController.h; sourceTree = "<group>"; };
-		B802CC57189EBCC1006D607C /* XYZInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZInfoViewController.m; path = ../XYZInfoViewController.m; sourceTree = "<group>"; };
 		B802CC59189EC47D006D607C /* xbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xbutton.png; path = ListMe2/Icons/xbutton.png; sourceTree = "<group>"; };
 		B802CC5A189EC47D006D607C /* xbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xbutton@2x.png"; path = "ListMe2/Icons/xbutton@2x.png"; sourceTree = "<group>"; };
 		B802CC5D189ECEFA006D607C /* info2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info2.png; path = ListMe2/Icons/info2.png; sourceTree = "<group>"; };
@@ -175,6 +173,12 @@
 		B8361BFA18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYZMainViewController+GestureRecognizers.m"; sourceTree = "<group>"; };
 		B849F50A18A46FF700C8D2C2 /* XYZInfo2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZInfo2ViewController.h; sourceTree = "<group>"; };
 		B849F50B18A46FF700C8D2C2 /* XYZInfo2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfo2ViewController.m; sourceTree = "<group>"; };
+		B86CF98E18C4A4FA00218587 /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
+		B86CF98F18C4A4FA00218587 /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
+		B86CF99118C4A55B00218587 /* XYZInfo4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZInfo4ViewController.h; sourceTree = "<group>"; };
+		B86CF99218C4A55B00218587 /* XYZInfo4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfo4ViewController.m; sourceTree = "<group>"; };
+		B86CF99318C4A55B00218587 /* XYZInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZInfoViewController.h; sourceTree = "<group>"; };
+		B86CF99418C4A55B00218587 /* XYZInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfoViewController.m; sourceTree = "<group>"; };
 		B87FC119189D859400AF60FD /* bin222M.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bin222M.png; path = ListMe2/Icons/bin222M.png; sourceTree = "<group>"; };
 		B87FC11A189D859400AF60FD /* bin222M@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bin222M@2x.png"; path = "ListMe2/Icons/bin222M@2x.png"; sourceTree = "<group>"; };
 		B87FC11B189D859400AF60FD /* folder22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder22.png; path = ListMe2/Icons/folder22.png; sourceTree = "<group>"; };
@@ -185,8 +189,6 @@
 		B881668218A510CD001D90E5 /* XYZInfo3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZInfo3ViewController.m; sourceTree = "<group>"; };
 		B881668618A516F3001D90E5 /* tips4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tips4.png; path = ListMe2/Images/tips4.png; sourceTree = "<group>"; };
 		B881668718A516F3001D90E5 /* tips4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tips4@2x.png"; path = "ListMe2/Images/tips4@2x.png"; sourceTree = "<group>"; };
-		B881668A18A5172E001D90E5 /* XYZInfo4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZInfo4ViewController.h; path = ../XYZInfo4ViewController.h; sourceTree = "<group>"; };
-		B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZInfo4ViewController.m; path = ../XYZInfo4ViewController.m; sourceTree = "<group>"; };
 		B881669D18A53581001D90E5 /* tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tour.png; path = ListMe2/Images/tour.png; sourceTree = "<group>"; };
 		B881669E18A53581001D90E5 /* tour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tour@2x.png"; path = "ListMe2/Images/tour@2x.png"; sourceTree = "<group>"; };
 		B88166A118A561E1001D90E5 /* pullmainview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pullmainview.png; path = ListMe2/Images/pullmainview.png; sourceTree = "<group>"; };
@@ -214,8 +216,6 @@
 		B8A72DD718A2E0EC0078CAA7 /* XYZArchivedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZArchivedList.m; sourceTree = "<group>"; };
 		B8A72DDD18A2FBF70078CAA7 /* XYZListHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZListHistoryViewController.h; sourceTree = "<group>"; };
 		B8A72DDE18A2FBF70078CAA7 /* XYZListHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZListHistoryViewController.m; sourceTree = "<group>"; };
-		B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOberViewController.h; sourceTree = "<group>"; };
-		B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOberViewController.m; sourceTree = "<group>"; };
 		B8B95851189FD8E6007928BB /* clear-button-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clear-button-114.png"; path = "ListMe2/Icons/clear-button-114.png"; sourceTree = "<group>"; };
 		B8B95853189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYZTopEditTableViewController+TapRecognizer.h"; sourceTree = "<group>"; };
 		B8B95854189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYZTopEditTableViewController+TapRecognizer.m"; sourceTree = "<group>"; };
@@ -306,6 +306,8 @@
 		B806B735189BD14600C19AC0 /* ListMe2 */ = {
 			isa = PBXGroup;
 			children = (
+				B86CF98E18C4A4FA00218587 /* XYZOberViewController.h */,
+				B86CF98F18C4A4FA00218587 /* XYZOberViewController.m */,
 				B8A72DE118A2FD8A0078CAA7 /* InfoView */,
 				B8A72DE018A2FD730078CAA7 /* HistoryLists */,
 				B8C7CD6118A2552500EEA70D /* FinishShoppingControllers */,
@@ -318,8 +320,6 @@
 				B8C7CD8718A2766A00EEA70D /* Main.storyboard */,
 				B806B73E189BD14600C19AC0 /* XYZAppDelegate.h */,
 				B806B73F189BD14600C19AC0 /* XYZAppDelegate.m */,
-				B8AB0647189C1D6700E81E4F /* XYZOberViewController.h */,
-				B8AB0648189C1D6700E81E4F /* XYZOberViewController.m */,
 				B806B747189BD14600C19AC0 /* Images.xcassets */,
 				B806B736189BD14600C19AC0 /* Supporting Files */,
 			);
@@ -499,14 +499,14 @@
 		B8A72DE118A2FD8A0078CAA7 /* InfoView */ = {
 			isa = PBXGroup;
 			children = (
-				B802CC56189EBCC1006D607C /* XYZInfoViewController.h */,
-				B802CC57189EBCC1006D607C /* XYZInfoViewController.m */,
+				B86CF99118C4A55B00218587 /* XYZInfo4ViewController.h */,
+				B86CF99218C4A55B00218587 /* XYZInfo4ViewController.m */,
+				B86CF99318C4A55B00218587 /* XYZInfoViewController.h */,
+				B86CF99418C4A55B00218587 /* XYZInfoViewController.m */,
 				B849F50A18A46FF700C8D2C2 /* XYZInfo2ViewController.h */,
 				B849F50B18A46FF700C8D2C2 /* XYZInfo2ViewController.m */,
 				B881668118A510CD001D90E5 /* XYZInfo3ViewController.h */,
 				B881668218A510CD001D90E5 /* XYZInfo3ViewController.m */,
-				B881668A18A5172E001D90E5 /* XYZInfo4ViewController.h */,
-				B881668B18A5172E001D90E5 /* XYZInfo4ViewController.m */,
 			);
 			name = InfoView;
 			sourceTree = "<group>";
@@ -692,7 +692,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C7CD6018A254F000EEA70D /* XYZTakePictureViewController.m in Sources */,
-				B8AB0649189C1D6700E81E4F /* XYZOberViewController.m in Sources */,
 				B8361BFB18A0020200787AE5 /* XYZMainViewController+GestureRecognizers.m in Sources */,
 				B802CC77189EF146006D607C /* XYZGlobalContainer.m in Sources */,
 				B82299DB18A43E9A0058AE4E /* XYZHistoryNavigationViewController.m in Sources */,
@@ -700,21 +699,22 @@
 				B8A72DD818A2E0EC0078CAA7 /* XYZArchivedList.m in Sources */,
 				B82299C218A3C13F0058AE4E /* XYZHistoryListDetailsViewController.m in Sources */,
 				B8BA195C18A15FD000EB49A1 /* XYZFinishShoppingTableViewController.m in Sources */,
+				B86CF99018C4A4FA00218587 /* XYZOberViewController.m in Sources */,
 				B806B740189BD14600C19AC0 /* XYZAppDelegate.m in Sources */,
 				B895D279189E877800BAF7FB /* XYZTopEditTableViewController.m in Sources */,
 				B8C7CD9018A28E0B00EEA70D /* XYZImageFullScreenViewController.m in Sources */,
 				B806B73C189BD14600C19AC0 /* main.m in Sources */,
 				B849F50C18A46FF700C8D2C2 /* XYZInfo2ViewController.m in Sources */,
 				B895D27C189E919D00BAF7FB /* XYZTopViewController.m in Sources */,
-				B802CC58189EBCC1006D607C /* XYZInfoViewController.m in Sources */,
 				B8A72DDF18A2FBF70078CAA7 /* XYZListHistoryViewController.m in Sources */,
+				B86CF99618C4A55B00218587 /* XYZInfoViewController.m in Sources */,
 				B8361BF1189FFA6400787AE5 /* NSString+IsEmpty.m in Sources */,
 				B895D276189E863200BAF7FB /* XYZTopEditNavigationController.m in Sources */,
 				B881668318A510CD001D90E5 /* XYZInfo3ViewController.m in Sources */,
 				B802CC7A189EF180006D607C /* XYZToDoItem.m in Sources */,
-				B881668C18A5172E001D90E5 /* XYZInfo4ViewController.m in Sources */,
 				B8B95855189FDE1E007928BB /* XYZTopEditTableViewController+TapRecognizer.m in Sources */,
 				B8BA195218A03FED00EB49A1 /* BVReorderTableView.m in Sources */,
+				B86CF99518C4A55B00218587 /* XYZInfo4ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
