@@ -38,6 +38,9 @@
 
 @implementation XYZOberViewController
 
+
+#pragma mark - navigation and segue methods
+
 - (void)returnToRoot {
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.navigationController popToRootViewControllerAnimated:NO];
@@ -47,11 +50,9 @@
     [self bringTopPanel:
      ^{
          [self performSegueWithIdentifier: @"HistoryFromOberSegue" sender: self];
-    }
-     WithAnimationDuration:SLIDE_TIMING_FAST
+     }
+  WithAnimationDuration:SLIDE_TIMING_FAST
      ];
-    
-    
 }
 
 
@@ -60,9 +61,13 @@
      ^{
          [self performSegueWithIdentifier: @"FinishShoppingSegue" sender: self];
      }
-     WithAnimationDuration:SLIDE_TIMING_FAST
+  WithAnimationDuration:SLIDE_TIMING_FAST
      ];
     
+}
+
+- (void)performEditSegue{
+    [self performSegueWithIdentifier: @"EditSegue" sender: self];
 }
 
 - (IBAction)unwindOberViewController:(UIStoryboardSegue *)segue
@@ -73,6 +78,29 @@
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"EditSegue"]) {
+        XYZTopEditNavigationController *navController = (XYZTopEditNavigationController *)segue.destinationViewController;
+        XYZTopEditTableViewController *controller = (XYZTopEditTableViewController *)navController.viewControllers[0];
+        controller.editFieldAutoResponderAllowed = YES;
+    }
+    else if([segue.identifier isEqualToString:@"FinishShoppingSegue"]){
+        XYZArchivedList *list = [[XYZArchivedList alloc] initWithListAndSetTheRestAutomatically:self.globalContainer.toDoItems];
+        
+        self.globalContainer.listToBeArchived = list;
+    }
+    else if([segue.identifier isEqualToString:@"HistoryFromOberSegue"]){
+        
+        
+        
+    }
+    
+}
+
+
+#pragma mark - show tip methods
+
 - (void)presentTourInvitationView{
     
     //App Tour Invitation
@@ -81,7 +109,7 @@
             [self.invitationView removeFromSuperview];
             self.invitationView = nil;
             //show pull to add tip on main table view after user took the tour for the first time. remove it when he pulls to add an item. in method "bringTopPanelToAnExtend" this is marked as //(1) - ...
-              [self presentPullToAddView];
+            [self presentPullToAddView];
         }
     }
     else{
@@ -101,20 +129,20 @@
             
         }
     }
-
+    
 }
 
 - (void)presentPullToAddView{
     
-
-        
+    
+    
     if(self.pullToAddView == nil){
         
         UIImage *image = [UIImage imageNamed:@"pullmainview.png"];
         
         self.pullToAddView = [[UIImageView alloc] initWithFrame:CGRectMake(
-                                                                            25,  100
-                                                                            , image.size.width , image.size.height)];
+                                                                           25,  100
+                                                                           , image.size.width , image.size.height)];
         
         self.pullToAddView.image = image;
         [self.pullToAddView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
@@ -122,22 +150,24 @@
         [self.view addSubview:self.pullToAddView];
     }
     
-     
+    
     
 }
+
+#pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.mainViewController.tableView.scrollEnabled = YES;
     
-    //(1)
+    //When app enters background close the top menu panel if it is being shown (which happens in the appEnteredBackGround selector)
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector: @selector(appEnteredBackground:)
                                                  name: UIApplicationDidEnterBackgroundNotification
                                                object: nil];
     
     [self presentTourInvitationView];
-  
+    
     
 }
 
@@ -147,18 +177,61 @@
     }
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     
-    //(2)
-     [[NSNotificationCenter defaultCenter] removeObserver:self];
-
+    //remove self as observer when the view dissappears
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-//if app loses focus, in this view only, this is triggered in order to close the top menu,
-// (1) and (2) register and unregister this selector so that it is only triggered in this very view
 -(void)appEnteredBackground:(NSNotification *)appEnteredBackgroundNotification {
     if(self.showingTopPanel){
         [self bringTopPanel:nil WithAnimationDuration:SLIDE_TIMING_SLOW];
     }
 }
+
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    NSLog(@"view did load");
+    
+    self.globalContainer = [XYZGlobalContainer globalContainer];
+    [self.globalContainer readItemsFromFile];
+    [self.globalContainer readHistoricalItemsFromFile];
+    [self.globalContainer readListsFromFile];
+    [self.globalContainer readAppTourTaken];
+    
+    [self loadMainView];
+    //removes toolbar border
+    self.navigationController.toolbar.clipsToBounds = YES;
+    
+}
+
+//this is called from ViewDidLoad
+- (void)loadMainView{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    self.mainViewController = (XYZMainViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"mainViewId"];
+    self.mainViewController.delegate = self;
+    
+    
+    self.mainViewController.view.frame = CGRectMake(0, 22, self.mainViewController.view.frame.size.width, self.mainViewController.view.frame.size.height);
+    
+    [self.view addSubview:self.mainViewController.view];
+    
+    self.showingTopPanel = NO;
+    
+    [self addChildViewController:_mainViewController];
+    [_mainViewController didMoveToParentViewController:self];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma - mark MFMailComposeViewController
 
 - (void)sendListByEmail{
     
@@ -182,12 +255,10 @@
              
              if (controller){
                  //bring top panel up and when done proceed to present view controller, which overall looks cool
-               //  [self bringTopPanel:^{
-                     self.mainViewController.tableView.scrollEnabled = YES;
-                     [self presentViewController:controller animated:NO completion:NULL];
-               //  }];
-                 
-                 
+                 //  [self bringTopPanel:^{
+                 self.mainViewController.tableView.scrollEnabled = YES;
+                 [self presentViewController:controller animated:NO completion:NULL];
+                 //  }];
                  
              }
          }
@@ -198,11 +269,11 @@
          }
      }
      
-     WithAnimationDuration:SLIDE_TIMING_FAST
+  WithAnimationDuration:SLIDE_TIMING_FAST
      ];
     
     
-
+    
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
@@ -210,11 +281,13 @@
                         error:(NSError*)error;
 {
     if (result == MFMailComposeResultSent) {
-       // NSLog(@"It's away!");
+        // NSLog(@"It's away!");
     }
-
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - TopMenu delegate's methods
 
 - (void)removeAllItemsFromMainTable{
     
@@ -244,117 +317,13 @@
     
 }
 
-- (void)performEditSegue{
-    [self performSegueWithIdentifier: @"EditSegue" sender: self];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.showingTopPanel = NO;
-        self.movingTopEditPanel = NO;
-       
-    }
-    return self;
-}
-
-- (void)loadMainView{
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    self.mainViewController = (XYZMainViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"mainViewId"];
-    self.mainViewController.delegate = self;
-    
-    
-    self.mainViewController.view.frame = CGRectMake(0, 22, self.mainViewController.view.frame.size.width, self.mainViewController.view.frame.size.height);
-    
-    [self.view addSubview:self.mainViewController.view];
-   
-    self.showingTopPanel = NO;
-    
-    [self addChildViewController:_mainViewController];
-    [_mainViewController didMoveToParentViewController:self];
-}
-
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    NSLog(@"view did load");
-
-    self.globalContainer = [XYZGlobalContainer globalContainer];
-    [self.globalContainer readItemsFromFile];
-    [self.globalContainer readHistoricalItemsFromFile];
-    [self.globalContainer readListsFromFile];
-    [self.globalContainer readAppTourTaken];
-    
-    [self loadMainView];
-    //removes toolbar border
-     self.navigationController.toolbar.clipsToBounds = YES;
-    
-}
-
-- (UITableView *)getTopView
-{
-  
-    if(_topViewController == nil){
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-        self.topViewController = (XYZTopViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topViewId"];
-        self.topViewController.delegate = self;
-        [self addChildViewController:_topViewController];
-        [self.view addSubview:self.topViewController.view];
-        [_topViewController didMoveToParentViewController:self];
-        _topViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    }
-    self.showingTopPanel = YES;
-    UITableView *view = (UITableView *)self.topViewController.view;
-    return view;
-}
-
-
-
-
-- (void)closeTopEditPanel{
-    
-   
-    [UIView animateWithDuration:SLIDE_TIMING_SLOW delay:0 options:UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                      
-                         _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
-                     }
-                     completion:^(BOOL finished) {
-                         if (finished) {
-                                [self.topEditNavigationController.view removeFromSuperview];
-                             self.topEditNavigationController = nil;
-                         }
-                     }];
-
-   
-    
-    
-}
-
-- (UITableView *)getTopEditView
-{
-    if(_topEditNavigationController == nil){
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-        self.topEditNavigationController = (XYZTopEditNavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topEditViewId"];
-        [self addChildViewController:_topEditNavigationController];
-        [self.view addSubview:self.topEditNavigationController.view];
-        [_topEditNavigationController didMoveToParentViewController:self];
-        _topEditNavigationController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    }
-    
-    UITableView *view = (UITableView *)self.topEditNavigationController.view;
-    return view;
-}
+#pragma mark - bring or close top edit - MainViewController delegate's methods
 
 - (void)bringTopEditPanelToAnExtend: (int)topY{
     
     
     if(_mainViewController.view.frame.origin.y<100){
-       // NSLog(@"%f", _mainViewController.view.frame.origin.y);
+        // NSLog(@"%f", _mainViewController.view.frame.origin.y);
         UITableView *childView = [self getTopEditView];
         [self.view sendSubviewToBack:childView];
         [UIView animateWithDuration:0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState
@@ -368,7 +337,7 @@
                          }];
     }
     else{
-        //(1) - if the pull to add view is visible remove it after pulling to add
+        //if the pull to add tip view is visible remove it after pulling to add
         if(self.pullToAddView != nil){
             
             [self.pullToAddView removeFromSuperview];
@@ -397,40 +366,48 @@
                                  }
                              }];
             
-            
-            
-            
-            
         }
     }
     
+}
+
+//close top edit view
+- (void)closeTopEditPanel{
+    
+    
+    [UIView animateWithDuration:SLIDE_TIMING_SLOW delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         
+                         _mainViewController.view.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
+                     }
+                     completion:^(BOOL finished) {
+                         if (finished) {
+                             [self.topEditNavigationController.view removeFromSuperview];
+                             self.topEditNavigationController = nil;
+                         }
+                     }];
     
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if([segue.identifier isEqualToString:@"EditSegue"]) {
-        XYZTopEditNavigationController *navController = (XYZTopEditNavigationController *)segue.destinationViewController;
-        XYZTopEditTableViewController *controller = (XYZTopEditTableViewController *)navController.viewControllers[0];
-        controller.editFieldAutoResponderAllowed = YES;
-    }
-    else if([segue.identifier isEqualToString:@"FinishShoppingSegue"]){
-        XYZArchivedList *list = [[XYZArchivedList alloc] initWithListAndSetTheRestAutomatically:self.globalContainer.toDoItems];
-        
-        self.globalContainer.listToBeArchived = list;
-    }
-    else if([segue.identifier isEqualToString:@"HistoryFromOberSegue"]){
-
-        
-     
+//get top edit view
+- (UITableView *)getTopEditView
+{
+    if(_topEditNavigationController == nil){
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        self.topEditNavigationController = (XYZTopEditNavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topEditViewId"];
+        [self addChildViewController:_topEditNavigationController];
+        [self.view addSubview:self.topEditNavigationController.view];
+        [_topEditNavigationController didMoveToParentViewController:self];
+        _topEditNavigationController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     }
     
-    
-
-    
+    UITableView *view = (UITableView *)self.topEditNavigationController.view;
+    return view;
 }
 
+#pragma mark - bring or close top menu - MainViewController delegate's methods
 
+//bring top menu panel
 - (void)bringTopPanel: (void (^)(void))block WithAnimationDuration: (double )duration{
     
     if(self.showingTopPanel){
@@ -450,34 +427,48 @@
                              }
                          }];
         
-    
+        
         
     }
     
     else{
-    
-    UITableView *childView = [self getTopView];
-    [self.view sendSubviewToBack:childView];
-     
- 
-    
-    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         _mainViewController.view.frame = CGRectMake(0, 4.5*childView.rowHeight, self.view.frame.size.width, self.view.frame.size.height);
-                     }
-                     completion:^(BOOL finished) {
-                         if (finished) {
-                             self.showingTopPanel = YES;
+        
+        UITableView *childView = [self getTopView];
+        [self.view sendSubviewToBack:childView];
+        
+        
+        
+        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             _mainViewController.view.frame = CGRectMake(0, 4.5*childView.rowHeight, self.view.frame.size.width, self.view.frame.size.height);
                          }
-                     }];
+                         completion:^(BOOL finished) {
+                             if (finished) {
+                                 self.showingTopPanel = YES;
+                             }
+                         }];
         
     }
 }
 
-- (void)didReceiveMemoryWarning
+// get top menu view
+- (UITableView *)getTopView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    if(_topViewController == nil){
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        self.topViewController = (XYZTopViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"topViewId"];
+        self.topViewController.delegate = self;
+        [self addChildViewController:_topViewController];
+        [self.view addSubview:self.topViewController.view];
+        [_topViewController didMoveToParentViewController:self];
+        _topViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }
+    self.showingTopPanel = YES;
+    UITableView *view = (UITableView *)self.topViewController.view;
+    return view;
 }
+
+
 
 @end
